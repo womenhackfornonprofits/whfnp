@@ -1,18 +1,18 @@
 module.exports = function(grunt) {
 
 grunt.loadNpmTasks('grunt-aws-s3');
-grunt.loadNpmTasks('grunt-contrib-concat');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.loadNpmTasks('grunt-contrib-sass');
+grunt.loadNpmTasks('grunt-contrib-watch');
 
 
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
-  s3settings: grunt.file.readJSON('s3settings.json'),
+  //s3settings: grunt.file.readJSON('s3settings.json'),
 
   //------- AWS -------//
   aws_s3: {
@@ -74,8 +74,15 @@ grunt.initConfig({
   sass: {
     dist: {
       files: {
-        'src/stylesheets/screen.css': 'src/sass/screen.scss'
+        'src/css/screen.css': 'src/sass/screen.scss'
       }
+    }
+  },
+  //------- Watch SASS -> CSS -------//
+  watch: {
+    css: {
+      files: 'src/sass/screen.scss',
+      tasks: ['sass']
     }
   },
   //------- IMAGE min -------//
@@ -93,7 +100,7 @@ grunt.initConfig({
 
   grunt.registerTask('deploy', ['default','aws_s3:live']);
   grunt.registerTask('download', ['aws_s3:download']);
-  grunt.registerTask('default', ['cssmin', 'htmlmin']); // not working =/
+  grunt.registerTask('default', ['cssmin', 'htmlmin']);
 
 
 };

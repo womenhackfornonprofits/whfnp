@@ -157,7 +157,8 @@ body, html {
   line-height: 1.3em;
   letter-spacing: 0.01em;
   color: #3c3c3c;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+  font-size: 16px; }
 
 .content {
   max-width: 60em;
@@ -170,10 +171,19 @@ body, html {
 
 .img-container {
   display: inline-block;
-  width: 40%; }
+  width: 50%;
+  padding: 1.5em; }
 
 header {
-  min-height: 5em; }
+  height: auto; }
+
+.col {
+  min-height: 20em;
+  margin: 1.5em;
+  border: 0.1em solid #fcfcfc; }
+  .col h2 {
+    text-transform: none;
+    font-size: 1.3em; }
 
 .banner {
   background: linear-gradient(rgba(101, 18, 78, 0.65), rgba(241, 95, 141, 0.65)), url("../img/background-2.jpeg") no-repeat center center;
@@ -181,26 +191,40 @@ header {
 
 h1 {
   color: #fff;
-  font-size: 4em;
+  font-size: 2em;
   line-height: 1em;
   text-align: center;
   padding: 1.5em 0; }
 
 h2 {
+  padding: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
   color: #fff;
-  font-size: 1.6em;
+  font-size: 1.3em;
   line-height: 1.6em;
   max-width: 40em;
   margin: 0 auto;
   text-align: center; }
 
+.banner h2 {
+  color: #fff;
+  font-size: 1.6em;
+  line-height: 1.6em;
+  max-width: 40em;
+  margin: 0 auto;
+  text-transform: none; }
+
 section {
-  padding: 1.5em;
   margin: 0;
-  height: 30em; }
+  min-height: 30em;
+  background-color: #F4B2A7; }
+
+section:nth-child(2n) {
+  background-color: #e3dedb; }
 
 nav {
-  display: inline-block;
+  display: none;
   margin: 0;
   padding: 0;
   width: 55%; }
@@ -221,12 +245,34 @@ nav {
       padding: 1.5em 0;
       margin: 0 auto;
       text-align: center;
-      font-size: 1em; }
+      font-size: 16px; }
       nav ul li a {
         text-decoration: none;
-        color: black;
+        color: #000;
         font-weight: bold; }
         nav ul li a:visited {
-          color: #c52253; }
+          color: #C52253; }
         nav ul li a:hover {
           color: #C52253; }
+
+@media (min-width: 500px) {
+  .col {
+    width: 28%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1.5em; }
+
+  h1 {
+    font-size: 4em; }
+
+  h2 {
+    font-size: 1.6em; }
+
+  nav {
+    display: inline-block; }
+
+  .img-container {
+    display: inline-block;
+    width: 40%; } }
+
+/*# sourceMappingURL=screen.css.map */

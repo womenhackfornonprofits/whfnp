@@ -20,6 +20,8 @@ body, html {
 	letter-spacing: 0.01em;
 	color: $black;
 	line-height: 1.6em;
+	 font-size: $base-font-size;
+
 }
 .content {
 	max-width: 60em;
@@ -33,10 +35,21 @@ body, html {
 }
 .img-container {
 	display: inline-block;
-	width: 40%;
+	width: 50%;
+	padding: $padding-margin-value;
 }
 header {
-	min-height: 5em;
+	height: auto;
+}
+.col {
+	min-height:20em;
+	margin: $padding-margin-value;
+	border: 0.1em solid #fcfcfc;
+	h2 {
+		text-transform: none;
+		font-size: 1.3em;
+	}
+
 }
 .banner {
 	background:  linear-gradient(
@@ -49,26 +62,45 @@ header {
 }
 h1 {
 	color: #fff;
-	font-size: 4em;
+	font-size: 2em;
 	line-height: 1em;
 	text-align: center;
 	padding: 1.5em 0;
 }
+
 h2 {
+	padding: $padding-margin-value;
+	font-weight: bold;
+	text-transform: uppercase;
 	color: #fff;
-	font-size: 1.6em;
+	font-size: 1.3em;
 	line-height: 1.6em;
 	max-width: 40em;
 	margin:0 auto;
 	text-align: center;
 }
+
+.banner h2 {
+	color: #fff;
+	font-size: 1.6em;
+	line-height: 1.6em;
+	max-width: 40em;
+	margin:0 auto;
+	text-transform: none;
+}
+
 section {
-	padding: $padding-margin-value;
 	margin: 0;
-	height: 30em;
+	min-height: 30em;
+	background-color: #F4B2A7; 
+
+}
+section:nth-child(2n) {
+	background-color: #e3dedb; 
 }
 nav {
-	display:inline-block;
+	display: none;
+
 	margin: 0;
 	padding: 0;
 	width: 55%;
@@ -106,4 +138,29 @@ nav {
 			}
 		}
 	}
+}
+
+@media(min-width:500px) {
+	.col {
+		width: 28%;
+		display: inline-block;
+    	vertical-align: top;
+    	margin: 0 $padding-margin-value;
+	}
+	h1 {
+		font-size: 4em;
+
+	}
+	h2 {
+		font-size: 1.6em;
+
+	}
+	nav {
+		display:inline-block;
+	}
+	.img-container {
+		display: inline-block;
+		width: 40%;
+	}
+
 }

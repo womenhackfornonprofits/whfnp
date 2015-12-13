@@ -12,7 +12,7 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
-  //s3settings: grunt.file.readJSON('s3settings.json'),
+  s3settings: grunt.file.readJSON('s3settings.json'),
 
   //------- AWS -------//
   aws_s3: {
@@ -26,7 +26,7 @@ grunt.initConfig({
     live: {
       options: {
         bucket: '<%= s3settings.bucket %>',
-        differential: true // Only uploads the files that have changed
+        differential: false // Only uploads the files that have changed
       },
       files: [
         {expand: true, cwd: 'deploy/', src: ['**'], dest: ''},
@@ -61,12 +61,16 @@ grunt.initConfig({
       ]
     }
   },
-  //------- HTML Copy -------//
+  //------- Copy -------//
   copy: {
     main: {
       files: [
         // includes files within path
-        {expand: false, src: ['*.css'], dest: 'src/stylesheets/', filter: 'isFile'},
+        {expand: true, cwd: 'src/', src: ['*.html'], dest: 'deploy/', filter: 'isFile'},
+        {expand: true, cwd: 'src/css', src: ['*.css'], dest: 'deploy/css/', filter: 'isFile'},
+        {expand: true, cwd: 'src/img', src: ['*.{png,jpg,jpeg}'], dest: 'deploy/img/', filter: 'isFile'},
+
+
       ]
     }
   },
@@ -100,7 +104,7 @@ grunt.initConfig({
 
   grunt.registerTask('deploy', ['default','aws_s3:live']);
   grunt.registerTask('download', ['aws_s3:download']);
-  grunt.registerTask('default', ['cssmin', 'htmlmin']);
+  grunt.registerTask('default', ['cssmin', 'htmlmin', 'imagemin']);
 
 
 };

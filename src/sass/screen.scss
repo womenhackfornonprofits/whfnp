@@ -29,14 +29,15 @@ body, html {
 	height: 100%;
 }
 #logo {
-	width: 10em;
+	width: 15em;
 	margin-top: 1em;
 
 }
 .img-container {
 	display: inline-block;
 	width: 50%;
-	padding: $padding-margin-value;
+	padding: .3em;
+	vertical-align: top;
 }
 header {
 	height: auto;
@@ -66,12 +67,12 @@ h1 {
 	line-height: 1em;
 	text-align: center;
 	padding: 1.5em 0;
+	margin: 0;
 }
 
 h2 {
 	padding: $padding-margin-value;
 	font-weight: bold;
-	text-transform: uppercase;
 	color: #fff;
 	font-size: 1.3em;
 	line-height: 1.6em;
@@ -93,6 +94,8 @@ section {
 	margin: 0;
 	min-height: 30em;
 	background-color: #F4B2A7; 
+	padding: 4em 0;
+	padding-bottom: 4em;
 
 }
 section:nth-child(2n) {
@@ -100,7 +103,7 @@ section:nth-child(2n) {
 }
 nav {
 	display: none;
-
+	vertical-align: top;
 	margin: 0;
 	padding: 0;
 	width: 55%;
@@ -117,11 +120,9 @@ nav {
 		flex-direction: row;
 		li {
 			flex-grow: 1;
-			max-width: 10em;
-			min-width: 5em;
 			text-align: center;
 			display: inline-block;
-			padding: $padding-margin-value 0;
+			padding: 2.4em 0;
 			margin: 0 auto;
 			text-align: center;
 			font-size: $base-font-size;
@@ -161,6 +162,7 @@ nav {
 	.img-container {
 		display: inline-block;
 		width: 40%;
+		padding: 0.3em;
 	}
 
 }

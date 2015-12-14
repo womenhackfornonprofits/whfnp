@@ -166,13 +166,14 @@ body, html {
   height: 100%; }
 
 #logo {
-  width: 10em;
+  width: 15em;
   margin-top: 1em; }
 
 .img-container {
   display: inline-block;
   width: 50%;
-  padding: 1.5em; }
+  padding: .3em;
+  vertical-align: top; }
 
 header {
   height: auto; }
@@ -194,12 +195,12 @@ h1 {
   font-size: 2em;
   line-height: 1em;
   text-align: center;
-  padding: 1.5em 0; }
+  padding: 1.5em 0;
+  margin: 0; }
 
 h2 {
   padding: 1.5em;
   font-weight: bold;
-  text-transform: uppercase;
   color: #fff;
   font-size: 1.3em;
   line-height: 1.6em;
@@ -218,13 +219,16 @@ h2 {
 section {
   margin: 0;
   min-height: 30em;
-  background-color: #F4B2A7; }
+  background-color: #F4B2A7;
+  padding: 4em 0;
+  padding-bottom: 4em; }
 
 section:nth-child(2n) {
   background-color: #e3dedb; }
 
 nav {
   display: none;
+  vertical-align: top;
   margin: 0;
   padding: 0;
   width: 55%; }
@@ -238,11 +242,9 @@ nav {
     flex-direction: row; }
     nav ul li {
       flex-grow: 1;
-      max-width: 10em;
-      min-width: 5em;
       text-align: center;
       display: inline-block;
-      padding: 1.5em 0;
+      padding: 2.4em 0;
       margin: 0 auto;
       text-align: center;
       font-size: 16px; }
@@ -273,6 +275,7 @@ nav {
 
   .img-container {
     display: inline-block;
-    width: 40%; } }
+    width: 40%;
+    padding: 0.3em; } }
 
 /*# sourceMappingURL=screen.css.map */

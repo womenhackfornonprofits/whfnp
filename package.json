@@ -16,6 +16,7 @@
     "grunt-contrib-htmlmin": "~0.6.0",
     "grunt-contrib-cssmin": "~0.14.0",
     "grunt-contrib-imagemin": "~1.0.0",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-browser-sync": "~2.2.0"
   }
 }

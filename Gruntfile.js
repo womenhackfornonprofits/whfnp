@@ -7,7 +7,7 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
-
+grunt.loadNpmTasks('grunt-browser-sync');
 
 
 grunt.initConfig({
@@ -100,6 +100,17 @@ grunt.initConfig({
       }]
     }
   },
+  //------- BrowserSync ------//
+  browserSync: {
+    bsFiles: {
+        src : 'css/*.css'
+    },
+    options: {
+        server: {
+            baseDir: "src/"
+        }
+    }
+  }
 });
 
   grunt.registerTask('deploy', ['default','aws_s3:live']);

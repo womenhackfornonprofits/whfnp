@@ -258,7 +258,7 @@ nav {
         text-decoration: none;
         text-transform: uppercase;
         color: #000;
-        font-weight: bold; }
+        padding-bottom: 0.15em; }
         nav ul li a:visited {
           color: #C52253; }
         nav ul li a:hover {

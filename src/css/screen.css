@@ -153,10 +153,10 @@ body, html {
   height: 100%;
   font-family: "GeoSansLight", sans-serif;
   font-weight: 100;
-  font-size: 100%;
+  font-size: 1.2em;
   line-height: 1.3em;
   letter-spacing: 0.01em;
-  color: #3c3c3c;
+  color: #333;
   line-height: 1.6em;
   font-size: 16px; }
 
@@ -181,13 +181,16 @@ header {
 .col {
   min-height: 20em;
   margin: 1.5em;
-  border: 0.1em solid #fcfcfc; }
+  border: 0.1em solid #EC5670;
+  padding: 1em;
+  text-align: center; }
   .col h2 {
     text-transform: none;
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    color: #333; }
 
 .banner {
-  background: linear-gradient(rgba(101, 18, 78, 0.65), rgba(241, 95, 141, 0.65)), url("../img/background-2.jpeg") no-repeat center center;
+  background: linear-gradient(rgba(255, 137, 122, 0.6), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
   background-size: cover; }
 
 h1 {
@@ -201,7 +204,7 @@ h1 {
 h2 {
   padding: 1.5em;
   font-weight: bold;
-  color: #fff;
+  color: #EC5670;
   font-size: 1.3em;
   line-height: 1.6em;
   max-width: 40em;
@@ -216,15 +219,18 @@ h2 {
   margin: 0 auto;
   text-transform: none; }
 
+.icon img {
+  height: 4em; }
+
 section {
   margin: 0;
   min-height: 30em;
-  background-color: #F4B2A7;
+  background-color: #fff;
   padding: 4em 0;
   padding-bottom: 4em; }
 
 section:nth-child(2n) {
-  background-color: #e3dedb; }
+  background-color: #eaeaea; }
 
 nav {
   display: none;
@@ -244,18 +250,28 @@ nav {
       flex-grow: 1;
       text-align: center;
       display: inline-block;
-      padding: 2.4em 0;
+      padding: 2.7em 0;
       margin: 0 auto;
       text-align: center;
       font-size: 16px; }
       nav ul li a {
         text-decoration: none;
+        text-transform: uppercase;
         color: #000;
         font-weight: bold; }
         nav ul li a:visited {
           color: #C52253; }
         nav ul li a:hover {
-          color: #C52253; }
+          border-bottom: 0.15em solid #ff897a; }
+
+footer {
+  background-color: #3c3c3c;
+  padding: 3em; }
+  footer p {
+    text-align: center;
+    font-weight: 100;
+    font-size: 0.9em;
+    color: #fff; }
 
 @media (min-width: 500px) {
   .col {

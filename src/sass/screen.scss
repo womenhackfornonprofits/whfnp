@@ -18,16 +18,17 @@ body, html {
 	font-size: 1.2em;
 	line-height: $line-height;
 	letter-spacing: 0.01em;
-	color: $black;
+	color: $black; 
 	line-height: 1.6em;
 	 font-size: $base-font-size;
 
 }
 .content {
-	max-width: 60em;
-	margin: 0 auto;
+	max-width: 70em;
+	margin: 0 auto; 
 	height: 100%;
-}
+} 
+
 #logo {
 	width: 15em;
 	margin-top: 1em;
@@ -65,26 +66,30 @@ header {
 
 }
 h1 {
+	font-family: $title-font-name;
 	color: $white;
-	font-size: 2em;
-	line-height: 1em;
+	font-size: $title-font-size;
+	line-height: $h1-line-height;
 	text-align: center;
 	padding: 1.5em 0;
 	margin: 0;
 }
 
 h2 {
+	font-family: $base-font-name;
 	padding: $padding-margin-value;
 	font-weight: bold;
 	color: #EC5670;
-	font-size: 1.3em;
-	line-height: 1.6em;
+	font-size: $title-font-size/1.5;
+	//line-height: 1.6em;
 	max-width: 40em;
 	margin:0 auto;
 	text-align: center;
 }
 
 .banner h2 {
+	font-family: $base-font-name;
+	font-weight: $base-font-light;
 	color: $white;
 	font-size: 1.6em;
 	line-height: 1.6em;
@@ -129,12 +134,13 @@ nav {
 			flex-grow: 1;
 			text-align: center;
 			display: inline-block;
-			padding: 2.7em 0;
+			padding: 2.7em .2em;
 			margin: 0 auto;
 			text-align: center;
 			font-size: $base-font-size;
 			a {
 				text-decoration: none;
+				font-family: $title-font-name;
 				text-transform: uppercase;
 				color: $darkest-black;
 				padding-bottom: 0.15em;
@@ -168,11 +174,11 @@ footer {
     	margin: 0 $padding-margin-value;
 	}
 	h1 {
-		font-size: 4em;
+		font-size: $h1-font-size;
 
 	}
 	h2 {
-		font-size: 1.6em;
+		font-size: $title-font-name;
 
 	}
 	nav {

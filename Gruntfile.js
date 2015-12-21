@@ -68,7 +68,7 @@ grunt.initConfig({
         // includes files within path
         {expand: true, cwd: 'src/', src: ['*.html'], dest: 'deploy/', filter: 'isFile'},
         {expand: true, cwd: 'src/css', src: ['*.css'], dest: 'deploy/css/', filter: 'isFile'},
-        {expand: true, cwd: 'src/img', src: ['*.{png,jpg,jpeg}'], dest: 'deploy/img/', filter: 'isFile'},
+        {expand: true, cwd: 'src/img', src: ['*.{png,jpg,jpeg,svg}'], dest: 'deploy/img/', filter: 'isFile'},
 
 
       ]

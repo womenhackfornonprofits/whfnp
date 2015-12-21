@@ -196,6 +196,7 @@ p {
   text-align: center; }
   .col h2 {
     text-transform: none;
+    font-size: 24.61538px;
     color: #333;
     padding: 0; }
   .col p {
@@ -210,14 +211,14 @@ h1 {
   font-weight: 100;
   color: #fff;
   font-size: 32px;
-  line-height: 96px;
+  line-height: 93.6px;
   text-align: center;
   padding: 1.5em 0;
   margin: 0; }
 
 h2 {
   font-family: "Lobster", cursive;
-  padding: 2em;
+  padding: 2em 2em 1em 2em;
   font-weight: bold;
   color: #EC5670;
   font-size: 21.33333px;
@@ -290,6 +291,43 @@ footer {
     font-size: 0.9em;
     color: #fff; }
 
+section p {
+  text-align: center;
+  max-width: 30em;
+  margin: 0 auto; }
+
+.text-link {
+  color: #ff897a;
+  padding-bottom: 0.1em;
+  text-decoration: none;
+  border-bottom: 1px  #ff897a dashed; }
+
+.partner-list {
+  list-style: none;
+  max-width: 27em;
+  margin: 2em auto; }
+  .partner-list li {
+    display: inline-block;
+    height: 6em; }
+  .partner-list img {
+    height: 100%;
+    width: auto; }
+
+.button {
+  max-width: 12em;
+  margin: 2em auto;
+  border: 0.1em solid #EC5670;
+  text-decoration: none;
+  padding: 1em;
+  display: block;
+  color: #EC5670;
+  text-align: center; }
+  .button:visited {
+    color: #EC5670; }
+  .button:hover {
+    background-color: #EC5670;
+    color: #fff; }
+
 @media (min-width: 600px) {
   .col {
     width: 31%;
@@ -297,7 +335,7 @@ footer {
     vertical-align: top;
     margin: 0;
     padding-top: 3em;
-    min-height: 18em; }
+    min-height: 18.5em; }
 
   .col:first-child {
     float: left; }
@@ -309,7 +347,7 @@ footer {
     margin: 0 3.5%; }
 
   h1 {
-    font-size: 64px; }
+    font-size: 62.4px; }
 
   h2 {
     font-size: 32px; }

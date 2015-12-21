@@ -115,7 +115,7 @@ grunt.initConfig({
 
   grunt.registerTask('deploy', ['default','aws_s3:live']);
   grunt.registerTask('download', ['aws_s3:download']);
-  grunt.registerTask('default', ['cssmin', 'htmlmin', 'imagemin']);
+  grunt.registerTask('default', ['sass', 'copy', 'cssmin', 'htmlmin', 'imagemin']);
 
 
 };

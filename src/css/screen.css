@@ -157,7 +157,7 @@ body, html {
   font-size: 1.2em;
   line-height: 24px;
   letter-spacing: 0.01em;
-  color: #333;
+  color: #333333;
   line-height: 1.6em;
   font-size: 16px; }
 
@@ -191,7 +191,7 @@ p {
 .col {
   width: auto;
   margin: 2em;
-  border: 0.1em solid #EC5670;
+  border: 0.1em solid #ec5670;
   padding: 2em;
   text-align: center; }
   .col h2 {
@@ -209,7 +209,7 @@ p {
 h1 {
   font-family: "Lobster", cursive;
   font-weight: 100;
-  color: #fff;
+  color: white;
   font-size: 32px;
   line-height: 93.6px;
   text-align: center;
@@ -220,7 +220,7 @@ h2 {
   font-family: "Lobster", cursive;
   padding: 2em 2em 1em 2em;
   font-weight: bold;
-  color: #EC5670;
+  color: #ec5670;
   font-size: 21.33333px;
   max-width: 40em;
   margin: 0 auto;
@@ -229,7 +229,7 @@ h2 {
 .banner h2 {
   font-family: "Helvetica", sans-serif;
   font-weight: 100;
-  color: #fff;
+  color: white;
   font-size: 1.6em;
   line-height: 1.6em;
   max-width: 40em;
@@ -242,10 +242,10 @@ h2 {
 section {
   margin: 0;
   min-height: 30em;
-  background-color: #fff;
+  background-color: white;
   padding: 4em 0;
   padding-bottom: 4em;
-  background-color: #fff; }
+  background-color: white; }
   section p {
     text-align: center;
     max-width: 30em;
@@ -255,7 +255,7 @@ section:nth-child(4) {
   background-color: #9acdf9; }
 
 section:nth-child(6) {
-  background-color: #F7CBFF; }
+  background-color: #f7cbff; }
 
 nav {
   display: none;
@@ -283,10 +283,10 @@ nav {
         text-decoration: none;
         font-family: "Helvetica", sans-serif;
         text-transform: uppercase;
-        color: #000;
+        color: black;
         padding-bottom: 0.15em; }
         nav ul li a:visited {
-          color: #C52253; }
+          color: #c52253; }
         nav ul li a:hover {
           border-bottom: 0.15em solid #ff897a; }
 
@@ -319,16 +319,16 @@ footer {
 .button {
   max-width: 12em;
   margin: 2em auto;
-  border: 0.1em solid #EC5670;
+  border: 0.1em solid #ec5670;
   text-decoration: none;
   padding: 1em;
   display: block;
-  color: #EC5670;
+  color: #ec5670;
   text-align: center; }
   .button:visited {
-    color: #EC5670; }
+    color: #ec5670; }
   .button:hover {
-    background-color: #EC5670;
+    background-color: #ec5670;
     color: #fff; }
 
 @media (min-width: 600px) {
@@ -362,5 +362,3 @@ footer {
     display: inline-block;
     width: 40%;
     padding: 0.3em; } }
-
-/*# sourceMappingURL=screen.css.map */

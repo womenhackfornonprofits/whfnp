@@ -58,7 +58,7 @@ p {
 	//min-height: 20em;
 	width: auto;
 	margin: $padding-margin-value;
-	border: 0.1em solid #EC5670;
+	border: 0.1em solid $pop-pink;
 	padding: $padding-margin-value;
 	text-align: center;
 
@@ -97,7 +97,7 @@ h2 {
 	font-family: $title-font-name;
 	padding: $padding-margin-value $padding-margin-value  $padding-margin-value/2 $padding-margin-value;
 	font-weight: bold;
-	color: #EC5670;
+	color: $pop-pink;
 	font-size: $title-font-size/1.5;
 	max-width: 40em;
 	margin:0 auto;
@@ -119,17 +119,35 @@ h2 {
 	height: 4em;
 }
 
+$section-bg: $white;
+
+
 section {
 	margin: 0;
 	min-height: 30em;
 	background-color: $white; 
 	padding: $padding-margin-value*2 0;
 	padding-bottom: $padding-margin-value*2;
+	background-color: $section-bg;
+	p {
+		text-align: center;
+		max-width: 30em; 
+		margin: 0 auto; 
+	}
+}
+section:nth-child(4) {
+ 	$section-bg: $pop-blue;
+ 	background-color: $section-bg;
 
 }
-section:nth-child(2n) {
-	background-color: #eaeaea; 
+
+section:nth-child(6) {
+	$section-bg: $pop-purple;
+	background-color: $section-bg;
+
 }
+
+
 nav {
 	display: none;
 	vertical-align: top;
@@ -165,7 +183,7 @@ nav {
 					color: $link-color;
 				}
 				&:hover {
-					border-bottom: 0.15em solid $pink;
+					border-bottom: 0.15em solid $salmon-pink;
 				}
 
 			}
@@ -184,13 +202,8 @@ footer {
 	}
 }
 
-section {
-	p {
-	text-align: center;
-	max-width: 30em; 
-	margin: 0 auto; 
-	}	
-}
+
+
 .text-link {
 	color: #ff897a;
 	padding-bottom: 0.1em;
@@ -215,17 +228,17 @@ section {
 .button {
 	max-width: 12em;
 	margin: $padding-margin-value auto;
-	border: 0.1em solid #EC5670;
+	border: 0.1em solid $pop-pink;
 	text-decoration: none;
 	padding: $padding-margin-value/2;
 	display: block;
-	color: #EC5670;
+	color: $pop-pink;
 	text-align: center;
 	&:visited{
-	color: #EC5670;
+	color: $pop-pink;
 	}
 	&:hover {
-		background-color: #EC5670;
+		background-color: $pop-pink;
 		color: #fff;
 	}
 	

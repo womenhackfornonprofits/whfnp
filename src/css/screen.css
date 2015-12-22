@@ -244,10 +244,18 @@ section {
   min-height: 30em;
   background-color: #fff;
   padding: 4em 0;
-  padding-bottom: 4em; }
+  padding-bottom: 4em;
+  background-color: #fff; }
+  section p {
+    text-align: center;
+    max-width: 30em;
+    margin: 0 auto; }
 
-section:nth-child(2n) {
-  background-color: #eaeaea; }
+section:nth-child(4) {
+  background-color: #9acdf9; }
+
+section:nth-child(6) {
+  background-color: #F7CBFF; }
 
 nav {
   display: none;
@@ -290,11 +298,6 @@ footer {
     font-weight: 100;
     font-size: 0.9em;
     color: #fff; }
-
-section p {
-  text-align: center;
-  max-width: 30em;
-  margin: 0 auto; }
 
 .text-link {
   color: #ff897a;

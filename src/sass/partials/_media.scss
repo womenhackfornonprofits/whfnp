@@ -1,0 +1,42 @@
+@media(min-width:600px) {
+	.col {
+		width: $col-width;
+		display: inline-block;
+    	vertical-align: top;
+    	margin: 0;
+    	padding-top: 3em;
+    	//border-radius: 100%;
+    	min-height: 18.5em;
+	}
+	.col:first-child {
+		float: left;
+	}
+	.col:last-child {
+		float: right;
+	}
+	.col:nth-child(2) {
+		margin: 0 (100% - $col-width * 3)/2;
+	}
+	
+	h1 {
+		font-size: $h1-font-size;
+
+	}
+	h2 {
+		font-size: $title-font-size;
+
+	}
+	nav {
+		display:inline-block;
+	}
+	.img-container {
+		display: inline-block;
+		width: 40%;
+		padding: 0.3em;
+	}
+	.col-wrap {
+		padding: 2em 0 0 2em;
+
+	}
+
+}

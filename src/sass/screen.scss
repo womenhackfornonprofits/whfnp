@@ -50,9 +50,9 @@ p {
 }
 .col-wrap {
 	margin: 0;
-	padding: 0;
-	padding-bottom: $padding-margin-value*2;
-	clear: both;
+	//padding: 0;
+    padding: 2em 0 0 2em;
+    clear: both;
 }
 .col {
 	//min-height: 20em;
@@ -73,15 +73,8 @@ p {
 	}
 
 }
-.banner {
-	background:  linear-gradient(
-      rgba(255, 137, 122, 0.6),  
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/background-2.jpeg') no-repeat center center;
-	background-size: cover;
 
-}
+
 h1 {
 	font-family: $title-font-name;
 	font-weight: 100;
@@ -104,27 +97,37 @@ h2 {
 	text-align: center;
 }
 
-.banner h2 {
-	font-family: $base-font-name;
-	font-weight: $base-font-light;
-	color: $white;
-	font-size: 1.6em;
-	line-height: 1.6em;
-	max-width: 40em;
-	margin:0 auto;
-	text-transform: none;
-}
 
 .icon img {
 	height: 4em;
 }
+.banner {
+	background:  linear-gradient(
+      rgba(255, 137, 122, 0.6),  
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/background-2.jpeg') no-repeat center center;
+	background-size: cover;
+	h2 {
+		font-family: $base-font-name;
+		font-weight: $base-font-light;
+		color: $white;
+		font-size: 1.6em;
+		line-height: 1.6em;
+		max-width: 40em;
+		margin:0 auto;
+		text-transform: none;
+	}
+}
+
+
 
 $section-bg: $white;
 
 
 section {
 	margin: 0;
-	min-height: 30em;
+	//min-height: 30em;
 	background-color: $white; 
 	padding: $padding-margin-value*2 0;
 	padding-bottom: $padding-margin-value*2;
@@ -140,13 +143,29 @@ section:nth-child(4) {
  	background-color: $section-bg;
 
 }
+section:nth-child(0) {
+ 	$section-bg: $pop-blue;
+ 	background-color: $section-bg;
 
+}
 section:nth-child(6) {
 	$section-bg: $pop-purple;
 	background-color: $section-bg;
 
 }
+.smaller-banner {
+	background:  linear-gradient(
+      rgba(255, 137, 122, 0.6),  
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/background-2.jpeg') no-repeat center center;
+	background-size: cover;
+	height: 15em;
+	h1 {
+		padding: 0;
+	}
 
+}
 
 nav {
 	display: none;

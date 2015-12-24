@@ -184,8 +184,7 @@ p {
 
 .col-wrap {
   margin: 0;
-  padding: 0;
-  padding-bottom: 4em;
+  padding: 2em 0 0 2em;
   clear: both; }
 
 .col {
@@ -201,10 +200,6 @@ p {
     padding: 0; }
   .col p {
     margin: 2em 0; }
-
-.banner {
-  background: linear-gradient(rgba(255, 137, 122, 0.6), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
-  background-size: cover; }
 
 h1 {
   font-family: "Lobster", cursive;
@@ -226,22 +221,24 @@ h2 {
   margin: 0 auto;
   text-align: center; }
 
-.banner h2 {
-  font-family: "Helvetica", sans-serif;
-  font-weight: 100;
-  color: white;
-  font-size: 1.6em;
-  line-height: 1.6em;
-  max-width: 40em;
-  margin: 0 auto;
-  text-transform: none; }
-
 .icon img {
   height: 4em; }
 
+.banner {
+  background: linear-gradient(rgba(255, 137, 122, 0.6), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
+  background-size: cover; }
+  .banner h2 {
+    font-family: "Helvetica", sans-serif;
+    font-weight: 100;
+    color: white;
+    font-size: 1.6em;
+    line-height: 1.6em;
+    max-width: 40em;
+    margin: 0 auto;
+    text-transform: none; }
+
 section {
   margin: 0;
-  min-height: 30em;
   background-color: white;
   padding: 4em 0;
   padding-bottom: 4em;
@@ -254,8 +251,18 @@ section {
 section:nth-child(4) {
   background-color: #9acdf9; }
 
+section:nth-child(0) {
+  background-color: #9acdf9; }
+
 section:nth-child(6) {
   background-color: #f7cbff; }
+
+.smaller-banner {
+  background: linear-gradient(rgba(255, 137, 122, 0.6), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
+  background-size: cover;
+  height: 15em; }
+  .smaller-banner h1 {
+    padding: 0; }
 
 nav {
   display: none;

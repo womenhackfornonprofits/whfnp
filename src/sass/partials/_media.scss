@@ -1,5 +1,5 @@
 @media(min-width:600px) {
-	.col {
+	.col-3 {
 		width: $col-width;
 		display: inline-block;
     	vertical-align: top;
@@ -8,13 +8,19 @@
     	//border-radius: 100%;
     	min-height: 18.5em;
 	}
-	.col:first-child {
+	.founding-team {
+		padding:0;
+		.col-3 {
+			min-height: 15em;
+		}
+	}
+	.col-3:first-child {
 		float: left;
 	}
-	.col:last-child {
+	.col-3:last-child {
 		float: right;
 	}
-	.col:nth-child(2) {
+	.col-3:nth-child(2) {
 		margin: 0 (100% - $col-width * 3)/2;
 	}
 	
@@ -35,7 +41,7 @@
 		padding: 0.3em;
 	}
 	.col-wrap {
-		padding: 2em 0 0 2em;
+		padding: 0 0 2em 0;
 
 	}
 

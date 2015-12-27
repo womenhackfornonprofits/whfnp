@@ -1,5 +1,6 @@
 @import "partials/base";
 
+
 *, 
 *:before,
 *:after {
@@ -21,7 +22,7 @@ body, html {
 	letter-spacing: 0.01em;
 	color: $black; 
 	line-height: 1.6em;
-	 font-size: $base-font-size;
+	font-size: $base-font-size;
 
 }
 .content {
@@ -44,129 +45,7 @@ body, html {
 header {
 	height: auto;
 }
-
-p {
-	padding: padding-margin-value;
-}
-.col-wrap {
-	margin: 0;
-	//padding: 0;
-    padding: 2em 0 0 2em;
-    clear: both;
-}
-.col {
-	//min-height: 20em;
-	width: auto;
-	margin: $padding-margin-value;
-	border: 0.1em solid $pop-pink;
-	padding: $padding-margin-value;
-	text-align: center;
-
-	h2 {
-		text-transform: none;
-		font-size: $title-font-size/1.3;
-		color: #333;
-		padding: 0;
-	}
-	p {
-		margin: $padding-margin-value 0;
-	}
-
-}
-
-
-h1 {
-	font-family: $title-font-name;
-	font-weight: 100;
-	color: $white;
-	font-size: $title-font-size;
-	line-height: $h1-line-height;
-	text-align: center;
-	padding: 1.5em 0;
-	margin: 0;
-}
-
-h2 {
-	font-family: $title-font-name;
-	padding: $padding-margin-value $padding-margin-value  $padding-margin-value/2 $padding-margin-value;
-	font-weight: bold;
-	color: $pop-pink;
-	font-size: $title-font-size/1.5;
-	max-width: 40em;
-	margin:0 auto;
-	text-align: center;
-}
-
-
-.icon img {
-	height: 4em;
-}
-.banner {
-	background:  linear-gradient(
-      rgba(255, 137, 122, 0.6),  
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/background-2.jpeg') no-repeat center center;
-	background-size: cover;
-	h2 {
-		font-family: $base-font-name;
-		font-weight: $base-font-light;
-		color: $white;
-		font-size: 1.6em;
-		line-height: 1.6em;
-		max-width: 40em;
-		margin:0 auto;
-		text-transform: none;
-	}
-}
-
-
-
-$section-bg: $white;
-
-
-section {
-	margin: 0;
-	//min-height: 30em;
-	background-color: $white; 
-	padding: $padding-margin-value*2 0;
-	padding-bottom: $padding-margin-value*2;
-	background-color: $section-bg;
-	p {
-		text-align: center;
-		max-width: 30em; 
-		margin: 0 auto; 
-	}
-}
-section:nth-child(4) {
- 	$section-bg: $pop-blue;
- 	background-color: $section-bg;
-
-}
-section:nth-child(0) {
- 	$section-bg: $pop-blue;
- 	background-color: $section-bg;
-
-}
-section:nth-child(6) {
-	$section-bg: $pop-purple;
-	background-color: $section-bg;
-
-}
-.smaller-banner {
-	background:  linear-gradient(
-      rgba(255, 137, 122, 0.6),  
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/background-2.jpeg') no-repeat center center;
-	background-size: cover;
-	height: 15em;
-	h1 {
-		padding: 0;
-	}
-
-}
-
+/** Navigation Styles**/
 nav {
 	display: none;
 	vertical-align: top;
@@ -196,10 +75,10 @@ nav {
 				text-decoration: none;
 				font-family: $base-font-name;
 				text-transform: uppercase;
-				color: $darkest-black;
+				color: $nav-link-color;
 				padding-bottom: 0.15em;
 				&:visited{
-					color: $link-color;
+					color: $nav-link-visited-color;
 				}
 				&:hover {
 					border-bottom: 0.15em solid $salmon-pink;
@@ -210,18 +89,177 @@ nav {
 	}
 }
 
-footer {
-	background-color: #3c3c3c;
-	padding: 3em;
+p {
+	padding: padding-margin-value;
+}
+.col-wrap {
+	margin: 0;
+	padding: 0;
+    clear: both;
+}
+.founding-team {
+	max-width: 50em;
+	margin: 0 auto;
+	padding: 0;
+}
+.col-3 {
+	//min-height: 15em;
+	width: auto;
+	margin: $padding-margin-value;
+	border: 0.1em solid $pop-pink;
+	padding: $padding-margin-value;
+	text-align: center;
+
+	h2 {
+		text-transform: none;
+		font-size: $title-font-size/1.3;
+		color: #333;
+		padding: 0;
+	}
 	p {
-		text-align: center;
-		font-weight: 100;
-		font-size: 0.9em;
-		color: #fff;
+		margin: $padding-margin-value 0;
+	}
+
+}
+// setting default volunteer image
+$default-volunteer: url('../img/volunteers/default_volunteer.png');
+$vinita-image: url('../img/volunteers/Vinita_Rathi.jpg');
+$nandhini-image: url('../img/volunteers/Nandhini_Narasimhan.jpeg');
+$tanya-image: url('../img/volunteers/Tanya_Powell.jpg');
+$lili-image: url('../img/volunteers/default_volunteer.png');
+$corinne-image: url('../img/volunteers/default_volunteer.png');
+$rainey-image: url('../img/volunteers/default_volunteer.png');
+$funmi-image: url('../img/volunteers/default_volunteer.png');
+$kriselda-image: url('../img/volunteers/default_volunteer.png');
+$charu-image: url('../img/volunteers/default_volunteer.png');
+
+.vinita {
+	background: $vinita-image no-repeat center center;
+
+}
+.nandhini {
+	background: $nandhini-image no-repeat center center;
+}
+.tanya {
+	background: $tanya-image no-repeat center center;
+}
+.lili {
+	background: $lili-image no-repeat center center;
+}
+.corinne {
+	background: $corinne-image no-repeat center center;
+}
+.rainey {
+	background: $rainey-image no-repeat center center;
+}
+.funmi {
+	background: $funmi-image no-repeat center center;
+}
+.kriselda {
+	background: $kriselda-image no-repeat center center;
+}
+.charu {
+	background: $charu-image no-repeat center center;
+}
+
+.volunteer-picture {
+	border: none;
+	background-size: cover;
+	position: relative;
+	padding: 0;
+	height: 15em;
+	width: auto;
+	h2 {
+		color: $white;
+		position: absolute;
+		bottom: 0;
+		padding: $padding-margin-value/2 0;
+		width: 100%;
+		background-color: $volunter-name-bg-color-1;
+
+	}
+	p {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: $padding-margin-value/2;
+		margin: $padding-margin-value/2 0;
+		background-color:$volunter-type-bg-color-1;
+		color: $white;
+
+	}
+	
+}
+.volunteer-picture:nth-child(even) {
+	h2 {
+		background-color: $volunter-name-bg-color-2;
+
+	}
+	p {
+		background-color: $volunter-type-bg-color-2;
+	}
+
+}
+
+.icon img {
+	height: 4em;
+}
+.banner {
+	background:  linear-gradient(
+      rgba(255, 137, 122, 0.6),  
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/background-2.jpeg') no-repeat center center;
+	background-size: cover;
+	h2 {
+		font-family: $base-font-name;
+		font-weight: $base-font-light;
+		color: $white;
+		font-size: 1.6em;
+		line-height: 1.6em;
+		max-width: 40em;
+		margin:0 auto;
+		text-transform: none;
 	}
 }
 
+h1 {
+	font-family: $title-font-name;
+	font-weight: 100;
+	color: $white;
+	font-size: $title-font-size;
+	line-height: $h1-line-height;
+	text-align: center;
+	padding: 1.5em 0;
+	margin: 0;
+}
 
+h2 {
+	font-family: $title-font-name;
+	padding: $padding-margin-value/2;
+	padding-top: 0;
+	font-weight: bold;
+	color: $pop-pink;
+	font-size: $title-font-size/1.5;
+	max-width: 40em;
+	margin:0 auto;
+	text-align: center;
+}
+
+
+.smaller-banner {
+	background:  linear-gradient(
+      rgba(255, 137, 122, 0.6),  
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../img/background-2.jpeg') no-repeat center center;
+	background-size: cover;
+	height: 15em;
+	h1 {
+		padding: 0;
+	}
+
+}
 
 .text-link {
 	color: #ff897a;
@@ -246,7 +284,7 @@ footer {
 
 .button {
 	max-width: 12em;
-	margin: $padding-margin-value auto;
+	margin: $padding-margin-value auto 0 auto;
 	border: 0.1em solid $pop-pink;
 	text-decoration: none;
 	padding: $padding-margin-value/2;
@@ -263,41 +301,16 @@ footer {
 	
 }
 
-@media(min-width:600px) {
-	.col {
-		width: $col-width;
-		display: inline-block;
-    	vertical-align: top;
-    	margin: 0;
-    	padding-top: 3em;
-    	//border-radius: 100%;
-    	min-height: 18.5em;
+footer {
+	background-color: #3c3c3c;
+	padding: 3em;
+	p {
+		text-align: center;
+		font-weight: 100;
+		font-size: 0.9em;
+		color: #fff;
 	}
-	.col:first-child {
-		float: left;
-	}
-	.col:last-child {
-		float: right;
-	}
-	.col:nth-child(2) {
-		margin: 0 (100% - $col-width * 3)/2;
-	}
-	
-	h1 {
-		font-size: $h1-font-size;
-
-	}
-	h2 {
-		font-size: $title-font-size;
-
-	}
-	nav {
-		display:inline-block;
-	}
-	.img-container {
-		display: inline-block;
-		width: 40%;
-		padding: 0.3em;
-	}
-
 }
+
+@import "partials/section";
+@import "partials/media";

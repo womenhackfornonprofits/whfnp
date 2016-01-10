@@ -89,21 +89,31 @@ nav {
 	}
 }
 
-p {
-	padding: padding-margin-value;
-}
 .col-wrap {
 	margin: 0;
 	padding: 0;
     clear: both;
 }
-.founding-team {
+.founding-team, .board-teams {
 	max-width: 50em;
 	margin: 0 auto;
 	padding: 0;
 }
+.board-teams {
+	.col-3 {
+		background-color: $pop-pink;
+		border:0;
+		h2 {
+			color: $white;
+		}
+		margin: 0;
+	}
+	.col-3:nth-child(odd) {
+		background-color: $pop-blue;
+	}
+
+}
 .col-3 {
-	//min-height: 15em;
 	width: auto;
 	margin: $padding-margin-value;
 	border: 0.1em solid $pop-pink;
@@ -230,7 +240,7 @@ h1 {
 	font-size: $title-font-size;
 	line-height: $h1-line-height;
 	text-align: center;
-	padding: 1.5em 0;
+	padding: 1em 0;
 	margin: 0;
 }
 
@@ -254,7 +264,7 @@ h2 {
     ),
     url('../img/background-2.jpeg') no-repeat center center;
 	background-size: cover;
-	height: 15em;
+	height: $smaller-banner-height;
 	h1 {
 		padding: 0;
 	}
@@ -282,6 +292,29 @@ h2 {
 	}
 }
 
+.project-img {
+	height: $project-image-height;
+	background: url('../img/background-2.jpeg') no-repeat center center;
+	background-size: cover;
+	margin: $padding-margin-value 0;
+}
+.project-info {
+	vertical-align: top;
+}
+.project {
+	h3 {
+		text-align: center;
+		font-style: bold;
+		font-weight: 100;
+		padding: 0;
+		padding-bottom: $padding-margin-value/4;
+
+	}
+	h2 {
+		padding: 0;
+		padding-bottom: $padding-margin-value/4;
+	}
+}
 .button {
 	max-width: 12em;
 	margin: $padding-margin-value auto 0 auto;

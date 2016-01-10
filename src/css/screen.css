@@ -157,7 +157,7 @@ body, html {
   font-size: 1.2em;
   line-height: 24px;
   letter-spacing: 0.01em;
-  color: #333333;
+  color: #333;
   line-height: 1.6em;
   font-size: 16px; }
 
@@ -206,30 +206,36 @@ nav {
         text-decoration: none;
         font-family: "Helvetica", sans-serif;
         text-transform: uppercase;
-        color: black;
+        color: #000;
         padding-bottom: 0.15em; }
         nav ul li a:visited {
-          color: black; }
+          color: #000; }
         nav ul li a:hover {
-          border-bottom: 0.15em solid #ff897a; }
-
-p {
-  padding: padding-margin-value; }
+          border-bottom: 0.15em solid #fe8359; }
 
 .col-wrap {
   margin: 0;
   padding: 0;
   clear: both; }
 
-.founding-team {
+.founding-team, .board-teams {
   max-width: 50em;
   margin: 0 auto;
   padding: 0; }
 
+.board-teams .col-3 {
+  background-color: #e42e3d;
+  border: 0;
+  margin: 0; }
+  .board-teams .col-3 h2 {
+    color: #fff; }
+.board-teams .col-3:nth-child(odd) {
+  background-color: #59d5fe; }
+
 .col-3 {
   width: auto;
   margin: 2em;
-  border: 0.1em solid #ec5670;
+  border: 0.1em solid #e42e3d;
   padding: 2em;
   text-align: center; }
   .col-3 h2 {
@@ -275,7 +281,7 @@ p {
   height: 15em;
   width: auto; }
   .volunteer-picture h2 {
-    color: white;
+    color: #fff;
     position: absolute;
     bottom: 0;
     padding: 1em 0;
@@ -288,7 +294,7 @@ p {
     padding: 1em;
     margin: 1em 0;
     background-color: rgba(236, 86, 112, 0.6);
-    color: white; }
+    color: #fff; }
 
 .volunteer-picture:nth-child(even) h2 {
   background-color: rgba(247, 203, 255, 0.6); }
@@ -304,7 +310,7 @@ p {
   .banner h2 {
     font-family: "Helvetica", sans-serif;
     font-weight: 100;
-    color: white;
+    color: #fff;
     font-size: 1.6em;
     line-height: 1.6em;
     max-width: 40em;
@@ -314,11 +320,11 @@ p {
 h1 {
   font-family: "Lobster", cursive;
   font-weight: 100;
-  color: white;
+  color: #fff;
   font-size: 32px;
   line-height: 93.6px;
   text-align: center;
-  padding: 1.5em 0;
+  padding: 1em 0;
   margin: 0; }
 
 h2 {
@@ -326,7 +332,7 @@ h2 {
   padding: 1em;
   padding-top: 0;
   font-weight: bold;
-  color: #ec5670;
+  color: #e42e3d;
   font-size: 21.33333px;
   max-width: 40em;
   margin: 0 auto;
@@ -335,7 +341,7 @@ h2 {
 .smaller-banner {
   background: linear-gradient(rgba(255, 137, 122, 0.6), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
   background-size: cover;
-  height: 15em; }
+  height: 24em; }
   .smaller-banner h1 {
     padding: 0; }
 
@@ -356,19 +362,38 @@ h2 {
     height: 100%;
     width: auto; }
 
+.project-img {
+  height: 22em;
+  background: url("../img/background-2.jpeg") no-repeat center center;
+  background-size: cover;
+  margin: 2em 0; }
+
+.project-info {
+  vertical-align: top; }
+
+.project h3 {
+  text-align: center;
+  font-style: bold;
+  font-weight: 100;
+  padding: 0;
+  padding-bottom: 0.5em; }
+.project h2 {
+  padding: 0;
+  padding-bottom: 0.5em; }
+
 .button {
   max-width: 12em;
   margin: 2em auto 0 auto;
-  border: 0.1em solid #ec5670;
+  border: 0.1em solid #e42e3d;
   text-decoration: none;
   padding: 1em;
   display: block;
-  color: #ec5670;
+  color: #e42e3d;
   text-align: center; }
   .button:visited {
-    color: #ec5670; }
+    color: #e42e3d; }
   .button:hover {
-    background-color: #ec5670;
+    background-color: #e42e3d;
     color: #fff; }
 
 footer {
@@ -382,23 +407,23 @@ footer {
 
 section {
   margin: 0;
-  background-color: white;
-  padding: 4em 0;
-  padding-bottom: 4em;
-  background-color: white; }
+  background-color: #fff;
+  padding: 8em 0;
+  padding-bottom: 8em;
+  background-color: #fff; }
   section p {
     text-align: center;
     max-width: 35em;
     margin: 0 auto; }
 
 section:nth-child(4) {
-  background-color: #9acdf9; }
+  background-color: #59d5fe; }
 
 section:nth-child(0) {
-  background-color: #9acdf9; }
+  background-color: #59d5fe; }
 
 section:nth-child(6) {
-  background-color: #f7cbff; }
+  background-color: #ffaf9c; }
 
 @media (min-width: 600px) {
   .col-3 {
@@ -413,6 +438,12 @@ section:nth-child(6) {
     padding: 0; }
     .founding-team .col-3 {
       min-height: 15em; }
+
+  .board-teams .col-3 {
+    min-height: 10em;
+    width: 33.33333%; }
+  .board-teams .col-3:nth-child(2) {
+    margin: 0; }
 
   .col-3:first-child {
     float: left; }
@@ -438,4 +469,19 @@ section:nth-child(6) {
     padding: 0.3em; }
 
   .col-wrap {
-    padding: 0 0 2em 0; } }
+    padding: 0 0 2em 0; }
+
+  .project-img, .project-info {
+    display: inline-block;
+    width: 49%; }
+
+  .project-info {
+    margin: 4em 0;
+    padding-left: 2em; }
+    .project-info .button {
+      margin: 2em 2em 0 0; }
+
+  .project h2, .project h3, .project p {
+    text-align: left; } }
+
+/*# sourceMappingURL=screen.css.map */

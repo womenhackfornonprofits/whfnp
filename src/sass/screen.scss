@@ -89,6 +89,10 @@ nav {
 	}
 }
 
+.current-projects {
+	//background-color: $grey;
+}
+
 .col-wrap {
 	margin: 0;
 	padding: 0;
@@ -215,10 +219,8 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 	height: 4em;
 }
 .banner {
-	background:  linear-gradient(
-      rgba(255, 137, 122, 0.6),  
-      rgba(0, 0, 0, 0.5)
-    ),
+	background: 
+	linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)),
     url('../img/background-2.jpeg') no-repeat center center;
 	background-size: cover;
 	h2 {
@@ -258,11 +260,9 @@ h2 {
 
 
 .smaller-banner {
-	background:  linear-gradient(
-      rgba(255, 137, 122, 0.6),  
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/background-2.jpeg') no-repeat center center;
+	background:
+    	linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)),
+    	url('../img/background-2.jpeg') no-repeat center center;
 	background-size: cover;
 	height: $smaller-banner-height;
 	h1 {
@@ -272,10 +272,10 @@ h2 {
 }
 
 .text-link {
-	color: #ff897a;
+	color: $orange;
 	padding-bottom: 0.1em;
 	text-decoration: none;
-  	border-bottom: 1px  #ff897a dashed;
+  	border-bottom: 1px  $orange dashed;
 
 }
 .partner-list {
@@ -313,6 +313,18 @@ h2 {
 	h2 {
 		padding: 0;
 		padding-bottom: $padding-margin-value/4;
+		color: $orange;
+	}
+	.button {
+		border: 0.1em solid $orange;
+		color: $orange;
+		&:visited{
+		color: $orange;
+		}
+		&:hover {
+			background-color: $orange;
+			color: #fff;
+		}
 	}
 }
 .button {

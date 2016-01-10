@@ -230,7 +230,7 @@ nav {
   .board-teams .col-3 h2 {
     color: #fff; }
 .board-teams .col-3:nth-child(odd) {
-  background-color: #59d5fe; }
+  background-color: #A3E8FF; }
 
 .col-3 {
   width: auto;
@@ -305,7 +305,7 @@ nav {
   height: 4em; }
 
 .banner {
-  background: linear-gradient(rgba(255, 137, 122, 0.6), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
+  background: linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
   background-size: cover; }
   .banner h2 {
     font-family: "Helvetica", sans-serif;
@@ -339,17 +339,17 @@ h2 {
   text-align: center; }
 
 .smaller-banner {
-  background: linear-gradient(rgba(255, 137, 122, 0.6), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
+  background: linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
   background-size: cover;
   height: 24em; }
   .smaller-banner h1 {
     padding: 0; }
 
 .text-link {
-  color: #ff897a;
+  color: #fe6633;
   padding-bottom: 0.1em;
   text-decoration: none;
-  border-bottom: 1px  #ff897a dashed; }
+  border-bottom: 1px #fe6633 dashed; }
 
 .partner-list {
   list-style: none;
@@ -379,7 +379,16 @@ h2 {
   padding-bottom: 0.5em; }
 .project h2 {
   padding: 0;
-  padding-bottom: 0.5em; }
+  padding-bottom: 0.5em;
+  color: #fe6633; }
+.project .button {
+  border: 0.1em solid #fe6633;
+  color: #fe6633; }
+  .project .button:visited {
+    color: #fe6633; }
+  .project .button:hover {
+    background-color: #fe6633;
+    color: #fff; }
 
 .button {
   max-width: 12em;
@@ -417,13 +426,13 @@ section {
     margin: 0 auto; }
 
 section:nth-child(4) {
-  background-color: #59d5fe; }
+  background-color: #A3E8FF; }
 
 section:nth-child(0) {
-  background-color: #59d5fe; }
+  background-color: #A3E8FF; }
 
 section:nth-child(6) {
-  background-color: #ffaf9c; }
+  background-color: #FF8962; }
 
 @media (min-width: 600px) {
   .col-3 {

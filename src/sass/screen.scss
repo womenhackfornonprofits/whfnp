@@ -1,6 +1,5 @@
 @import "partials/base";
-
-
+@import "partials/reset";
 *, 
 *:before,
 *:after {
@@ -10,6 +9,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 body, html {
 	margin: 0;
 	padding: 0;
@@ -34,107 +34,19 @@ body, html {
 #logo {
 	width: 15em;
 	margin-top: 1em;
-
 }
 .img-container {
 	display: inline-block;
-	width: 50%;
-	padding: .3em;
-	vertical-align: top;
+	float: left;
 }
+
 header {
 	height: auto;
 }
-/** Navigation Styles**/
-nav {
-	display: none;
-	vertical-align: top;
-	margin: 0;
-	padding: 0;
-	width: 55%;
-	//position: absolute;
-	//top:0;
-	ul {
-		padding: 0;
-		list-style: none;
-		width: 100%;
-		margin: 0 auto;
-		display: flex;
-		//max-width: 30em; 
-		flex-wrap: wrap;
-		flex-direction: row;
-		li {
-			flex-grow: 1;
-			text-align: center;
-			display: inline-block;
-			padding: 2.7em .2em;
-			margin: 0 auto;
-			text-align: center;
-			font-size: $base-font-size;
-			a {
-				text-decoration: none;
-				font-family: $base-font-name;
-				text-transform: uppercase;
-				color: $nav-link-color;
-				padding-bottom: 0.15em;
-				&:visited{
-					color: $nav-link-visited-color;
-				}
-				&:hover {
-					border-bottom: 0.15em solid $salmon-pink;
-				}
 
-			}
-		}
-	}
-}
 
-.current-projects {
-	//background-color: $grey;
-}
 
-.col-wrap {
-	margin: 0;
-	padding: 0;
-    clear: both;
-}
-.founding-team, .board-teams {
-	max-width: 50em;
-	margin: 0 auto;
-	padding: 0;
-}
-.board-teams {
-	.col-3 {
-		background-color: $pop-pink;
-		border:0;
-		h2 {
-			color: $white;
-		}
-		margin: 0;
-	}
-	.col-3:nth-child(odd) {
-		background-color: $pop-blue;
-	}
 
-}
-.col-3 {
-	width: auto;
-	margin: $padding-margin-value;
-	border: 0.1em solid $pop-pink;
-	padding: $padding-margin-value;
-	text-align: center;
-
-	h2 {
-		text-transform: none;
-		font-size: $title-font-size/1.3;
-		color: #333;
-		padding: 0;
-	}
-	p {
-		margin: $padding-margin-value 0;
-	}
-
-}
 // setting default volunteer image
 $default-volunteer: url('../img/volunteers/default_volunteer.png');
 $vinita-image: url('../img/volunteers/Vinita_Rathi.jpg');
@@ -176,66 +88,13 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 	background: $charu-image no-repeat center center;
 }
 
-.volunteer-picture {
-	border: none;
-	background-size: cover;
-	position: relative;
-	padding: 0;
-	height: 15em;
-	width: auto;
-	h2 {
-		color: $white;
-		position: absolute;
-		bottom: 0;
-		padding: $padding-margin-value/2 0;
-		width: 100%;
-		background-color: $volunter-name-bg-color-1;
-
-	}
-	p {
-		position: absolute;
-		top: 0;
-		right: 0;
-		padding: $padding-margin-value/2;
-		margin: $padding-margin-value/2 0;
-		background-color:$volunter-type-bg-color-1;
-		color: $white;
-
-	}
-	
-}
-.volunteer-picture:nth-child(even) {
-	h2 {
-		background-color: $volunter-name-bg-color-2;
-
-	}
-	p {
-		background-color: $volunter-type-bg-color-2;
-	}
-
-}
 
 .icon img {
 	height: 4em;
 }
-.banner {
-	background: 
-	linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)),
-    url('../img/background-2.jpeg') no-repeat center center;
-	background-size: cover;
-	h2 {
-		font-family: $base-font-name;
-		font-weight: $base-font-light;
-		color: $white;
-		font-size: 1.6em;
-		line-height: 1.6em;
-		max-width: 40em;
-		margin:0 auto;
-		text-transform: none;
-	}
-}
 
-h1 {
+
+.title-heading {
 	font-family: $title-font-name;
 	font-weight: 100;
 	color: $white;
@@ -244,31 +103,27 @@ h1 {
 	text-align: center;
 	padding: 1em 0;
 	margin: 0;
+	@media(min-width:600px) {
+		font-size: $h1-font-size;
+	}
+
 }
 
-h2 {
+
+.section-heading, .sub-title, h2 {
 	font-family: $title-font-name;
 	padding: $padding-margin-value/2;
 	padding-top: 0;
 	font-weight: bold;
 	color: $pop-pink;
-	font-size: $title-font-size/1.5;
+	font-size: $title-font-size;
 	max-width: 40em;
 	margin:0 auto;
 	text-align: center;
-}
 
-
-.smaller-banner {
-	background:
-    	linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)),
-    	url('../img/background-2.jpeg') no-repeat center center;
-	background-size: cover;
-	height: $smaller-banner-height;
-	h1 {
-		padding: 0;
+	@media(min-width:600px) {
+		font-size: $title-font-size;
 	}
-
 }
 
 .text-link {
@@ -278,84 +133,71 @@ h2 {
   	border-bottom: 1px  $orange dashed;
 
 }
-.partner-list {
-	list-style: none;
-	max-width: 27em;
-	margin: $padding-margin-value auto;
-	li {
-		display: inline-block;
-		height: 6em;
-	}
-	img {
-		height: 100%;
-		width: auto;
-	}
-}
 
-.project-img {
-	height: $project-image-height;
-	background: url('../img/background-2.jpeg') no-repeat center center;
+
+.volunteer-picture, .non-profit-picture {
+	border: none;
 	background-size: cover;
-	margin: $padding-margin-value 0;
-}
-.project-info {
-	vertical-align: top;
-}
-.project {
-	h3 {
-		text-align: center;
-		font-style: bold;
-		font-weight: 100;
-		padding: 0;
-		padding-bottom: $padding-margin-value/4;
+	position: relative;
+	padding: 0;
+	height: 15em;
+	width: auto;
+	h2 {
+		color: $white;
+		padding: $padding-margin-value/2 0;
+		width: 100%;
+	}
+	p {
+		padding: $padding-margin-value/2;
+		margin: $padding-margin-value/2 0;
+		color: $white;
 
 	}
-	h2 {
-		padding: 0;
-		padding-bottom: $padding-margin-value/4;
-		color: $orange;
-	}
-	.button {
-		border: 0.1em solid $orange;
-		color: $orange;
-		&:visited{
-		color: $orange;
-		}
-		&:hover {
-			background-color: $orange;
-			color: #fff;
-		}
-	}
 }
-.button {
-	max-width: 12em;
-	margin: $padding-margin-value auto 0 auto;
-	border: 0.1em solid $pop-pink;
-	text-decoration: none;
-	padding: $padding-margin-value/2;
-	display: block;
-	color: $pop-pink;
-	text-align: center;
-	&:visited{
-	color: $pop-pink;
+
+.non-profit-icons {
+	width: 6em;
+	margin-bottom: $padding-margin-value/2;
+}
+.non-profit-picture {
+	cursor: pointer;
+	p, h2 {
+		display: none;
 	}
 	&:hover {
-		background-color: $pop-pink;
-		color: #fff;
-	}
-	
-}
-
-footer {
-	background-color: #3c3c3c;
-	padding: 3em;
-	p {
-		text-align: center;
-		font-weight: 100;
-		font-size: 0.9em;
-		color: #fff;
+		.overlay-text{
+			height: 100%;
+			width: 100%;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		p, h2 {
+			display: block;
+		}
 	}
 }
+.overlay-text > h2 {
+	padding: $padding-margin-value/2 0;
+}
+.founding-team, .non-profits-wrap {
+	max-width: 50em;
+	margin: 0 auto;
+	padding: 0;
 
+	@media (min-width: 600px) {
+		padding:0;
+		.col-3 {
+			min-height: 15em;
+		}
+	}
+}
+
+@import "partials/nav";
+@import "partials/banners";
 @import "partials/section";
-@import "partials/media";
+@import "partials/button";
+@import "partials/projects";
+@import "partials/columns";
+@import "partials/social";
+@import "partials/footer";
+@import "partials/partners";
+

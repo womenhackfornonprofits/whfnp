@@ -1,0 +1,13 @@
+.partner-list {
+	list-style: none;
+	max-width: 27em;
+	margin: $padding-margin-value auto;
+	li {
+		display: inline-block;
+		height: 6em;
+	}
+	img {
+		height: 100%;
+		width: auto;
+	}
+}

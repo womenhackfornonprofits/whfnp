@@ -1,0 +1,47 @@
+/** Navigation Styles**/
+nav {
+	display: none;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	width: 55%;
+	float: right;
+	//position: absolute;
+	//top:0;
+	ul {
+		padding: 0;
+		list-style: none;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		//max-width: 30em; 
+		flex-wrap: wrap;
+		flex-direction: row;
+		li {
+			flex-grow: 1;
+			text-align: center;
+			display: inline-block;
+			padding: 2.7em .2em;
+			margin: 0 auto;
+			text-align: center;
+			font-size: $base-font-size;
+			a {
+				text-decoration: none;
+				font-family: $base-font-name;
+				text-transform: uppercase;
+				color: $nav-link-color;
+				padding-bottom: 0.15em;
+				&:visited{
+					color: $nav-link-visited-color;
+				}
+				&:hover {
+					border-bottom: 0.15em solid $salmon-pink;
+				}
+
+			}
+		}
+	}
+	@media(min-width:600px) {
+		display:inline-block;
+	}
+}

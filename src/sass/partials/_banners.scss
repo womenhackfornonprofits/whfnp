@@ -1,0 +1,27 @@
+.banner {
+	background: 
+	linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)),
+    url('../img/background-2.jpeg') no-repeat center center;
+	background-size: cover;
+	h2 {
+		font-family: $base-font-name;
+		font-weight: $base-font-light;
+		color: $white;
+		font-size: 1.6em;
+		line-height: 1.6em;
+		max-width: 40em;
+		margin:0 auto;
+		text-transform: none;
+	}
+}
+.smaller-banner {
+	background:
+    	linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)),
+    	url('../img/background-2.jpeg') no-repeat center center;
+	background-size: cover;
+	height: $smaller-banner-height;
+	h1 {
+		padding: 0;
+	}
+
+}

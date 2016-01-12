@@ -1,0 +1,18 @@
+.button {
+	max-width: 12em;
+	margin: $padding-margin-value auto 0 auto;
+	border: 0.1em solid $pop-pink;
+	background-color: $pop-pink;
+	color: $white;
+	text-decoration: none;
+	padding: $padding-margin-value/2;
+	display: block;
+	text-align: center;
+	&:visited{
+	}
+	&:hover {
+		background: none;
+		color: $pop-pink;
+	}
+	
+}

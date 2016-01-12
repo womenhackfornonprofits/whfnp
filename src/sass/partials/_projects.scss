@@ -1,0 +1,43 @@
+.project-img {
+	height: $project-image-height;
+	background: url('../img/background-2.jpeg') no-repeat center center;
+	background-size: cover;
+	margin: $padding-margin-value 0;
+	@media(min-width:600px) {
+		display: inline-block;
+		width: 49%;
+	}
+}
+.project-info {
+	vertical-align: top;
+	@media(min-width:600px) {
+		display: inline-block;
+		width: 49%;
+		margin: $padding-margin-value*2 0;
+		padding-left: $padding-margin-value;
+		.button {
+			margin: $padding-margin-value $padding-margin-value 0 0;
+		}
+	}
+}
+.project {
+	h3 {
+		text-align: center;
+		font-style: bold;
+		font-weight: 100;
+		padding: 0;
+		padding-bottom: $padding-margin-value/4;
+
+	}
+	h2 {
+		padding: 0;
+		padding-bottom: $padding-margin-value/4;
+		color: $orange;
+	}
+	@media(min-width:600px) {
+		h2, h3, p {
+			text-align: left;
+		}
+	}
+	
+}

@@ -622,6 +622,57 @@ section:nth-child(even) h2 {
   display: inline-block;
   background-size: cover; }
 
+form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 20em;
+  padding: 2em; }
+
+input[type=text] {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  margin: 1em auto 1em auto;
+  border: 1px solid #f2f2f2;
+  color: #333; }
+
+input[type=email] {
+  display: block;
+  padding: 1em;
+  margin: 0 auto 1em auto;
+  width: 100%;
+  border: 1px solid #f2f2f2;
+  color: #333; }
+
+input[type=number] {
+  display: block;
+  padding: 1em;
+  margin: 0 auto 1em auto;
+  width: 100%;
+  border: 1px solid #f2f2f2;
+  color: #333; }
+
+input[type=submit] {
+  display: block;
+  padding: 1em;
+  margin: 0 auto 1em auto;
+  width: 100%;
+  border: none;
+  opacity: 1;
+  box-shadow: 0.5em 0.5em 0px rgba(0, 0, 0, 0.1);
+  background-color: #e42e3d;
+  color: #fff; }
+  input[type=submit]:hover {
+    opacity: .8; }
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  margin: 0 auto 1em auto;
+  border: 1px solid #f2f2f2;
+  color: #333; }
+
 footer {
   background-color: #3c3c3c;
   padding: 3em; }

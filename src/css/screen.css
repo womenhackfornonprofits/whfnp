@@ -291,8 +291,8 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: "Helvetica", sans-serif;
-  font-weight: 100;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   font-size: 1.2em;
   line-height: 24px;
   letter-spacing: 0.01em;
@@ -315,6 +315,9 @@ body, html {
 
 header {
   height: auto; }
+
+h3 {
+  text-align: center; }
 
 .vinita {
   background: url("../img/volunteers/Vinita_Rathi.jpg") no-repeat center center; }
@@ -389,11 +392,13 @@ header {
   .volunteer-picture h2, .non-profit-picture h2 {
     color: #fff;
     padding: 1em 0;
-    width: 100%; }
+    width: 100%;
+    display: none; }
   .volunteer-picture p, .non-profit-picture p {
     padding: 1em;
     margin: 1em 0;
-    color: #fff; }
+    color: #fff;
+    display: none; }
 
 .non-profit-icons {
   width: 6em;
@@ -408,7 +413,8 @@ header {
     width: 100%;
     background: rgba(0, 0, 0, 0.5); }
   .non-profit-picture:hover p, .non-profit-picture:hover h2 {
-    display: block; }
+    display: block;
+    padding-top: 2em; }
 
 .overlay-text > h2 {
   padding: 1em 0; }
@@ -449,7 +455,7 @@ nav {
       font-size: 16px; }
       nav ul li a {
         text-decoration: none;
-        font-family: "Helvetica", sans-serif;
+        font-family: "Lato", sans-serif;
         text-transform: uppercase;
         color: #000;
         padding-bottom: 0.15em; }
@@ -462,11 +468,12 @@ nav {
       display: inline-block; } }
 
 .banner {
-  background: linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
-  background-size: cover; }
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
+  background-size: cover;
+  height: 30em; }
   .banner h2 {
-    font-family: "Helvetica", sans-serif;
-    font-weight: 100;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
     color: #fff;
     font-size: 1.6em;
     line-height: 1.6em;
@@ -475,11 +482,23 @@ nav {
     text-transform: none; }
 
 .smaller-banner {
-  background: linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)), url("../img/background-2.jpeg") no-repeat center center;
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
   background-size: cover;
   height: 24em; }
   .smaller-banner h1 {
     padding: 0; }
+
+.about-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
+  background-size: cover; }
+
+.projects-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/projects.jpg") no-repeat center center;
+  background-size: cover; }
+
+.non-profits {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/non-profits1.JPG") no-repeat center center;
+  background-size: cover; }
 
 section {
   margin: 0;
@@ -591,6 +610,18 @@ section:nth-child(even) h2 {
   @media (min-width: 600px) {
     .col-wrap {
       padding: 0 0 2em 0; } }
+
+.col-2 {
+  width: auto;
+  margin: 2em;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .col-2 {
+      width: 49%;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      margin-top: 2em; } }
 
 .social {
   float: none;

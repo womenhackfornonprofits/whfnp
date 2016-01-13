@@ -44,7 +44,9 @@ header {
 	height: auto;
 }
 
-
+h3 {
+	text-align: center; //change this to a class
+}
 
 
 // setting default volunteer image
@@ -146,11 +148,13 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 		color: $white;
 		padding: $padding-margin-value/2 0;
 		width: 100%;
+		display: none;
 	}
 	p {
 		padding: $padding-margin-value/2;
 		margin: $padding-margin-value/2 0;
 		color: $white;
+		display: none;
 
 	}
 }
@@ -172,6 +176,7 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 		}
 		p, h2 {
 			display: block;
+			padding-top: $padding-margin-value;
 		}
 	}
 }

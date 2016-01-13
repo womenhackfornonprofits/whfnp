@@ -1,8 +1,11 @@
+
+
 .banner {
 	background: 
-	linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)),
-    url('../img/background-2.jpeg') no-repeat center center;
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+ 	url('../img/about.jpg') no-repeat center center;
 	background-size: cover;
+	height: 30em;
 	h2 {
 		font-family: $base-font-name;
 		font-weight: $base-font-light;
@@ -14,14 +17,41 @@
 		text-transform: none;
 	}
 }
+
 .smaller-banner {
-	background:
-    	linear-gradient(rgba(254, 102, 51, 0.35), rgba(0, 0, 0, 0.5)),
-    	url('../img/background-2.jpeg') no-repeat center center;
+	background: 
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+ 	url('../img/about.jpg') no-repeat center center;
 	background-size: cover;
 	height: $smaller-banner-height;
 	h1 {
 		padding: 0;
 	}
+
+}
+
+
+
+.about-image {
+	background:
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+    	url('../img/about.jpg') no-repeat center center;
+    background-size: cover;
+
+}
+
+.projects-image {
+	background:
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+    	url('../img/projects.jpg') no-repeat center center;
+    background-size: cover;
+
+}
+
+.non-profits {
+	background:
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+    	url('../img/non-profits1.JPG') no-repeat center center;
+   	background-size: cover;
 
 }

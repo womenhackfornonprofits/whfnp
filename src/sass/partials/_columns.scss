@@ -38,3 +38,18 @@
 		padding: 0 0 2em 0;
 	}
 }
+
+.col-2 {
+	width: auto;
+	margin: $padding-margin-value;
+	text-align: center;
+		@media(min-width: 600px) {
+
+	width: 49%;
+	display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    margin-top: $padding-margin-value;
+}
+   
+}

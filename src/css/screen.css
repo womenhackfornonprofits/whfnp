@@ -405,16 +405,8 @@ h3 {
   margin-bottom: 1em; }
 
 .non-profit-picture {
-  cursor: pointer; }
-  .non-profit-picture p, .non-profit-picture h2 {
-    display: none; }
-  .non-profit-picture:hover .overlay-text {
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5); }
-  .non-profit-picture:hover p, .non-profit-picture:hover h2 {
-    display: block;
-    padding-top: 2em; }
+  height: 100%;
+  width: 100%; }
 
 .overlay-text > h2 {
   padding: 1em 0; }
@@ -542,8 +534,12 @@ section:nth-child(even) h2 {
     background: none;
     color: #e42e3d; }
 
+.inactive {
+  background: none;
+  color: #e42e3d; }
+
 .project-img {
-  height: 22em;
+  height: 26em;
   background: url("../img/background-2.jpeg") no-repeat center center;
   background-size: cover;
   margin: 2em 0; }

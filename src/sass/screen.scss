@@ -164,21 +164,23 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 	margin-bottom: $padding-margin-value/2;
 }
 .non-profit-picture {
-	cursor: pointer;
-	p, h2 {
-		display: none;
-	}
-	&:hover {
-		.overlay-text{
-			height: 100%;
-			width: 100%;
-			background: rgba(0, 0, 0, 0.5);
-		}
-		p, h2 {
-			display: block;
-			padding-top: $padding-margin-value;
-		}
-	}
+	height: 100%;
+	width: 100%;
+	//cursor: pointer;
+	// p, h2 {
+	// 	display: none;
+	// }
+	// &:hover {
+	// 	.overlay-text{
+	// 		height: 100%;
+	// 		width: 100%;
+	// 		background: rgba(0, 0, 0, 0.5);
+	// 	}
+	// 	p, h2 {
+	// 		display: block;
+	// 		padding-top: $padding-margin-value;
+	// 	}
+	// }
 }
 .overlay-text > h2 {
 	padding: $padding-margin-value/2 0;

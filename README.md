@@ -4,7 +4,15 @@ Women Hack for Non-Profits website rebuild.
 ## Dev Setup Instructions
 
 1. First you will need to install NPM to manage packages https://nodejs.org/
-2. Clone the repo: `git clone git@github.com:womenhackfornonprofits/whfnp.git`
-3. Install all required packages:
+2. Install [Grunt](http://gruntjs.com/getting-started)
+3. Clone the repo: `git clone git@github.com:womenhackfornonprofits/whfnp.git`
+4. Install all required packages:
 	`npm install` 
 	in the directory root, this will read the package.json file and install all required packages.
+5. You will need to create a file s3settings.json add in the following:
+`{
+    "key": "",
+    "secret": "",
+    "region": ""
+
+}`

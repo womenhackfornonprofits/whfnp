@@ -10,9 +10,9 @@ Women Hack for Non-Profits website rebuild.
 	`npm install` 
 	in the directory root, this will read the package.json file and install all required packages.
 5. You will need to create a file s3settings.json add in the following:
-`{
+```{
     "key": "",
     "secret": "",
     "region": ""
 
-}`
+}```

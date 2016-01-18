@@ -184,6 +184,13 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 .overlay-text > h2 {
 	padding: $padding-margin-value/2 0;
 }
+.non-profits-wrap {
+	img {
+		margin: 2em auto;
+    	width: auto;
+    	display: block;
+	}
+}
 .founding-team, .non-profits-wrap {
 	max-width: 50em;
 	margin: 0 auto;

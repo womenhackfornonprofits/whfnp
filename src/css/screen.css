@@ -410,6 +410,11 @@ h3 {
 .overlay-text > h2 {
   padding: 1em 0; }
 
+.non-profits-wrap img {
+  margin: 2em auto;
+  width: auto;
+  display: block; }
+
 .founding-team, .non-profits-wrap {
   max-width: 50em;
   margin: 0 auto;
@@ -440,7 +445,7 @@ nav {
       flex-grow: 1;
       text-align: center;
       display: inline-block;
-      padding: 2.7em .2em;
+      padding: 1.8em .2em;
       margin: 0 auto;
       text-align: center;
       font-size: 16px; }
@@ -508,10 +513,10 @@ section {
         padding: 0; } }
 
 section:nth-child(4) {
-  background-color: #91DAE7; }
+  background-color: #88DAE9; }
 
 section:nth-child(0) {
-  background-color: #91DAE7; }
+  background-color: #88DAE9; }
 
 section:nth-child(6) {
   background-color: #FF8962; }
@@ -710,13 +715,16 @@ footer {
 
 .partner-list {
   list-style: none;
-  max-width: 27em;
+  max-width: 25em;
   margin: 2em auto; }
   .partner-list li {
     display: inline-block;
-    height: 6em; }
+    width: 8em;
+    vertical-align: middle; }
+  .partner-list li:last-child {
+    margin: 0 30%; }
   .partner-list img {
-    height: 100%;
-    width: auto; }
+    width: 100%;
+    height: auto; }
 
 /*# sourceMappingURL=screen.css.map */

@@ -615,6 +615,8 @@ section:nth-child(even) h2 {
   width: auto;
   margin: 2em;
   text-align: center; }
+  .col-2 p {
+    padding: 0 2em; }
   @media (min-width: 600px) {
     .col-2 {
       width: 49%;
@@ -659,13 +661,16 @@ form {
   max-width: 20em;
   padding: 2em; }
 
-input[type=text] {
+input {
   display: block;
   width: 100%;
   padding: 1em;
   margin: 1em auto 1em auto;
   border: 1px solid #f2f2f2;
   color: #333; }
+
+label {
+  display: none; }
 
 input[type=email] {
   display: block;

@@ -6,13 +6,16 @@ form {
   padding: $padding-margin-value;
 }
 
-input[type=text] {
+input {
   display: block;
   width: 100%;
   padding: $form-padding-value;
   margin: $form-padding-value auto $form-padding-value auto;
   border: 1px solid $grey;
   color: $black;
+}
+label {
+  display: none;
 }
 
 input[type=email] {

@@ -50,16 +50,26 @@
 		</header>
 		<section class="smaller-banner">
 			<div class="content">
-				<h1 class="title-heading">Contact Us</h2>
-			</div>
+<!-- 				<h1 class="title-heading">Volunteer</h2>
+ -->			</div>
 		</section>
 		<section>
-			<h2> Get in touch </h2>
+			<h2> Volunteer with us</h2>
 			<form method="POST" action="//formspree.io/info@treloganyoga.co.uk">
-				<input type="text" name="name" placeholder="Name">
-				<input type="email" name="_replyto" placeholder="Email">
-				<input type="text" name="phone" placeholder="Phone (Optional)">
-				<textarea name="message" rows="5" placeholder="Your message here"></textarea>    
+				<label for="name">Name:</label>
+				<input type="text" name="name" placeholder="Name" required>
+				<label for="surname">Surname:</label>
+				<input type="text" name="surname" placeholder="Surname">
+				<label for="email">Your email address:</label>
+				<input type="email" name="_replyto" placeholder="Email" required>
+				<label for="linkedin">LinkedIn profile:</label>
+				<input type="url" name="linkedin" placeholder="LinkedIn profile">
+				<label for="volunteer-skills">What skills are you able to contribute?</label>
+				<textarea name="volunteer-skills" rows="3" placeholder="Skills E.g. QA, Python"></textarea>   
+				<label for="hours">How many hours a week are you able to commit to a project with us?</label>
+				<input type="number" name="hours" placeholder="Weekly commitment in hours">
+				<label for="why-volunteer">Why would you like to volunteer with us?</label>
+				<textarea name="why-volunteer" rows="5" placeholder="Why are you interested in volunteering?"></textarea>    
 				<input type="submit" value="Send">
 			</form>
 		</section>

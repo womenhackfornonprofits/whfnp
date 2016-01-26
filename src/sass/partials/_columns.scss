@@ -43,13 +43,15 @@
 	width: auto;
 	margin: $padding-margin-value;
 	text-align: center;
-		@media(min-width: 600px) {
-
-	width: 49%;
-	display: inline-block;
-    vertical-align: top;
-    margin: 0;
-    margin-top: $padding-margin-value;
-}
+	p {
+		padding: 0 2em;
+	}
+	@media(min-width: 600px) {
+		width: 49%;
+		display: inline-block;
+	    vertical-align: top;
+	    margin: 0;
+	    margin-top: $padding-margin-value;
+	}
    
 }

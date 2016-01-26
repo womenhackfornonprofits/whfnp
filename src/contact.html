@@ -55,11 +55,13 @@
 		</section>
 		<section>
 			<h2> Get in touch </h2>
-			<form method="POST" action="//formspree.io/info@treloganyoga.co.uk">
-				<input type="text" name="name" placeholder="Name">
-				<input type="email" name="_replyto" placeholder="Email">
-				<input type="text" name="phone" placeholder="Phone (Optional)">
-				<textarea name="message" rows="5" placeholder="Your message here"></textarea>    
+			<form method="POST" action="//formspree.io/help@womenhackfornonprofits.com">
+				<input type="text" name="name" placeholder="Name" required>
+				<input type="email" name="_replyto" placeholder="Email" required>
+				<input type="hidden" name="_subject" value="New Submission: WHFN Website Contact Form"/>
+				<input type="text" name="_gotcha" style="display:none"/>
+				<input type="tel" name="phone" placeholder="Phone">
+				<textarea name="message" rows="5" placeholder="Your message here" required></textarea>    
 				<input type="submit" value="Send">
 			</form>
 		</section>

@@ -319,6 +319,19 @@ header {
 h3 {
   text-align: center; }
 
+.faq {
+  max-width: 45em;
+  margin: 0 auto; }
+  .faq p, .faq h3 {
+    text-align: left;
+    padding: 1em 1em 0 1em; }
+  .faq h3 {
+    color: #e42e3d;
+    font-style: italic; }
+  .faq ul {
+    list-style: disc;
+    padding: 0 2em; }
+
 .vinita {
   background: url("../img/volunteers/Vinita_Rathi.jpg") no-repeat center center; }
 
@@ -505,12 +518,14 @@ section {
   background-color: #fff; }
   section p {
     text-align: center;
-    max-width: 42em;
+    max-width: 45em;
     margin: 0 auto;
     padding: 2em; }
     @media (min-width: 600px) {
       section p {
         padding: 0; } }
+  section h3 {
+    max-width: 45em; }
 
 section:nth-child(4) {
   background-color: #88DAE9; }
@@ -523,6 +538,8 @@ section:nth-child(6) {
 
 section:nth-child(even) h2 {
   color: #fff; }
+section:nth-child(even) h3 {
+  color: #333; }
 
 .button {
   max-width: 12em;

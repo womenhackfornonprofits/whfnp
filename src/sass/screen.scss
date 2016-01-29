@@ -48,6 +48,23 @@ h3 {
 	text-align: center; //change this to a class
 }
 
+.faq {
+	p, h3 {
+		text-align: left;
+		padding: $padding-margin-value/2 $padding-margin-value/2 0 $padding-margin-value/2;
+	}
+	h3 {
+		color: $pop-pink;
+		font-style: italic;
+	}
+	max-width: $max-text-width; 
+	margin: 0 auto;
+	ul {
+		list-style: disc;
+		padding:0 $padding-margin-value;
+
+	}
+}
 
 // setting default volunteer image
 $default-volunteer: url('../img/volunteers/default_volunteer.png');

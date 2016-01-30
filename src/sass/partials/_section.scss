@@ -28,6 +28,11 @@ section {
 section:nth-child(4) {
  	$section-bg: $pop-blue;
  	background-color: $section-bg;
+ 	.faq{
+ 		h3 {
+		color: $black;
+		}
+	}
 }
 
 section:nth-child(0) {

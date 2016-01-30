@@ -30,7 +30,27 @@
 
 }
 
+.volunteers-image {
+	background:
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+    	url('../img/volunteers.jpg') no-repeat center center;
+    background-size: cover;
 
+}
+.events-image {
+	background:
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+    	url('../img/events.jpg') no-repeat center center;
+    background-size: cover;
+
+}
+.contact-image {
+	background:
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+    	url('../img/contact.jpg') no-repeat center center;
+    background-size: cover;
+
+}
 
 .about-image {
 	background:
@@ -44,6 +64,13 @@
 	background:
 	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
     	url('../img/projects.jpg') no-repeat center center;
+    background-size: cover;
+
+}
+.homepage-image {
+	background:
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+    	url('../img/homepage.jpeg') no-repeat center center;
     background-size: cover;
 
 }

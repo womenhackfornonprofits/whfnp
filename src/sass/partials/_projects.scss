@@ -1,12 +1,30 @@
 .project-img {
+	img {
+		height: $project-image-height;
+	}
+	//background: url('../img/background-2.jpeg') no-repeat center center;
 	height: $project-image-height;
-	background: url('../img/background-2.jpeg') no-repeat center center;
-	background-size: cover;
+	border: .1em $grey-white  solid;
+
 	margin: $padding-margin-value 0;
 	@media(min-width:600px) {
 		display: inline-block;
 		width: 49%;
 	}
+}
+
+.findacure {
+	background: url('../img/non-profits/findacure.png') no-repeat;
+	background-size: cover;
+
+}
+.pimpmycause {
+	background: url('../img/non-profits/pimp-my-cause.png') no-repeat;
+	background-size: cover;
+}
+.jaspalsvoice {
+	background: url('../img/non-profits/jaspalsvoice.png') no-repeat;
+	background-size: cover;
 }
 .project-info {
 	vertical-align: top;

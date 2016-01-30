@@ -342,6 +342,9 @@ h3 {
     list-style: disc;
     padding: 0 2em; }
 
+sectionnth-child h3 {
+  color: #333; }
+
 .icon img {
   height: 4em; }
 
@@ -480,12 +483,28 @@ nav {
   .smaller-banner h1 {
     padding: 0; }
 
+.volunteers-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/volunteers.jpg") no-repeat center center;
+  background-size: cover; }
+
+.events-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/events.jpg") no-repeat center center;
+  background-size: cover; }
+
+.contact-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/contact.jpg") no-repeat center center;
+  background-size: cover; }
+
 .about-image {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
   background-size: cover; }
 
 .projects-image {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/projects.jpg") no-repeat center center;
+  background-size: cover; }
+
+.homepage-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/homepage.jpeg") no-repeat center center;
   background-size: cover; }
 
 .non-profits {
@@ -514,6 +533,8 @@ section {
 
 section:nth-child(4) {
   background-color: #88DAE9; }
+  section:nth-child(4) .faq h3 {
+    color: #333; }
 
 section:nth-child(0) {
   background-color: #88DAE9; }
@@ -544,13 +565,26 @@ section:nth-child(even) h2 {
 
 .project-img {
   height: 26em;
-  background: url("../img/background-2.jpeg") no-repeat center center;
-  background-size: cover;
+  border: 0.1em #f4f4f4 solid;
   margin: 2em 0; }
+  .project-img img {
+    height: 26em; }
   @media (min-width: 600px) {
     .project-img {
       display: inline-block;
       width: 49%; } }
+
+.findacure {
+  background: url("../img/non-profits/findacure.png") no-repeat;
+  background-size: cover; }
+
+.pimpmycause {
+  background: url("../img/non-profits/pimp-my-cause.png") no-repeat;
+  background-size: cover; }
+
+.jaspalsvoice {
+  background: url("../img/non-profits/jaspalsvoice.png") no-repeat;
+  background-size: cover; }
 
 .project-info {
   vertical-align: top; }

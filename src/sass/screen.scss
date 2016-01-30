@@ -97,7 +97,11 @@ sectionnth-child {
 .speech-bubble-left, .speech-bubble-right {
 	background-color: $white;
 	position: relative;
-	border-radius: 3em;
+	border-radius: 1em;
+	p {
+		text-align: left;
+
+	}
 }
 
 .speech-bubble-left:before {
@@ -113,11 +117,7 @@ sectionnth-child {
 
 }
 
-.speech-bubble-left {
-	background-color: $white;
-	position: relative;
-	border-radius: 3em;
-}
+
 
 .speech-bubble-left:before {
 	content:"";

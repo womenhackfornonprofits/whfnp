@@ -355,7 +355,9 @@ sectionnth-child h3 {
 .speech-bubble-left, .speech-bubble-right {
   background-color: #fff;
   position: relative;
-  border-radius: 3em; }
+  border-radius: 1em; }
+  .speech-bubble-left p, .speech-bubble-right p {
+    text-align: left; }
 
 .speech-bubble-left:before {
   content: "";
@@ -367,11 +369,6 @@ sectionnth-child h3 {
   border-top: 13px solid transparent;
   border-right: 26px solid #fff;
   border-bottom: 13px solid transparent; }
-
-.speech-bubble-left {
-  background-color: #fff;
-  position: relative;
-  border-radius: 3em; }
 
 .speech-bubble-left:before {
   content: "";

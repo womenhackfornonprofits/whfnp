@@ -345,6 +345,56 @@ h3 {
 sectionnth-child h3 {
   color: #333; }
 
+.client-testimonial .col-2 {
+  height: 18em;
+  margin-bottom: 2em; }
+  .client-testimonial .col-2 p {
+    padding: 2em;
+    padding-top: 2em; }
+
+.speech-bubble-left, .speech-bubble-right {
+  background-color: #fff;
+  position: relative;
+  border-radius: 3em; }
+
+.speech-bubble-left:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 3em;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #fff;
+  border-bottom: 13px solid transparent; }
+
+.speech-bubble-left {
+  background-color: #fff;
+  position: relative;
+  border-radius: 3em; }
+
+.speech-bubble-left:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 3em;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #fff;
+  border-bottom: 13px solid transparent; }
+
+.speech-bubble-right:before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 3em;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-left: 26px solid #fff;
+  border-bottom: 13px solid transparent; }
+
 .icon img {
   height: 4em; }
 
@@ -415,7 +465,7 @@ sectionnth-child h3 {
   display: block; }
 
 .founding-team, .non-profits-wrap {
-  max-width: 50em;
+  max-width: 55em;
   margin: 0 auto;
   padding: 0; }
   @media (min-width: 600px) {

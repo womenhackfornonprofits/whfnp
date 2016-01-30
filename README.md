@@ -19,3 +19,13 @@ Women Hack for Non-Profits website rebuild.
 
 }
 ```
+
+# Team
+
+1. Content: Krissy
+2. Front end Dev: Liliana Kastilio
+3. Design: Elizabeth Chesters
+4. Logo: Mariza Dima
+5. QA & Project Manager: Tanya Powel
+
+

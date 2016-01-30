@@ -19,10 +19,10 @@ section {
 	}
 	h3 {
 		max-width: $max-text-width; 
-
+		text-align: center;
+		margin: 0 auto;
 	}
 }
-
 
 
 section:nth-child(4) {
@@ -45,8 +45,5 @@ section:nth-child(6) {
 section:nth-child(even){
 	h2 {
  		color: $white;
- 	}
- 	h3 {
- 		color: $black;
  	}
 }

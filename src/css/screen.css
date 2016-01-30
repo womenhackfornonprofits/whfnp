@@ -319,6 +319,16 @@ header {
 h3 {
   text-align: center; }
 
+.volunteer-link {
+  text-decoration: none;
+  color: #e42e3d; }
+  .volunteer-link:visited {
+    color: #e42e3d; }
+
+.volunteer-quote {
+  text-align: left;
+  font-style: italic; }
+
 .faq {
   max-width: 45em;
   margin: 0 auto; }
@@ -331,33 +341,6 @@ h3 {
   .faq ul {
     list-style: disc;
     padding: 0 2em; }
-
-.vinita {
-  background: url("../img/volunteers/Vinita_Rathi.jpg") no-repeat center center; }
-
-.nandhini {
-  background: url("../img/volunteers/Nandhini_Narasimhan.jpeg") no-repeat center center; }
-
-.tanya {
-  background: url("../img/volunteers/Tanya_Powell.jpg") no-repeat center center; }
-
-.lili {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
-
-.corinne {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
-
-.rainey {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
-
-.funmi {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
-
-.kriselda {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
-
-.charu {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
 
 .icon img {
   height: 4em; }
@@ -525,7 +508,9 @@ section {
       section p {
         padding: 0; } }
   section h3 {
-    max-width: 45em; }
+    max-width: 45em;
+    text-align: center;
+    margin: 0 auto; }
 
 section:nth-child(4) {
   background-color: #88DAE9; }
@@ -538,8 +523,6 @@ section:nth-child(6) {
 
 section:nth-child(even) h2 {
   color: #fff; }
-section:nth-child(even) h3 {
-  color: #333; }
 
 .button {
   max-width: 12em;

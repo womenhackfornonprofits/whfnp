@@ -47,7 +47,17 @@ header {
 h3 {
 	text-align: center; //change this to a class
 }
-
+.volunteer-link {
+	text-decoration: none;
+	color: $pop-pink;
+	&:visited{
+		color: $pop-pink;
+	}
+}
+.volunteer-quote {
+	text-align: left;
+	font-style: italic;
+}
 .faq {
 	p, h3 {
 		text-align: left;
@@ -66,46 +76,46 @@ h3 {
 	}
 }
 
-// setting default volunteer image
-$default-volunteer: url('../img/volunteers/default_volunteer.png');
-$vinita-image: url('../img/volunteers/Vinita_Rathi.jpg');
-$nandhini-image: url('../img/volunteers/Nandhini_Narasimhan.jpeg');
-$tanya-image: url('../img/volunteers/Tanya_Powell.jpg');
-$lili-image: url('../img/volunteers/default_volunteer.png');
-$corinne-image: url('../img/volunteers/default_volunteer.png');
-$rainey-image: url('../img/volunteers/default_volunteer.png');
-$funmi-image: url('../img/volunteers/default_volunteer.png');
-$kriselda-image: url('../img/volunteers/default_volunteer.png');
-$charu-image: url('../img/volunteers/default_volunteer.png');
+// // setting default volunteer image
+// $default-volunteer: url('../img/volunteers/default_volunteer.png');
+// $vinita-image: url('../img/volunteers/Vinita_Rathi.jpg');
+// $nandhini-image: url('../img/volunteers/Nandhini_Narasimhan.jpeg');
+// $tanya-image: url('../img/volunteers/Tanya_Powell.jpg');
+// $lili-image: url('../img/volunteers/default_volunteer.png');
+// $corinne-image: url('../img/volunteers/default_volunteer.png');
+// $rainey-image: url('../img/volunteers/default_volunteer.png');
+// $funmi-image: url('../img/volunteers/default_volunteer.png');
+// $kriselda-image: url('../img/volunteers/default_volunteer.png');
+// $charu-image: url('../img/volunteers/default_volunteer.png');
 
-.vinita {
-	background: $vinita-image no-repeat center center;
+// .vinita {
+// 	background: $vinita-image no-repeat center center;
 
-}
-.nandhini {
-	background: $nandhini-image no-repeat center center;
-}
-.tanya {
-	background: $tanya-image no-repeat center center;
-}
-.lili {
-	background: $lili-image no-repeat center center;
-}
-.corinne {
-	background: $corinne-image no-repeat center center;
-}
-.rainey {
-	background: $rainey-image no-repeat center center;
-}
-.funmi {
-	background: $funmi-image no-repeat center center;
-}
-.kriselda {
-	background: $kriselda-image no-repeat center center;
-}
-.charu {
-	background: $charu-image no-repeat center center;
-}
+// }
+// .nandhini {
+// 	background: $nandhini-image no-repeat center center;
+// }
+// .tanya {
+// 	background: $tanya-image no-repeat center center;
+// }
+// .lili {
+// 	background: $lili-image no-repeat center center;
+// }
+// .corinne {
+// 	background: $corinne-image no-repeat center center;
+// }
+// .rainey {
+// 	background: $rainey-image no-repeat center center;
+// }
+// .funmi {
+// 	background: $funmi-image no-repeat center center;
+// }
+// .kriselda {
+// 	background: $kriselda-image no-repeat center center;
+// }
+// .charu {
+// 	background: $charu-image no-repeat center center;
+// }
 
 
 .icon img {

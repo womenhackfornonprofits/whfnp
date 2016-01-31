@@ -342,9 +342,6 @@ h3 {
     list-style: disc;
     padding: 0 2em; }
 
-sectionnth-child h3 {
-  color: #333; }
-
 .client-testimonial .col-2 {
   height: 18em;
   margin-bottom: 2em; }
@@ -399,19 +396,20 @@ sectionnth-child h3 {
   font-family: "Lobster", cursive;
   font-weight: 100;
   color: #fff;
-  font-size: 32px;
-  line-height: 93.6px;
+  font-size: 2em;
+  line-height: 2em;
   text-align: center;
   padding: 1em 0;
   margin: 0; }
   @media (min-width: 600px) {
     .title-heading {
-      font-size: 62.4px; } }
+      font-size: 62.4px;
+      line-height: 93.6px; } }
 
 .section-heading, .sub-title, h2 {
   font-family: "Lobster", cursive;
-  padding: 1em;
   padding-top: 0;
+  padding: 0;
   font-weight: bold;
   color: #e42e3d;
   font-size: 32px;
@@ -420,7 +418,7 @@ sectionnth-child h3 {
   text-align: center; }
   @media (min-width: 600px) {
     .section-heading, .sub-title, h2 {
-      font-size: 32px; } }
+      padding: 1em; } }
 
 .text-link {
   color: #fe6633;
@@ -517,11 +515,18 @@ nav {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     color: #fff;
-    font-size: 1.6em;
-    line-height: 1.6em;
+    font-size: 1.3em;
+    line-height: 1.3em;
     max-width: 40em;
-    margin: 0 auto;
+    margin: 1em;
     text-transform: none; }
+    @media (min-width: 600px) {
+      .banner h2 {
+        font-size: 1.6em;
+        line-height: 1.6em;
+        padding: 0; }
+        .banner h2 h2 {
+          margin: 0 auto; } }
 
 .smaller-banner {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
@@ -668,7 +673,7 @@ section:nth-child(even) h2 {
     color: #333;
     padding: 0; }
   .col-3 p {
-    margin: 1em 0; }
+    margin: 0; }
   @media (min-width: 600px) {
     .col-3 {
       width: 31%;
@@ -676,6 +681,8 @@ section:nth-child(even) h2 {
       vertical-align: top;
       margin: 0;
       margin-top: 2em; }
+      .col-3 p {
+        margin: 1em 0; }
       .col-3:first-child {
         float: left; }
       .col-3:last-child {
@@ -802,15 +809,20 @@ footer {
 .partner-list {
   list-style: none;
   max-width: 25em;
-  margin: 2em auto; }
+  margin: 2em; }
   .partner-list li {
     display: inline-block;
-    width: 8em;
+    width: 47%;
     vertical-align: middle; }
   .partner-list li:last-child {
     margin: 0 30%; }
   .partner-list img {
     width: 100%;
     height: auto; }
+  @media (min-width: 600px) {
+    .partner-list {
+      margin: 2em auto; }
+      .partner-list li {
+        width: 8em; } }
 
 /*# sourceMappingURL=screen.css.map */

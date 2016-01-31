@@ -10,9 +10,13 @@
 		padding: 0;
 	}
 	p {
-		margin: $padding-margin-value/2 0;
+		margin: 0;
 	}
 	@media(min-width: 600px) {
+		p {
+			margin: $padding-margin-value/2 0;
+
+		}
 		width: $col-width;
 		display: inline-block;
     	vertical-align: top;

@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-gb">
   <head>
-    <title>Events | Women Hack for Non Profits</title>
+    <title>Volunteer Contact | Women Hack for Non Profits</title>
     <!--Meta Data-->
     <meta charset="UTF-8">
     <meta name="created" content='13th Dec 2015 04:37' />
-    <meta name="description" content="Women Hack for Non Profits upcoming events." />
+    <meta name="description" content="Volunteer signup/contact form, to get started with Women Hack for Non Profits." />
     <meta name="keywords" content="" />
-    <meta name="author" content="Women Hack for Non Profits" />
+    <meta name="author" content="Liliana Kastilio" />
     <meta name="copyright" content="All text content and images copyright womenhackfornonprofits.com" />
     <meta name="company" content="Women Hack for Non Profits" />
     <link rel="shortcut icon" href="img/icons/icon2.png" type="image/x-icon" />
-    <!--Facebook-->
-    <meta property="og:title" content="About | Women Hack for Non Profits">
-    <meta property="og:image" content="link_to_image">
-    <meta property="og:description" content="Women Hack for Non Profits is a program that brings passionate women in technology together to collaborate on projects for registered non profits and charities or individuals with a great cause, both in the UK and around the world.">
     <!--Styles-->
     <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen" />
     <!--[if IE]><script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -49,30 +45,33 @@
         </nav>
       </div>
     </header>
-    <section class="smaller-banner events-image">
+    <section class="smaller-banner">
       <div class="content">
-        <h1 class="title-heading">Events</h1>
-      </div>
+        <!-- 				<h1 class="title-heading">Volunteer</h2>
+ --></div>
     </section>
     <section>
-      <div class="content text-section">
-        <h2 class="section-heading">Our Events</h2>
-        <p>We run regular events across London. Coding workshops, social mixers, project pitches from non-profit organisation and hackathons. Come say hello at one of our next events.</p>
-        <a href="http://www.meetup.com/Women-Hack-For-Non-Profits/" class="button">Join us on Meetup</a>
-      </div>
-    </section>
-    <section>
-      <h2 class="section-heading"> Do you have any questions? </h2>
-      <p> If you would like to know more please check out our <a href="faq.html" class="text-link">FAQ</a>. If your question isn’t answered, please feel free to <a href="https://twitter.com/WHFNP" class="text-link">tweet us</a> or <a href="contact.html" class="text-link">drop us a line.</a></p>
-      <a href="faq.html" class="button">Volunteer FAQ</a>
-    </section>
-    <section>
-      <div class="content text-section">
-        <h2 class="section-heading">Newsletter</h2>
-        <p>Did you know we have an awesome newsletter? Sign up to ensure you don’t miss out on upcoming events, workshops and project news. </p>
-        <p>We will never spam or share your details.</p>
-        <a href="http://eepurl.com/bwvdlL" class="button">Sign up for updates</a>
-      </div>
+      <h2> Volunteer with us</h2>
+      <form method="POST" action="//formspree.io/help@womenhackfornonprofits.com">
+        <input type="hidden" name="_subject" value="New Submission: New Volunteer Application" />
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Name" required>
+        <label for="surname">Surname:</label>
+        <input type="text" name="surname" placeholder="Surname">
+        <label for="email">Your email address:</label>
+        <input type="email" name="_replyto" placeholder="Email" required>
+        <label for="linkedin">LinkedIn profile:</label>
+        <input type="url" name="linkedin" placeholder="LinkedIn profile">
+        <label for="twitter">Twitter profile:</label>
+        <input type="url" name="twitter" placeholder="Twitter profile">
+        <label for="volunteer-skills">What skills are you able to contribute?</label>
+        <textarea name="volunteer-skills" rows="3" placeholder="Skills E.g. QA, Python"></textarea>
+        <label for="hours">How many hours a week are you able to commit to a project with us?</label>
+        <input type="number" name="hours" placeholder="Weekly commitment in hours">
+        <label for="why-volunteer">Why would you like to volunteer with us?</label>
+        <textarea name="why-volunteer" rows="5" placeholder="Why are you interested in volunteering?"></textarea>
+        <input type="submit" value="Send">
+      </form>
     </section>
     <nav class="social">
       <ul>

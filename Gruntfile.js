@@ -8,6 +8,7 @@ grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-browser-sync');
+grunt.loadNpmTasks('grunt-prettify');
 
 
 grunt.initConfig({
@@ -69,8 +70,6 @@ grunt.initConfig({
         {expand: true, cwd: 'src/', src: ['*.html'], dest: 'deploy/', filter: 'isFile'},
         {expand: true, cwd: 'src/css', src: ['*.css'], dest: 'deploy/css/', filter: 'isFile'},
         {expand: true, cwd: 'src/img', src: ['*.{png,jpg,jpeg,svg}'], dest: 'deploy/img/', filter: 'isFile'},
-
-
       ]
     }
   },
@@ -109,6 +108,20 @@ grunt.initConfig({
         server: {
             baseDir: "src/"
         }
+    }
+  },
+  //-------- Prettify HTML ------//
+  prettify: {
+    options: {
+      // Task-specific options go here. 
+    },
+    html: {
+      // Target-specific file lists and/or options go here. 
+      expand: true,
+      cwd: 'src/',
+      ext: '.html',
+      src: ['*.html'],
+      dest: 'src/'
     }
   }
 });

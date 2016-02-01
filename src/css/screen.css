@@ -319,32 +319,75 @@ header {
 h3 {
   text-align: center; }
 
-.vinita {
-  background: url("../img/volunteers/Vinita_Rathi.jpg") no-repeat center center; }
+.volunteer-link {
+  text-decoration: none;
+  color: #e42e3d; }
+  .volunteer-link:visited {
+    color: #e42e3d; }
 
-.nandhini {
-  background: url("../img/volunteers/Nandhini_Narasimhan.jpeg") no-repeat center center; }
+.volunteer-quote {
+  text-align: left;
+  font-style: italic; }
 
-.tanya {
-  background: url("../img/volunteers/Tanya_Powell.jpg") no-repeat center center; }
+.faq {
+  max-width: 45em;
+  margin: 0 auto; }
+  .faq p, .faq h3 {
+    text-align: left;
+    padding: 1em 1em 0 1em; }
+  .faq h3 {
+    color: #e42e3d;
+    font-style: italic; }
+  .faq ul {
+    list-style: disc;
+    padding: 0 2em; }
 
-.lili {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
+.client-testimonial .col-2 {
+  height: 18em;
+  margin-bottom: 2em; }
+  .client-testimonial .col-2 p {
+    padding: 2em;
+    padding-top: 2em; }
 
-.corinne {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
+.speech-bubble-left, .speech-bubble-right {
+  background-color: #fff;
+  position: relative;
+  border-radius: 1em; }
+  .speech-bubble-left p, .speech-bubble-right p {
+    text-align: left; }
 
-.rainey {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
+.speech-bubble-left:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 3em;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #fff;
+  border-bottom: 13px solid transparent; }
 
-.funmi {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
+.speech-bubble-left:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 3em;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #fff;
+  border-bottom: 13px solid transparent; }
 
-.kriselda {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
-
-.charu {
-  background: url("../img/volunteers/default_volunteer.png") no-repeat center center; }
+.speech-bubble-right:before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 3em;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-left: 26px solid #fff;
+  border-bottom: 13px solid transparent; }
 
 .icon img {
   height: 4em; }
@@ -353,19 +396,20 @@ h3 {
   font-family: "Lobster", cursive;
   font-weight: 100;
   color: #fff;
-  font-size: 32px;
-  line-height: 93.6px;
+  font-size: 2em;
+  line-height: 2em;
   text-align: center;
   padding: 1em 0;
   margin: 0; }
   @media (min-width: 600px) {
     .title-heading {
-      font-size: 62.4px; } }
+      font-size: 62.4px;
+      line-height: 93.6px; } }
 
 .section-heading, .sub-title, h2 {
   font-family: "Lobster", cursive;
-  padding: 1em;
   padding-top: 0;
+  padding: 0;
   font-weight: bold;
   color: #e42e3d;
   font-size: 32px;
@@ -374,7 +418,7 @@ h3 {
   text-align: center; }
   @media (min-width: 600px) {
     .section-heading, .sub-title, h2 {
-      font-size: 32px; } }
+      padding: 1em; } }
 
 .text-link {
   color: #fe6633;
@@ -416,7 +460,7 @@ h3 {
   display: block; }
 
 .founding-team, .non-profits-wrap {
-  max-width: 50em;
+  max-width: 55em;
   margin: 0 auto;
   padding: 0; }
   @media (min-width: 600px) {
@@ -471,11 +515,18 @@ nav {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     color: #fff;
-    font-size: 1.6em;
-    line-height: 1.6em;
+    font-size: 1.3em;
+    line-height: 1.3em;
     max-width: 40em;
-    margin: 0 auto;
+    margin: 1em;
     text-transform: none; }
+    @media (min-width: 600px) {
+      .banner h2 {
+        font-size: 1.6em;
+        line-height: 1.6em;
+        padding: 0; }
+        .banner h2 h2 {
+          margin: 0 auto; } }
 
 .smaller-banner {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
@@ -484,12 +535,28 @@ nav {
   .smaller-banner h1 {
     padding: 0; }
 
+.volunteers-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/volunteers.jpg") no-repeat center center;
+  background-size: cover; }
+
+.events-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/events.jpg") no-repeat center center;
+  background-size: cover; }
+
+.contact-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/contact.jpg") no-repeat center center;
+  background-size: cover; }
+
 .about-image {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
   background-size: cover; }
 
 .projects-image {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/projects.jpg") no-repeat center center;
+  background-size: cover; }
+
+.homepage-image {
+  background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/homepage.jpeg") no-repeat center center;
   background-size: cover; }
 
 .non-profits {
@@ -505,15 +572,21 @@ section {
   background-color: #fff; }
   section p {
     text-align: center;
-    max-width: 42em;
+    max-width: 45em;
     margin: 0 auto;
     padding: 2em; }
     @media (min-width: 600px) {
       section p {
         padding: 0; } }
+  section h3 {
+    max-width: 45em;
+    text-align: center;
+    margin: 0 auto; }
 
 section:nth-child(4) {
   background-color: #88DAE9; }
+  section:nth-child(4) .faq h3 {
+    color: #333; }
 
 section:nth-child(0) {
   background-color: #88DAE9; }
@@ -544,13 +617,26 @@ section:nth-child(even) h2 {
 
 .project-img {
   height: 26em;
-  background: url("../img/background-2.jpeg") no-repeat center center;
-  background-size: cover;
+  border: 0.1em #f4f4f4 solid;
   margin: 2em 0; }
+  .project-img img {
+    height: 26em; }
   @media (min-width: 600px) {
     .project-img {
       display: inline-block;
       width: 49%; } }
+
+.findacure {
+  background: url("../img/non-profits/findacure.png") no-repeat;
+  background-size: cover; }
+
+.pimpmycause {
+  background: url("../img/non-profits/pimp-my-cause.png") no-repeat;
+  background-size: cover; }
+
+.jaspalsvoice {
+  background: url("../img/non-profits/jaspalsvoice.png") no-repeat;
+  background-size: cover; }
 
 .project-info {
   vertical-align: top; }
@@ -587,7 +673,7 @@ section:nth-child(even) h2 {
     color: #333;
     padding: 0; }
   .col-3 p {
-    margin: 1em 0; }
+    margin: 0; }
   @media (min-width: 600px) {
     .col-3 {
       width: 31%;
@@ -595,6 +681,8 @@ section:nth-child(even) h2 {
       vertical-align: top;
       margin: 0;
       margin-top: 2em; }
+      .col-3 p {
+        margin: 1em 0; }
       .col-3:first-child {
         float: left; }
       .col-3:last-child {
@@ -721,15 +809,20 @@ footer {
 .partner-list {
   list-style: none;
   max-width: 25em;
-  margin: 2em auto; }
+  margin: 2em; }
   .partner-list li {
     display: inline-block;
-    width: 8em;
+    width: 47%;
     vertical-align: middle; }
   .partner-list li:last-child {
     margin: 0 30%; }
   .partner-list img {
     width: 100%;
     height: auto; }
+  @media (min-width: 600px) {
+    .partner-list {
+      margin: 2em auto; }
+      .partner-list li {
+        width: 8em; } }
 
 /*# sourceMappingURL=screen.css.map */

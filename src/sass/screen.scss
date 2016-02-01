@@ -47,47 +47,95 @@ header {
 h3 {
 	text-align: center; //change this to a class
 }
+.volunteer-link {
+	text-decoration: none;
+	color: $pop-pink;
+	&:visited{
+		color: $pop-pink;
+	}
+}
+.volunteer-quote {
+	text-align: left;
+	font-style: italic;
+}
+.faq {
+	p, h3 {
+		text-align: left;
+		padding: $padding-margin-value/2 $padding-margin-value/2 0 $padding-margin-value/2;
+	}
+	h3 {
+		color: $pop-pink;
+		font-style: italic;
+	}
+	max-width: $max-text-width; 
+	margin: 0 auto;
+	ul {
+		list-style: disc;
+		padding:0 $padding-margin-value;
+
+	}
+}
+
+.client-testimonial{
+	.col-2 {
+		//background-color: white;
+		height: 18em;
+		p {
+			padding: $padding-margin-value;
+			padding-top: 2em;
+		}
+		margin-bottom: $padding-margin-value;
+	}
 
 
-// setting default volunteer image
-$default-volunteer: url('../img/volunteers/default_volunteer.png');
-$vinita-image: url('../img/volunteers/Vinita_Rathi.jpg');
-$nandhini-image: url('../img/volunteers/Nandhini_Narasimhan.jpeg');
-$tanya-image: url('../img/volunteers/Tanya_Powell.jpg');
-$lili-image: url('../img/volunteers/default_volunteer.png');
-$corinne-image: url('../img/volunteers/default_volunteer.png');
-$rainey-image: url('../img/volunteers/default_volunteer.png');
-$funmi-image: url('../img/volunteers/default_volunteer.png');
-$kriselda-image: url('../img/volunteers/default_volunteer.png');
-$charu-image: url('../img/volunteers/default_volunteer.png');
+}
+.speech-bubble-left, .speech-bubble-right {
+	background-color: $white;
+	position: relative;
+	border-radius: 1em;
+	p {
+		text-align: left;
 
-.vinita {
-	background: $vinita-image no-repeat center center;
+	}
+}
+
+.speech-bubble-left:before {
+  content:"";
+  position: absolute;
+  right: 100%;
+  top: 3em;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid $white;
+  border-bottom: 13px solid transparent;
 
 }
-.nandhini {
-	background: $nandhini-image no-repeat center center;
+
+
+
+.speech-bubble-left:before {
+	content:"";
+	position: absolute;
+	right: 100%;
+	top: 3em;
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent;
+	border-right: 26px solid $white;
+	border-bottom: 13px solid transparent;
 }
-.tanya {
-	background: $tanya-image no-repeat center center;
-}
-.lili {
-	background: $lili-image no-repeat center center;
-}
-.corinne {
-	background: $corinne-image no-repeat center center;
-}
-.rainey {
-	background: $rainey-image no-repeat center center;
-}
-.funmi {
-	background: $funmi-image no-repeat center center;
-}
-.kriselda {
-	background: $kriselda-image no-repeat center center;
-}
-.charu {
-	background: $charu-image no-repeat center center;
+
+.speech-bubble-right:before {
+	content:"";
+	position: absolute;
+	left: 100%;
+	top: 3em;
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent;
+	border-left: 26px solid $white;
+	border-bottom: 13px solid transparent;
 }
 
 
@@ -100,13 +148,14 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 	font-family: $title-font-name;
 	font-weight: 100;
 	color: $white;
-	font-size: $title-font-size;
-	line-height: $h1-line-height;
+	font-size: 2em;
+	line-height: 2em;
 	text-align: center;
 	padding: 1em 0;
 	margin: 0;
 	@media(min-width:600px) {
 		font-size: $h1-font-size;
+		line-height: $h1-line-height;
 	}
 
 }
@@ -114,19 +163,21 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 
 .section-heading, .sub-title, h2 {
 	font-family: $title-font-name;
-	padding: $padding-margin-value/2;
 	padding-top: 0;
+	padding: 0;
 	font-weight: bold;
 	color: $pop-pink;
 	font-size: $title-font-size;
 	max-width: 40em;
 	margin:0 auto;
 	text-align: center;
-
 	@media(min-width:600px) {
-		font-size: $title-font-size;
+		padding: $padding-margin-value/2;
+	
 	}
 }
+
+
 
 .text-link {
 	color: $orange;
@@ -165,22 +216,8 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 }
 .non-profit-picture {
 	width: 100%;
-	//cursor: pointer;
-	// p, h2 {
-	// 	display: none;
-	// }
-	// &:hover {
-	// 	.overlay-text{
-	// 		height: 100%;
-	// 		width: 100%;
-	// 		background: rgba(0, 0, 0, 0.5);
-	// 	}
-	// 	p, h2 {
-	// 		display: block;
-	// 		padding-top: $padding-margin-value;
-	// 	}
-	// }
 }
+
 .overlay-text > h2 {
 	padding: $padding-margin-value/2 0;
 }
@@ -192,7 +229,7 @@ $charu-image: url('../img/volunteers/default_volunteer.png');
 	}
 }
 .founding-team, .non-profits-wrap {
-	max-width: 50em;
+	max-width: 55em;
 	margin: 0 auto;
 	padding: 0;
 

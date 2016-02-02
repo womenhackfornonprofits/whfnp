@@ -630,8 +630,12 @@ section:nth-child(even) h2 {
   background: url("../img/non-profits/findacure.png") no-repeat;
   background-size: cover; }
 
+.ippr {
+  background: url("../img/non-profits/IPPR.png") no-repeat;
+  background-size: cover; }
+
 .pimpmycause {
-  background: url("../img/non-profits/pimp-my-cause.png") no-repeat;
+  background: url("../img/non-profits/pimpmycause.png") no-repeat;
   background-size: cover; }
 
 .jaspalsvoice {

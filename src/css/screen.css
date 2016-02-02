@@ -400,11 +400,17 @@ h3 {
   line-height: 2em;
   text-align: center;
   padding: 1em 0;
-  margin: 0; }
+  margin: 0;
+  text-shadow: 1px 1px #333; }
   @media (min-width: 600px) {
     .title-heading {
       font-size: 62.4px;
       line-height: 93.6px; } }
+
+.sub-title {
+  text-shadow: 1px 1px #333;
+  font-style: italic;
+  font-weight: 100; }
 
 .section-heading, .sub-title, h2 {
   font-family: "Lobster", cursive;
@@ -617,7 +623,8 @@ section:nth-child(even) h2 {
 
 .project-img {
   height: 26em;
-  border: 0.1em #f4f4f4 solid;
+  border: .1em #C5C2C2  solid;
+  box-shadow: 0.5em 0.5em 0px rgba(0, 0, 0, 0.1);
   margin: 2em 0; }
   .project-img img {
     height: 26em; }
@@ -628,6 +635,10 @@ section:nth-child(even) h2 {
 
 .findacure {
   background: url("../img/non-profits/findacure.png") no-repeat;
+  background-size: cover; }
+
+.whfnp {
+  background: url("../img/non-profits/whfnp.png") no-repeat;
   background-size: cover; }
 
 .ippr {
@@ -758,7 +769,7 @@ input {
   width: 100%;
   padding: 1em;
   margin: 1em auto 1em auto;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #949494;
   color: #333; }
 
 label {
@@ -769,7 +780,7 @@ input[type=email] {
   padding: 1em;
   margin: 0 auto 1em auto;
   width: 100%;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #949494;
   color: #333; }
 
 input[type=number] {
@@ -777,7 +788,7 @@ input[type=number] {
   padding: 1em;
   margin: 0 auto 1em auto;
   width: 100%;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #949494;
   color: #333; }
 
 input[type=submit] {
@@ -798,7 +809,7 @@ textarea {
   width: 100%;
   padding: 1em;
   margin: 0 auto 1em auto;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #949494;
   color: #333; }
 
 footer {

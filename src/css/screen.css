@@ -761,7 +761,7 @@ section:nth-child(even) h2 {
 form {
   margin: 0 auto;
   width: 100%;
-  max-width: 20em;
+  max-width: 30em;
   padding: 2em; }
 
 input {

@@ -153,6 +153,7 @@ h3 {
 	text-align: center;
 	padding: 1em 0;
 	margin: 0;
+	text-shadow: 1px 1px $black;
 	@media(min-width:600px) {
 		font-size: $h1-font-size;
 		line-height: $h1-line-height;
@@ -160,7 +161,12 @@ h3 {
 
 }
 
+.sub-title {
+	text-shadow: 1px 1px $black;
+	font-style: italic;
+	font-weight: 100;
 
+}
 .section-heading, .sub-title, h2 {
 	font-family: $title-font-name;
 	padding-top: 0;

@@ -11,9 +11,18 @@ input {
   width: 100%;
   padding: $form-padding-value;
   margin: $form-padding-value auto $form-padding-value auto;
-  border: 1px solid $dark-grey;
+  border: none;
   color: $black;
+  background-color: #FDEFF0;
+  font-weight: 100;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1) inset
 }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  //color: $dark-grey;
+  color: #FBB7BC;
+}
+
 label {
   display: none;
 }
@@ -23,8 +32,9 @@ input[type=email] {
   padding: $form-padding-value;
   margin: 0 auto $form-padding-value auto;
   width: 100%;
-  border: 1px solid $dark-grey;
+  border: none;
   color: $black;
+  font-weight: 100;
 }
 
 
@@ -33,8 +43,10 @@ input[type=number] {
   padding: $form-padding-value;
   margin: 0 auto $form-padding-value auto;
   width: 100%;
-  border: 1px solid $dark-grey;
+  border: none;
   color: $black;
+  font-weight: 100;
+
 }
 
 input[type=submit] {
@@ -46,6 +58,7 @@ input[type=submit] {
   opacity: 1;
   box-shadow: .5em .5em 0px rgba(0,0,0,.1);
   background-color: $pop-pink;
+  font-weight: 100;
   color: $white;
   &:hover { 
     opacity: .8;  
@@ -58,6 +71,10 @@ textarea {
   width: 100%;
   padding: $form-padding-value;
   margin: 0 auto $form-padding-value auto;
-  border: 1px solid $dark-grey;
+  border: none;
   color: $black;
+  background-color: #FDEFF0;
+  font-weight: 100;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,.1) inset
+
 }

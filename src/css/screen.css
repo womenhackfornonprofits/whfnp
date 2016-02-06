@@ -682,6 +682,9 @@ section:nth-child(even) h2 {
   font-weight: 100;
   padding: 0;
   padding-bottom: 0.5em; }
+.project p {
+  margin: 0;
+  padding: 0; }
 .project h2 {
   padding: 0;
   padding-bottom: 0.5em;

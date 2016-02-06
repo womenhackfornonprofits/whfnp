@@ -3,8 +3,8 @@
 	max-width: 30em;
 	margin: $padding-margin-value auto;
 	padding: .5em;
-	text-align: center;
 	margin-bottom: $padding-margin-value*2;
+	text-align: center;
 
 	h2 {
 		text-transform: none;
@@ -13,8 +13,12 @@
 		padding: 0;
 	}
 	p {
-		padding: $padding-margin-value/2;
+		padding: $padding-margin-value/4;
 		margin: 0;
+		text-align: center;
+		//border-left: 2px solid $pop-pink;
+
+
 	}
 	@media(min-width: 600px) {
 		// p {
@@ -35,6 +39,12 @@
 		 	float: right;
 		 	border-left: 1px solid #F5F5F5;
 		}
+	}
+}
+
+.who-we-are {
+	p {
+		text-align: left;
 	}
 }
 .col-wrap {

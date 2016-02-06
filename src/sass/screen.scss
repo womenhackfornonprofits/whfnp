@@ -178,8 +178,10 @@ h3 {
 	min-width: 5em;
 	line-height: $title-font-size;
 	font-family: $title-font-name;
-	padding-top: 0;
-	padding: 0;
+	//padding: 0;
+	padding: $padding-margin-value/2;
+	padding-bottom: 0;
+
 	font-weight: bold;
 	color: $pop-pink;
 	font-size: $title-font-size;
@@ -227,7 +229,7 @@ h3 {
 }
 
 .non-profit-icons {
-	width: 6em;
+	width: 4em;
 	margin-bottom: $padding-margin-value/2;
 }
 .non-profit-picture {

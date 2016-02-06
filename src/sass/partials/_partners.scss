@@ -1,7 +1,7 @@
 .partner-list {
 	list-style: none;
 	max-width: 25em;
-	margin: $padding-margin-value;
+	margin: $padding-margin-value/4 auto;
 	li {
 		display: inline-block;
 		width: 47%;
@@ -15,7 +15,7 @@
 		height: auto;
 	}
 	@media(min-width:600px) {
-		margin: $padding-margin-value auto;
+		margin: $padding-margin-value/4 auto;
 		li {
 			width: 8em;
 		}

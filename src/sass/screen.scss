@@ -146,14 +146,19 @@ h3 {
 
 .title-heading {
 	font-family: $title-font-name;
-	font-weight: 100;
+	//position: relative;
+    //top: 30%;
+	font-weight: 400;
 	color: $white;
-	font-size: 2em;
-	line-height: 2em;
+	font-size: $h1-font-size/1.5;
+	line-height: $h1-line-height/1.5;
 	text-align: center;
-	padding: 1em 0;
+	padding: .5em 0;
+	padding-bottom: 0;
 	margin: 0;
 	text-shadow: 1px 1px $black;
+	max-width: 100%;
+	margin-bottom: 0;
 	@media(min-width:600px) {
 		font-size: $h1-font-size;
 		line-height: $h1-line-height;
@@ -161,13 +166,17 @@ h3 {
 
 }
 
-.sub-title {
-	text-shadow: 1px 1px $black;
-	font-style: italic;
-	font-weight: 100;
 
-}
+// .sub-title {
+// 	text-shadow: 1px 1px $black;
+// 	font-style: italic;
+// 	font-weight: 100;
+// 	margin: 0 auto;
+// }
+
 .section-heading, .sub-title, h2 {
+	min-width: 5em;
+	line-height: $title-font-size;
 	font-family: $title-font-name;
 	padding-top: 0;
 	padding: 0;
@@ -175,6 +184,7 @@ h3 {
 	color: $pop-pink;
 	font-size: $title-font-size;
 	max-width: 40em;
+	font-weight: 400;
 	margin:0 auto;
 	text-align: center;
 	@media(min-width:600px) {

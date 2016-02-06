@@ -292,13 +292,13 @@ body, html {
   width: 100%;
   height: 100%;
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1.2em;
-  line-height: 24px;
+  line-height: 21px;
   letter-spacing: 0.01em;
   color: #333;
   line-height: 1.6em;
-  font-size: 16px; }
+  font-size: 14px; }
 
 .content {
   max-width: 70em;
@@ -393,33 +393,34 @@ h3 {
   height: 4em; }
 
 .title-heading {
-  font-family: "Lobster", cursive;
-  font-weight: 100;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   color: #fff;
-  font-size: 2em;
-  line-height: 2em;
+  font-size: 36.4px;
+  line-height: 54.6px;
   text-align: center;
-  padding: 1em 0;
+  padding: .5em 0;
+  padding-bottom: 0;
   margin: 0;
-  text-shadow: 1px 1px #333; }
+  text-shadow: 1px 1px #333;
+  max-width: 100%;
+  margin-bottom: 0; }
   @media (min-width: 600px) {
     .title-heading {
-      font-size: 62.4px;
-      line-height: 93.6px; } }
-
-.sub-title {
-  text-shadow: 1px 1px #333;
-  font-style: italic;
-  font-weight: 100; }
+      font-size: 54.6px;
+      line-height: 81.9px; } }
 
 .section-heading, .sub-title, h2 {
-  font-family: "Lobster", cursive;
+  min-width: 5em;
+  line-height: 28px;
+  font-family: "Lato", sans-serif;
   padding-top: 0;
   padding: 0;
   font-weight: bold;
   color: #e42e3d;
-  font-size: 32px;
+  font-size: 28px;
   max-width: 40em;
+  font-weight: 400;
   margin: 0 auto;
   text-align: center; }
   @media (min-width: 600px) {
@@ -498,7 +499,7 @@ nav {
       padding: 1.8em .2em;
       margin: 0 auto;
       text-align: center;
-      font-size: 16px; }
+      font-size: 14px; }
       nav ul li a {
         text-decoration: none;
         font-family: "Lato", sans-serif;
@@ -516,30 +517,34 @@ nav {
 .banner {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
   background-size: cover;
-  height: 30em; }
+  min-height: 30em; }
   .banner h2 {
     font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-weight: 100;
     color: #fff;
-    font-size: 1.3em;
-    line-height: 1.3em;
+    font-size: 1.5em;
+    line-height: 1.5em;
     max-width: 40em;
-    margin: 1em;
+    min-width: 15em;
+    margin: 1em auto;
     text-transform: none; }
     @media (min-width: 600px) {
-      .banner h2 {
-        font-size: 1.6em;
-        line-height: 1.6em;
-        padding: 0; }
-        .banner h2 h2 {
-          margin: 0 auto; } }
+      .banner h2 h2 {
+        margin: 0 auto;
+        font-size: 1.8em;
+        line-height: 1.8em;
+        margin: 0 auto;
+        padding: 0; } }
 
 .smaller-banner {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
   background-size: cover;
-  height: 24em; }
+  height: 24em;
+  padding: 0;
+  margin: 0; }
   .smaller-banner h1 {
-    padding: 0; }
+    padding: 0;
+    padding-top: 1.5em; }
 
 .volunteers-image {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/volunteers.jpg") no-repeat center center;
@@ -573,8 +578,7 @@ section {
   margin: 0;
   clear: both;
   background-color: #fff;
-  padding: 8em 0;
-  padding-bottom: 8em;
+  padding: .5em;
   background-color: #fff; }
   section p {
     text-align: center;
@@ -583,11 +587,15 @@ section {
     padding: 2em; }
     @media (min-width: 600px) {
       section p {
-        padding: 0; } }
+        padding: 1em 2em; } }
   section h3 {
     max-width: 45em;
     text-align: center;
     margin: 0 auto; }
+  @media (min-width: 300px) {
+    section {
+      padding: 4em 2em;
+      padding-bottom: 8em; } }
 
 section:nth-child(4) {
   background-color: #88DAE9; }
@@ -627,7 +635,11 @@ section:nth-child(even) h2 {
   box-shadow: 0.5em 0.5em 0px rgba(0, 0, 0, 0.1);
   margin: 2em 0; }
   .project-img img {
-    height: 26em; }
+    height: 26em;
+    border: 2em solid white;
+    /* border-bottom-width: 0; */
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1); }
   @media (min-width: 600px) {
     .project-img {
       display: inline-block;
@@ -679,32 +691,31 @@ section:nth-child(even) h2 {
     text-align: left; } }
 
 .col-3 {
-  width: auto;
-  margin: 2em;
-  text-align: center; }
+  min-width: 10em;
+  max-width: 30em;
+  margin: 2em auto;
+  padding: .5em;
+  text-align: center;
+  margin-bottom: 4em; }
   .col-3 h2 {
     text-transform: none;
-    font-size: 24.61538px;
+    font-size: 21.53846px;
     color: #333;
     padding: 0; }
   .col-3 p {
+    padding: 1em;
     margin: 0; }
   @media (min-width: 600px) {
     .col-3 {
-      width: 31%;
+      width: 33.3%;
       display: inline-block;
-      vertical-align: top;
-      margin: 0;
-      margin-top: 2em; }
-      .col-3 p {
-        margin: 1em 0; }
+      vertical-align: top; }
       .col-3:first-child {
-        float: left; }
+        float: left;
+        border-right: 1px solid #F5F5F5; }
       .col-3:last-child {
-        float: right; }
-      .col-3:nth-child(2) {
-        margin: 0 3.5%;
-        margin-top: 2em; } }
+        float: right;
+        border-left: 1px solid #F5F5F5; } }
 
 .col-wrap {
   margin: 0 auto;
@@ -715,8 +726,7 @@ section:nth-child(even) h2 {
       padding: 0 0 2em 0; } }
 
 .col-2 {
-  width: auto;
-  margin: 2em;
+  width: 50%;
   text-align: center; }
   .col-2 p {
     padding: 0 2em; }

@@ -1,7 +1,10 @@
 .col-3 {
-	width: auto;
-	margin: $padding-margin-value;
+	min-width: 10em;
+	max-width: 30em;
+	margin: $padding-margin-value auto;
+	padding: .5em;
 	text-align: center;
+	margin-bottom: $padding-margin-value*2;
 
 	h2 {
 		text-transform: none;
@@ -10,32 +13,33 @@
 		padding: 0;
 	}
 	p {
+		padding: $padding-margin-value/2;
 		margin: 0;
 	}
 	@media(min-width: 600px) {
-		p {
-			margin: $padding-margin-value/2 0;
+		// p {
+		// 	margin: $padding-margin-value/2 0;
 
-		}
-		width: $col-width;
+		// }
+		width: 33.3%;
+	//	margin-right: $col-gutter;
 		display: inline-block;
-    	vertical-align: top;
-    	margin: 0;
-    	margin-top: $padding-margin-value;
-    	&:first-child {
+     	vertical-align: top;
+  //   	margin: 0;
+  //   	margin-top: $padding-margin-value;
+     	&:first-child {
 			float: left;
-		}
+			border-right: 1px solid #F5F5F5;
+		 }
 		&:last-child {
-			float: right;
-		}
-		&:nth-child(2) {
-			margin: 0 (100% - $col-width * 3)/2;
-			margin-top: $padding-margin-value;
+		 	float: right;
+		 	border-left: 1px solid #F5F5F5;
 		}
 	}
 }
 .col-wrap {
 	margin: 0 auto;
+	//margin-top: $padding-margin-value*2;
 	padding: 0;
     clear: both;
     @media(min-width:600px) {
@@ -44,8 +48,8 @@
 }
 
 .col-2 {
-	width: auto;
-	margin: $padding-margin-value;
+	width: 50%;
+	//margin: $padding-margin-value;
 	text-align: center;
 	p {
 		padding: 0 2em;

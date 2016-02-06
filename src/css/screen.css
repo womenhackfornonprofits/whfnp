@@ -306,8 +306,12 @@ body, html {
   height: 100%; }
 
 #logo {
-  width: 15em;
-  margin-top: 1em; }
+  margin-top: 1.33333em;
+  width: 10em;
+  margin-left: 2em; }
+  @media (min-width: 600px) {
+    #logo {
+      max-width: 15em; } }
 
 .img-container {
   display: inline-block;
@@ -478,14 +482,12 @@ h3 {
 
 /** Navigation Styles**/
 nav {
-  display: none;
   vertical-align: top;
   margin: 0;
   padding: 0;
-  width: 55%;
   float: right; }
   nav ul {
-    padding: 0;
+    padding-right: 4em;
     list-style: none;
     width: 100%;
     margin: 0 auto;
@@ -494,12 +496,14 @@ nav {
     flex-direction: row; }
     nav ul li {
       flex-grow: 1;
-      text-align: center;
       display: inline-block;
-      padding: 1.8em .2em;
+      padding: .5em .5em;
       margin: 0 auto;
-      text-align: center;
+      text-align: left;
       font-size: 14px; }
+      @media (min-width: 600px) {
+        nav ul li {
+          padding: 1.8em .4em; } }
       nav ul li a {
         text-decoration: none;
         font-family: "Lato", sans-serif;
@@ -510,9 +514,6 @@ nav {
           color: #000; }
         nav ul li a:hover {
           border-bottom: 0.15em solid #fe8359; }
-  @media (min-width: 600px) {
-    nav {
-      display: inline-block; } }
 
 .banner {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/about.jpg") no-repeat center center;
@@ -579,7 +580,8 @@ section {
   clear: both;
   background-color: #fff;
   padding: 2em .5em;
-  background-color: #fff; }
+  background-color: #fff;
+  min-height: 20em; }
   section p {
     text-align: center;
     max-width: 45em;
@@ -752,7 +754,9 @@ section:nth-child(even) h2 {
   margin: 0 auto;
   width: 100%; }
   .social ul {
-    width: 20em; }
+    width: 20em;
+    margin: 0 auto;
+    padding: 0; }
   .social a:hover {
     border: none; }
 

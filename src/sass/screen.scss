@@ -32,8 +32,12 @@ body, html {
 } 
 
 #logo {
-	width: 15em;
-	margin-top: 1em;
+	margin-top: $padding-margin-value/1.5;
+	width: 10em;
+	margin-left: $padding-margin-value;
+	@media(min-width:600px) {
+		max-width: 15em;
+	}
 }
 .img-container {
 	display: inline-block;

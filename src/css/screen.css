@@ -737,17 +737,19 @@ section:nth-child(even) h2 {
       padding: 0 0 2em 0; } }
 
 .col-2 {
-  width: 50%;
+  width: 100%;
   text-align: center; }
   .col-2 p {
     padding: 0 2em; }
+  .col-2 h2 {
+    padding: 0.5em; }
   @media (min-width: 600px) {
     .col-2 {
-      width: 49%;
       display: inline-block;
       vertical-align: top;
       margin: 0;
-      margin-top: 2em; } }
+      margin-top: 2em;
+      width: 50%; } }
 
 .social {
   float: none;

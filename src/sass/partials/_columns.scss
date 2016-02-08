@@ -58,18 +58,22 @@
 }
 
 .col-2 {
-	width: 50%;
+	width: 100%;
 	//margin: $padding-margin-value;
 	text-align: center;
 	p {
 		padding: 0 2em;
 	}
+	h2 {
+		padding: $padding-margin-value/4;
+	}
 	@media(min-width: 600px) {
-		width: 49%;
 		display: inline-block;
 	    vertical-align: top;
 	    margin: 0;
 	    margin-top: $padding-margin-value;
+	    width: 50%;
+
 	}
    
 }

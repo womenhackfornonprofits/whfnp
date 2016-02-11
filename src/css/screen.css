@@ -334,7 +334,7 @@ h3 {
   font-style: italic; }
 
 .faq {
-  max-width: 45em;
+  max-width: 850px;
   margin: 0 auto; }
   .faq p, .faq h3 {
     text-align: left;
@@ -414,12 +414,16 @@ h3 {
       font-size: 54.6px;
       line-height: 81.9px; } }
 
+.vfounding-team .col-2 h2 {
+  font-weight: 100;
+  font-size: 1.6em; }
+
 .section-heading, .sub-title, h2 {
   min-width: 5em;
   line-height: 28px;
   font-family: "Lato", sans-serif;
   padding: 1em;
-  padding-bottom: 0;
+  padding-bottom: 0.5em;
   font-weight: bold;
   color: #e42e3d;
   font-size: 28px;
@@ -427,9 +431,6 @@ h3 {
   font-weight: 400;
   margin: 0 auto;
   text-align: center; }
-  @media (min-width: 600px) {
-    .section-heading, .sub-title, h2 {
-      padding: 1em; } }
 
 .text-link {
   color: #fe6633;
@@ -479,6 +480,13 @@ h3 {
       padding: 0; }
       .founding-team .col-3, .non-profits-wrap .col-3 {
         min-height: 15em; } }
+
+.left-align-text {
+  text-align: left; }
+
+.board-name {
+  padding: 2em;
+  font-size: 1.5em; }
 
 /** Navigation Styles**/
 nav {
@@ -545,7 +553,7 @@ nav {
   margin: 0; }
   .smaller-banner h1 {
     padding: 0;
-    padding-top: 1.5em; }
+    padding-top: 2em; }
 
 .volunteers-image {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/volunteers.jpg") no-repeat center center;
@@ -584,7 +592,7 @@ section {
   min-height: 20em; }
   section p {
     text-align: center;
-    max-width: 45em;
+    max-width: 850px;
     margin: 0 auto;
     padding: 2em 1em;
     text-align: left; }
@@ -593,12 +601,12 @@ section {
         padding: 1em 2em;
         text-align: center; } }
   section h3 {
-    max-width: 45em;
+    max-width: 850px;
     text-align: center;
     margin: 0 auto; }
   @media (min-width: 300px) {
     section {
-      padding: 4em 2em;
+      padding: 6em 2em;
       padding-bottom: 8em; } }
 
 section:nth-child(4) {
@@ -616,7 +624,7 @@ section:nth-child(even) h2 {
   color: #fff; }
 
 .button {
-  max-width: 12em;
+  max-width: 14em;
   margin: 2em auto 0 auto;
   border: 0.1em solid #e42e3d;
   background-color: #e42e3d;
@@ -732,9 +740,13 @@ section:nth-child(even) h2 {
   margin: 0 auto;
   padding: 0;
   clear: both; }
+  .col-wrap .founding-team {
+    margin-top: 2em; }
   @media (min-width: 600px) {
     .col-wrap {
-      padding: 0 0 2em 0; } }
+      padding: 0 0 2em 0; }
+      .col-wrap .founding-team {
+        margin-top: 2em; } }
 
 .col-2 {
   width: 100%;
@@ -742,7 +754,8 @@ section:nth-child(even) h2 {
   .col-2 p {
     padding: 0 2em; }
   .col-2 h2 {
-    padding: 0.5em; }
+    padding: 0.5em;
+    font-size: 1.5em; }
   @media (min-width: 600px) {
     .col-2 {
       display: inline-block;
@@ -866,8 +879,6 @@ footer {
     display: inline-block;
     width: 47%;
     vertical-align: middle; }
-  .partner-list li:last-child {
-    margin: 0 30%; }
   .partner-list img {
     width: 100%;
     height: auto; }

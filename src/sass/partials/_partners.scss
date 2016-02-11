@@ -8,7 +8,10 @@
     	vertical-align: middle;
 	}
 	li:last-child {
-		margin: 0 30%;
+		//margin: 0 5%;
+	}
+	li:nth-last-child(2){
+		//margin: 0 5%;
 	}
 	img {
 		width: 100%;

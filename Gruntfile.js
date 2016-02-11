@@ -30,9 +30,9 @@ grunt.initConfig({
         differential: false // Only uploads the files that have changed
       },
       files: [
-        {expand: true, cwd: 'deploy/css/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
-        {expand: true, cwd: 'deploy/img/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
-        {expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+        {expand: true, cwd: 'deploy/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+        //{expand: true, cwd: 'deploy/img/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+        //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
 
         //{expand: true, cwd: 'deploy/css/', src: ['*.css'], dest: '', params: {CacheControl: '31536000'}},
   
@@ -72,8 +72,8 @@ grunt.initConfig({
     main: {
       files: [
         // includes files within path
-        {expand: true, cwd: 'src/', src: ['*.html'], dest: 'deploy/', filter: 'isFile'},
-        {expand: true, cwd: 'src/css', src: ['*.css'], dest: 'deploy/css/', filter: 'isFile'},
+        {expand: true, cwd: 'src/', src: ['**'], dest: 'deploy/', filter: 'isFile'},
+        //{expand: true, cwd: 'src/css', src: ['*.css'], dest: 'deploy/css/', filter: 'isFile'},
       ]
     },
     img: {

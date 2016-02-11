@@ -171,21 +171,19 @@ h3 {
 }
 
 
-// .sub-title {
-// 	text-shadow: 1px 1px $black;
-// 	font-style: italic;
-// 	font-weight: 100;
-// 	margin: 0 auto;
-// }
-
+.vfounding-team {
+	.col-2 h2 {
+		font-weight: 100;
+		font-size: 1.6em;
+	}
+}
 .section-heading, .sub-title, h2 {
 	min-width: 5em;
 	line-height: $title-font-size;
 	font-family: $title-font-name;
 	//padding: 0;
 	padding: $padding-margin-value/2;
-	padding-bottom: 0;
-
+	padding-bottom: 0.5em;
 	font-weight: bold;
 	color: $pop-pink;
 	font-size: $title-font-size;
@@ -194,7 +192,7 @@ h3 {
 	margin:0 auto;
 	text-align: center;
 	@media(min-width:600px) {
-		padding: $padding-margin-value/2;
+		//padding: $padding-margin-value/2;
 	
 	}
 }
@@ -254,13 +252,20 @@ h3 {
 	max-width: 55em;
 	margin: 0 auto;
 	padding: 0;
-
 	@media (min-width: 600px) {
 		padding:0;
 		.col-3 {
 			min-height: 15em;
 		}
 	}
+}
+.left-align-text {
+	text-align: left;
+}
+
+.board-name {
+	padding: $padding-margin-value;
+	font-size: 1.5em;
 }
 
 @import "partials/nav";

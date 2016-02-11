@@ -13,6 +13,7 @@ section {
 		margin: 0 auto; 
    		padding: 2em 1em;
     	text-align: left;
+
 		@media (min-width: 600px)
 		{
 			padding: $padding-margin-value/2 $padding-margin-value;
@@ -26,7 +27,7 @@ section {
 	}
 	@media (min-width: 300px)
 	{
-		padding: $padding-margin-value*2 $padding-margin-value;
+		padding: $padding-margin-value*3 $padding-margin-value;
 		padding-bottom: $padding-margin-value*4;
 	}
 }

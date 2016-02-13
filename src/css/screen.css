@@ -306,9 +306,9 @@ body, html {
   height: 100%; }
 
 #logo {
-  margin-top: 1.33333em;
+  margin-top: 1em;
   max-width: 15em;
-  width: 10em;
+  width: 15em;
   margin-left: 2em; }
 
 .img-container {
@@ -316,7 +316,18 @@ body, html {
   float: left; }
 
 header {
-  min-height: 5em; }
+  min-height: 5em;
+  /** to help nav not be a little buggy fixed header does the trick **/
+  position: fixed;
+  display: block;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f2f2;
+  width: 100%;
+  z-index: 99; }
+  @media (min-width: 750px) {
+    header {
+      position: relative;
+      border: none; } }
 
 h3 {
   text-align: center; }
@@ -345,13 +356,15 @@ h3 {
     padding: 0 2em; }
 
 .client-testimonial .col-2 {
-  min-height: 18em;
   margin-bottom: 2em; }
   .client-testimonial .col-2 p {
     padding: 2em;
     padding-top: 2em; }
   .client-testimonial .col-2 h3 {
     padding: 1em; }
+  @media (min-width: 600px) {
+    .client-testimonial .col-2 {
+      min-height: 18em; } }
 
 .speech-bubble-left, .speech-bubble-right {
   background-color: #fff;
@@ -364,7 +377,7 @@ h3 {
   content: "";
   position: absolute;
   right: 100%;
-  top: 3em;
+  top: 4em;
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
@@ -403,7 +416,7 @@ h3 {
   font-size: 36.4px;
   line-height: 54.6px;
   text-align: center;
-  padding: .5em 0;
+  padding: 2em 0;
   padding-bottom: 0;
   margin: 0;
   text-shadow: 1px 1px #333;
@@ -414,7 +427,7 @@ h3 {
       font-size: 54.6px;
       line-height: 81.9px; } }
 
-.vfounding-team .col-2 h2 {
+.founding-team .col-2 h2 {
   font-weight: 100;
   font-size: 1.6em; }
 
@@ -469,7 +482,10 @@ h3 {
 .non-profits-wrap img {
   margin: 2em auto;
   width: auto;
-  display: block; }
+  display: none; }
+@media (min-width: 600px) {
+  .non-profits-wrap img {
+    display: block; } }
 
 .founding-team, .non-profits-wrap {
   max-width: 55em;
@@ -546,7 +562,7 @@ nav {
   z-index: 10;
   box-sizing: border-box;
   width: 14rem;
-  height: 4000px;
+  height: 500px;
   height: 100vh;
   background: white;
   border-left: 1px solid #aaa;
@@ -667,11 +683,13 @@ input[type="checkbox"].nav-toggle {
     font-family: "Lato", sans-serif;
     font-weight: 100;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.28571em;
     line-height: 1.5em;
     max-width: 40em;
     min-width: 15em;
-    margin: 1em auto;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 1em;
     text-transform: none; }
     @media (min-width: 600px) {
       .banner h2 h2 {
@@ -687,9 +705,14 @@ input[type="checkbox"].nav-toggle {
   height: 24em;
   padding: 0;
   margin: 0; }
-  .smaller-banner h1 {
+  .smaller-banner .title-heading {
     padding: 0;
-    padding-top: 2em; }
+    padding-top: 4em; }
+  @media (min-width: 750px) {
+    .smaller-banner .title-heading {
+      padding-top: 2em; }
+    .smaller-banner .title-cta {
+      padding-top: 1.5em; } }
 
 .volunteers-image {
   background: linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)), url("../img/volunteers.jpg") no-repeat center center;
@@ -1020,7 +1043,8 @@ footer {
   .partner-list li {
     display: inline-block;
     width: 47%;
-    vertical-align: middle; }
+    vertical-align: middle;
+    padding: .5em; }
   .partner-list img {
     width: 100%;
     height: auto; }

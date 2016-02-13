@@ -22,11 +22,36 @@
   </head>
   <body>
     <header>
-      <div class="content">
+       <div class="content">
         <div class="img-container">
           <a href="index.html"><img id="logo" src="img/whfnplogo.svg" alt="WHFNP Logo Image"></a>
         </div>
-        <nav>
+        <input type="checkbox" id="primary-toggle" class="nav-toggle" />
+        <nav id="mobile-nav">
+          <label for="primary-toggle" class="hamburger"></label>
+          <ul>
+            <li>
+              <a href="about.html" class="menu-item">About</a>
+            </li>
+            <li>
+              <a href="volunteers.html" class="menu-item">Volunteers</a>
+            </li>
+            <li>
+              <a href="non-profits.html" class="menu-item">Non-Profits</a>
+            </li>
+            <li>
+              <a href="projects.html" class="menu-item">Projects</a>
+            </li>
+            <li>
+              <a href="events.html" class="menu-item">Events</a>
+            </li>
+            <li>
+              <a href="contact.html" class="menu-item">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Desktop Nav -->
+        <nav id="primary-nav">
           <ul>
             <li>
               <a href="about.html">About</a>
@@ -73,16 +98,7 @@
     <section class="current-projects">
       <div class="content">
         <h2 class="section-heading">Current Projects </h2>
-                <div class="project">
-          <div class="project-img jaspalsvoice"></div>
-          <div class="project-info">
-            <h2 class="section-heading">Jaspal’s Voice</h2>
-            <h3>HTML, CSS, JavaScript, Java, Play, AWS, Sketch</h3>
-            <p>When Susan’s sister Jaspal contracted Motor Neurone Disease, one of the hardest things was when Jaspal lost her voice to the disease. However Jaspal found innovative ways of communicating despite the condition. </p>
-            <p>The charity aims to collate and review communication devices for those suffering from MND. We aim to have a catalogue of devices with user-generated reviews and tips. We hope to be able to donate devices to those in need.</p>
-            <a href="https://github.com/ClaudiaHosu/Jaspals-Web" class="button">View Project</a>
-          </div>
-        </div><div class="project">
+        <div class="project">
           <div class="project-img jaspalsvoice"></div>
           <div class="project-info">
             <h2 class="section-heading">Jaspal’s Voice</h2>

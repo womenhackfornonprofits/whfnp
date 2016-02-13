@@ -3,9 +3,9 @@
 .banner {
 	background: 
 	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
- 	url('../img/about.jpg') no-repeat center center;
+ 	url('../img/index.jpg') no-repeat center center;
 	background-size: cover;
-	min-height: 30em;
+	min-height: 35em;
 	h2 {
 		font-family: $base-font-name;
 		font-weight: $base-font-light;
@@ -83,7 +83,7 @@
 }
 .homepage-image {
 	background:
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(208, 208, 208, 0.35), rgba(0, 0, 0, 0.5)),
     	url('../img/homepage.jpeg') no-repeat center center;
     background-size: cover;
 

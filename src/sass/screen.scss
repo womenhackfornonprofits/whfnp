@@ -33,11 +33,9 @@ body, html {
 
 #logo {
 	margin-top: $padding-margin-value/1.5;
+	max-width: 15em;
 	width: 10em;
 	margin-left: $padding-margin-value;
-	@media(min-width:600px) {
-		max-width: 15em;
-	}
 }
 .img-container {
 	display: inline-block;
@@ -45,7 +43,7 @@ body, html {
 }
 
 header {
-	height: auto;
+	min-height: 5em;
 }
 
 h3 {
@@ -83,10 +81,13 @@ h3 {
 .client-testimonial{
 	.col-2 {
 		//background-color: white;
-		height: 18em;
+		min-height: 18em;
 		p {
 			padding: $padding-margin-value;
 			padding-top: 2em;
+		}
+		h3 {
+			padding: 1em;
 		}
 		margin-bottom: $padding-margin-value;
 	}

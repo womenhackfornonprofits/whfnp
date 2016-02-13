@@ -36,6 +36,7 @@ section {
 section:nth-child(4) {
  	$section-bg: $pop-blue;
  	background-color: $section-bg;
+ 	background-image: linear-gradient(315deg,#2693d5,$section-bg);
  	.faq{
  		h3 {
 		color: $black;
@@ -46,17 +47,23 @@ section:nth-child(4) {
 section:nth-child(0) {
  	$section-bg: $pop-blue;
  	background-color: $section-bg;
+ 	background-image: linear-gradient(315deg,#2693d5,$section-bg);
 
 
 }
 section:nth-child(6) {
 	$section-bg: $pale-orange;
 	background-color: $section-bg;
+ 	background-image: linear-gradient(315deg,#FF6E3D,$section-bg);
 
 }
 
 section:nth-child(even){
 	h2 {
  		color: $white;
+ 	}
+ 	.text-link {
+ 		color: $white;
+ 		border-bottom:1px $white dashed;
  	}
 }

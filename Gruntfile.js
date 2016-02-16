@@ -30,7 +30,12 @@ grunt.initConfig({
         differential: false // Only uploads the files that have changed
       },
       files: [
-        {expand: true, cwd: 'deploy/', src: ['**'], dest: ''},
+        {expand: true, cwd: 'deploy/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+        //{expand: true, cwd: 'deploy/img/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+        //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+
+        //{expand: true, cwd: 'deploy/css/', src: ['*.css'], dest: '', params: {CacheControl: '31536000'}},
+  
       ]
     },
     download: {
@@ -67,8 +72,12 @@ grunt.initConfig({
     main: {
       files: [
         // includes files within path
-        {expand: true, cwd: 'src/', src: ['*.html'], dest: 'deploy/', filter: 'isFile'},
-        {expand: true, cwd: 'src/css', src: ['*.css'], dest: 'deploy/css/', filter: 'isFile'},
+        {expand: true, cwd: 'src/', src: ['**'], dest: 'deploy/', filter: 'isFile'},
+        //{expand: true, cwd: 'src/css', src: ['*.css'], dest: 'deploy/css/', filter: 'isFile'},
+      ]
+    },
+    img: {
+      files: [
         {expand: true, cwd: 'src/img', src: ['*.{png,jpg,jpeg,svg}'], dest: 'deploy/img/', filter: 'isFile'},
       ]
     }
@@ -94,7 +103,7 @@ grunt.initConfig({
       files: [{
         expand: true,                  // Enable dynamic expansion
         cwd: 'src/img/',                   // Src matches are relative to this path
-        src: ['**/*.{png,jpg}'],   // Actual patterns to match
+        src: ['**/*.{png,jpg,svg,jpeg}'],   // Actual patterns to match
         dest: 'deploy/img/'                  // Destination path prefix
       }]
     }
@@ -128,7 +137,8 @@ grunt.initConfig({
 
   grunt.registerTask('deploy', ['default','aws_s3:live']);
   grunt.registerTask('download', ['aws_s3:download']);
-  grunt.registerTask('default', ['sass', 'copy', 'cssmin', 'htmlmin', 'imagemin']);
+  grunt.registerTask('img', ['imagemin', 'copy:img']);
+  grunt.registerTask('default', ['sass', 'copy:main', 'cssmin', 'htmlmin']);
 
 
 };

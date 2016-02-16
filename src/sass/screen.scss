@@ -32,8 +32,12 @@ body, html {
 } 
 
 #logo {
-	width: 15em;
-	margin-top: 1em;
+	margin-top: $padding-margin-value/1.5;
+	width: 10em;
+	margin-left: $padding-margin-value;
+	@media(min-width:600px) {
+		max-width: 15em;
+	}
 }
 .img-container {
 	display: inline-block;
@@ -146,14 +150,19 @@ h3 {
 
 .title-heading {
 	font-family: $title-font-name;
-	font-weight: 100;
+	//position: relative;
+    //top: 30%;
+	font-weight: 400;
 	color: $white;
-	font-size: 2em;
-	line-height: 2em;
+	font-size: $h1-font-size/1.5;
+	line-height: $h1-line-height/1.5;
 	text-align: center;
-	padding: 1em 0;
+	padding: .5em 0;
+	padding-bottom: 0;
 	margin: 0;
 	text-shadow: 1px 1px $black;
+	max-width: 100%;
+	margin-bottom: 0;
 	@media(min-width:600px) {
 		font-size: $h1-font-size;
 		line-height: $h1-line-height;
@@ -161,24 +170,29 @@ h3 {
 
 }
 
-.sub-title {
-	text-shadow: 1px 1px $black;
-	font-style: italic;
-	font-weight: 100;
 
+.vfounding-team {
+	.col-2 h2 {
+		font-weight: 100;
+		font-size: 1.6em;
+	}
 }
 .section-heading, .sub-title, h2 {
+	min-width: 5em;
+	line-height: $title-font-size;
 	font-family: $title-font-name;
-	padding-top: 0;
-	padding: 0;
+	//padding: 0;
+	padding: $padding-margin-value/2;
+	padding-bottom: 0.5em;
 	font-weight: bold;
 	color: $pop-pink;
 	font-size: $title-font-size;
 	max-width: 40em;
+	font-weight: 400;
 	margin:0 auto;
 	text-align: center;
 	@media(min-width:600px) {
-		padding: $padding-margin-value/2;
+		//padding: $padding-margin-value/2;
 	
 	}
 }
@@ -217,7 +231,7 @@ h3 {
 }
 
 .non-profit-icons {
-	width: 6em;
+	width: 4em;
 	margin-bottom: $padding-margin-value/2;
 }
 .non-profit-picture {
@@ -238,13 +252,20 @@ h3 {
 	max-width: 55em;
 	margin: 0 auto;
 	padding: 0;
-
 	@media (min-width: 600px) {
 		padding:0;
 		.col-3 {
 			min-height: 15em;
 		}
 	}
+}
+.left-align-text {
+	text-align: left;
+}
+
+.board-name {
+	padding: $padding-margin-value;
+	font-size: 1.5em;
 }
 
 @import "partials/nav";

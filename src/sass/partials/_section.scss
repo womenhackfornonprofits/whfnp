@@ -4,17 +4,20 @@ section {
 	margin: 0;
 	clear: both;
 	background-color: $white; 
-	padding: $padding-margin-value*4 0;
-	padding-bottom: $padding-margin-value*4;
+	padding: 2em .5em;
 	background-color: $section-bg;
+	min-height: 20em;
 	p {
 		text-align: center;
 		max-width: $max-text-width; 
 		margin: 0 auto; 
-		padding: $padding-margin-value;
+   		padding: 2em 1em;
+    	text-align: left;
+
 		@media (min-width: 600px)
 		{
-			padding: 0;
+			padding: $padding-margin-value/2 $padding-margin-value;
+			text-align: center;
 		}
 	}
 	h3 {
@@ -22,7 +25,11 @@ section {
 		text-align: center;
 		margin: 0 auto;
 	}
-	
+	@media (min-width: 300px)
+	{
+		padding: $padding-margin-value*3 $padding-margin-value;
+		padding-bottom: $padding-margin-value*4;
+	}
 }
 
 

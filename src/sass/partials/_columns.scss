@@ -1,6 +1,9 @@
 .col-3 {
-	width: auto;
-	margin: $padding-margin-value;
+	min-width: 10em;
+	max-width: 30em;
+	margin: $padding-margin-value auto;
+	padding: .5em;
+	margin-bottom: $padding-margin-value*2;
 	text-align: center;
 
 	h2 {
@@ -10,52 +13,64 @@
 		padding: 0;
 	}
 	p {
+		padding: $padding-margin-value/4;
 		margin: 0;
+		text-align: center;
 	}
 	@media(min-width: 600px) {
-		p {
-			margin: $padding-margin-value/2 0;
 
-		}
-		width: $col-width;
+		width: 33.3%;
 		display: inline-block;
-    	vertical-align: top;
-    	margin: 0;
-    	margin-top: $padding-margin-value;
-    	&:first-child {
+     	vertical-align: top;
+     	&:first-child {
 			float: left;
-		}
+			border-right: 1px solid #F5F5F5;
+		 }
 		&:last-child {
-			float: right;
+		 	float: right;
+		 	border-left: 1px solid #F5F5F5;
 		}
-		&:nth-child(2) {
-			margin: 0 (100% - $col-width * 3)/2;
-			margin-top: $padding-margin-value;
-		}
+	}
+}
+
+.who-we-are {
+	p {
+		text-align: left;
 	}
 }
 .col-wrap {
 	margin: 0 auto;
 	padding: 0;
     clear: both;
+    .founding-team{
+		margin-top: $padding-margin-value;
+	}	
+
     @media(min-width:600px) {
 		padding: 0 0 2em 0;
+		.founding-team{
+			margin-top: $padding-margin-value;
+		}
 	}
 }
 
 .col-2 {
-	width: auto;
-	margin: $padding-margin-value;
+	width: 100%;
 	text-align: center;
 	p {
 		padding: 0 2em;
 	}
+	h2 {
+		padding: $padding-margin-value/4;
+		font-size: 1.5em;
+	}
 	@media(min-width: 600px) {
-		width: 49%;
 		display: inline-block;
 	    vertical-align: top;
 	    margin: 0;
 	    margin-top: $padding-margin-value;
+	    width: 49%;
+
 	}
    
 }

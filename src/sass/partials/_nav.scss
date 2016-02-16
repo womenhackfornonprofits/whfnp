@@ -1,15 +1,15 @@
 /** Navigation Styles**/
 nav {
-	display: none;
+	//display: none;
 	vertical-align: top;
 	margin: 0;
 	padding: 0;
-	width: 55%;
+	//width: 55%;
 	float: right;
 	//position: absolute;
 	//top:0;
 	ul {
-		padding: 0;
+		padding-right: $padding-margin-value*2;
 		list-style: none;
 		width: 100%;
 		margin: 0 auto;
@@ -19,12 +19,14 @@ nav {
 		flex-direction: row;
 		li {
 			flex-grow: 1;
-			text-align: center;
 			display: inline-block;
-			padding: 1.8em .2em;
+			padding: .5em .5em;
 			margin: 0 auto;
-			text-align: center;
+			text-align: left;
 			font-size: $base-font-size;
+			@media(min-width:600px) {
+				padding: 1.8em .4em;
+			}
 			a {
 				text-decoration: none;
 				font-family: $base-font-name;
@@ -42,6 +44,6 @@ nav {
 		}
 	}
 	@media(min-width:600px) {
-		display:inline-block;
+		//display:inline-block;
 	}
 }

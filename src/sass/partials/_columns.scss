@@ -16,6 +16,8 @@
 		padding: $padding-margin-value/4;
 		margin: 0;
 		text-align: center;
+		font-weight: $base-font-light;
+
 	}
 	@media(min-width: 600px) {
 
@@ -24,7 +26,7 @@
      	vertical-align: top;
      	&:first-child {
 			float: left;
-			border-right: 1px solid #F5F5F5;
+			border-right: 1px solid #F5F5F5; 
 		 }
 		&:last-child {
 		 	float: right;

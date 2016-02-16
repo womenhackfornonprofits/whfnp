@@ -22,11 +22,36 @@
   </head>
   <body>
     <header>
-      <div class="content">
+       <div class="content">
         <div class="img-container">
           <a href="index.html"><img id="logo" src="img/whfnplogo.svg" alt="WHFNP Logo Image"></a>
         </div>
-        <nav>
+        <input type="checkbox" id="primary-toggle" class="nav-toggle" />
+        <nav id="mobile-nav">
+          <label for="primary-toggle" class="hamburger"></label>
+          <ul>
+            <li>
+              <a href="about.html" class="menu-item">About</a>
+            </li>
+            <li>
+              <a href="volunteers.html" class="menu-item">Volunteers</a>
+            </li>
+            <li>
+              <a href="non-profits.html" class="menu-item">Non-Profits</a>
+            </li>
+            <li>
+              <a href="projects.html" class="menu-item">Projects</a>
+            </li>
+            <li>
+              <a href="events.html" class="menu-item">Events</a>
+            </li>
+            <li>
+              <a href="contact.html" class="menu-item">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Desktop Nav -->
+        <nav id="primary-nav">
           <ul>
             <li>
               <a href="about.html">About</a>
@@ -68,6 +93,11 @@
             <a href="#" class="button">View Project</a>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="current-projects">
+      <div class="content">
+        <h2 class="section-heading">Current Projects </h2>
         <div class="project">
           <div class="project-img jaspalsvoice"></div>
           <div class="project-info">
@@ -78,11 +108,6 @@
             <a href="https://github.com/ClaudiaHosu/Jaspals-Web" class="button">View Project</a>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="current-projects">
-      <div class="content">
-        <h2 class="section-heading">Current Projects </h2>
         <div class="project">
           <div class="project-img pimpmycause"></div>
           <div class="project-info">

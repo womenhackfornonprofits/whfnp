@@ -3,3 +3,4 @@
 node_modules/
 s3settings.json
 deploy
+src/.DS_Store

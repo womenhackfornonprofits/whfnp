@@ -6,6 +6,8 @@
 		display: inline-block;
 		width: 47%;
     	vertical-align: middle;
+    	padding: .5em;
+
 	}
 	li:last-child {
 		//margin: 0 5%;
@@ -21,6 +23,7 @@
 		margin: $padding-margin-value/4 auto;
 		li {
 			width: 8em;
+
 		}
 	}
 }

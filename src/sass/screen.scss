@@ -25,6 +25,7 @@ body, html {
 	font-size: $base-font-size;
 
 }
+
 .content {
 	max-width: 70em;
 	margin: 0 auto; 
@@ -32,12 +33,10 @@ body, html {
 } 
 
 #logo {
-	margin-top: $padding-margin-value/1.5;
-	width: 10em;
+	margin-top: $padding-margin-value/2;
+	max-width: 15em;
+	width: 15em;
 	margin-left: $padding-margin-value;
-	@media(min-width:600px) {
-		max-width: 15em;
-	}
 }
 .img-container {
 	display: inline-block;
@@ -45,7 +44,20 @@ body, html {
 }
 
 header {
-	height: auto;
+	min-height: 5em;
+	/** to help nav not be a little buggy fixed header does the trick **/
+
+	@media(min-width:750px) {
+		position: relative;
+		border: none;
+	}
+	position: fixed;
+	display: block;
+	background-color: $white;
+	border-bottom: 1px solid $grey;
+	width: 100%;
+	z-index: 99;
+
 }
 
 h3 {
@@ -83,12 +95,20 @@ h3 {
 .client-testimonial{
 	.col-2 {
 		//background-color: white;
-		height: 18em;
+		//min-height: 18em;
 		p {
 			padding: $padding-margin-value;
 			padding-top: 2em;
 		}
+		h3 {
+			padding: 1em;
+		}
 		margin-bottom: $padding-margin-value;
+		@media(min-width:600px) {
+			min-height: 18em;
+
+		}
+
 	}
 
 
@@ -107,7 +127,7 @@ h3 {
   content:"";
   position: absolute;
   right: 100%;
-  top: 3em;
+  top: 4em;
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
@@ -157,7 +177,7 @@ h3 {
 	font-size: $h1-font-size/1.5;
 	line-height: $h1-line-height/1.5;
 	text-align: center;
-	padding: .5em 0;
+	padding: 2em 0;
 	padding-bottom: 0;
 	margin: 0;
 	text-shadow: 1px 1px $black;
@@ -171,7 +191,7 @@ h3 {
 }
 
 
-.vfounding-team {
+.founding-team {
 	.col-2 h2 {
 		font-weight: 100;
 		font-size: 1.6em;
@@ -245,7 +265,13 @@ h3 {
 	img {
 		margin: 2em auto;
     	width: auto;
-    	display: block;
+    	display: none;
+	}
+	@media(min-width:600px) {
+		img {
+			display: block;
+		}
+
 	}
 }
 .founding-team, .non-profits-wrap {

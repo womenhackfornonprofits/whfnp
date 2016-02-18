@@ -22,8 +22,9 @@ Women Hack for Non-Profits website rebuild.
 
 # Team
 
-* **Content**: Kriselda Rabino
+* **Content**: [Kriselda Rabino](https://github.com/krissy)
 * **Front end Dev**: [Liliana Kastilio](https://www.lilianakastilio.co.uk)
-* **Design:** Elizabeth Chesters
-* **Logo:** Mariza Dima
-* **QA & Project Manager**: [Tanya Powell](http://tanyapowell.co.uk/)
+* **Design:** [Elizabeth Chesters](http://echesters.co.uk)
+* **Logo:** [Mariza Dima](https://twitter.com/Marizolde)
+* **QA & Project Manager**: [Tanya Powell](http://tanyapowell.co.uk)
+* **Product Owner**: [Nandhini Narasimhan](http://nandhini31.github.io)

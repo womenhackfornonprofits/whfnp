@@ -83,11 +83,15 @@
 		<section>
 			<h2> Get in touch </h2>
 			<form method="POST" action="//formspree.io/help@womenhackfornonprofits.com">
+        <label for="name">Name:</label>
 				<input type="text" name="name" placeholder="Name" required>
+        <label for="email">Email Address:</label>
 				<input type="email" name="_replyto" placeholder="Email" required>
 				<input type="hidden" name="_subject" value="New Submission: WHFN Website Contact Form"/>
 				<input type="text" name="_gotcha" style="display:none"/>
+        <label for="tel">Phone Number:</label>
 				<input type="tel" name="phone" placeholder="Phone">
+        <label for="message">Enter your message here:</label>
 				<textarea name="message" rows="5" placeholder="Your message here" required></textarea>
 				<input type="submit" value="Send">
 			</form>

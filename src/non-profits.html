@@ -27,7 +27,32 @@
         <div class="img-container">
           <a href="index.html"><img id="logo" src="img/whfnplogo.svg" alt="WHFNP Logo Image"></a>
         </div>
-        <nav>
+        <input type="checkbox" id="primary-toggle" class="nav-toggle" />
+        <nav id="mobile-nav">
+          <label for="primary-toggle" class="hamburger"></label>
+          <ul>
+            <li>
+              <a href="about.html" class="menu-item">About</a>
+            </li>
+            <li>
+              <a href="volunteers.html" class="menu-item">Volunteers</a>
+            </li>
+            <li>
+              <a href="non-profits.html" class="menu-item">Non-Profits</a>
+            </li>
+            <li>
+              <a href="projects.html" class="menu-item">Projects</a>
+            </li>
+            <li>
+              <a href="events.html" class="menu-item">Events</a>
+            </li>
+            <li>
+              <a href="contact.html" class="menu-item">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Desktop Nav -->
+        <nav id="primary-nav">
           <ul>
             <li>
               <a href="about.html">About</a>
@@ -53,7 +78,7 @@
     </header>
     <section class="smaller-banner non-profits">
       <div class="content">
-        <h1 class="title-heading">Non-Profits</h1>
+        <h1 class="title-heading title-cta">Non-Profits</h1>
         <a href="non-profits-contact.html" class="button">Work with us</a>
       </div>
     </section>

@@ -3,18 +3,20 @@
 .banner {
 	background: 
 	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
- 	url('../img/about.jpg') no-repeat center center;
+ 	url('../img/index.jpg') no-repeat center center;
 	background-size: cover;
-	min-height: 30em;
+	min-height: 35em;
 	h2 {
 		font-family: $base-font-name;
 		font-weight: $base-font-light;
 		color: $white;
-		font-size: $h2-font-size/1.2;
+		font-size: $h2-font-size/1.4;
 		line-height: $h2-font-size/1.2;
 		max-width: 40em;
 		min-width: 15em;
-		margin: 1em auto;
+		margin: 0 auto;
+		padding: 0;
+		margin-top: 1em;
 		text-transform: none;
 		@media(min-width:600px) {
 			h2 {
@@ -37,9 +39,18 @@
 	height: $smaller-banner-height;
 	padding: 0;
 	margin: 0;
-	h1 {
+	.title-heading {
 		padding: 0;
-		padding-top: 2em;
+		padding-top: 4em;
+	}
+	@media(min-width:750px) {
+		.title-heading {
+			padding-top: 2em; //1.5
+		}
+		.title-cta {
+			padding-top: 1.5em; //1.5
+
+		}
 	}
 
 }
@@ -83,7 +94,7 @@
 }
 .homepage-image {
 	background:
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(208, 208, 208, 0.35), rgba(0, 0, 0, 0.5)),
     	url('../img/homepage.jpeg') no-repeat center center;
     background-size: cover;
 

@@ -485,22 +485,24 @@ h3 {
 .overlay-text > h2 {
   padding: 1em 0; }
 
-.non-profits-wrap img {
+.non-profits-wrap img, .volunteers-wrap img {
   margin: 2em auto;
-  width: auto;
+  width: auto; }
+
+.non-profits-wrap img {
   display: none; }
 @media (min-width: 600px) {
   .non-profits-wrap img {
     display: block; } }
 
-.founding-team, .non-profits-wrap {
+.founding-team, .non-profits-wrap, .volunteers-wrap {
   max-width: 55em;
   margin: 0 auto;
   padding: 0; }
   @media (min-width: 600px) {
-    .founding-team, .non-profits-wrap {
+    .founding-team, .non-profits-wrap, .volunteers-wrap {
       padding: 0; }
-      .founding-team .col-3, .non-profits-wrap .col-3 {
+      .founding-team .col-3, .non-profits-wrap .col-3, .volunteers-wrap .col-3 {
         min-height: 15em; } }
 
 .left-align-text {
@@ -956,10 +958,10 @@ table {
   border-spacing: 0; }
 
 .project-img {
-  height: 26em;
+  height: 30em;
   margin: 2em 0; }
   .project-img img {
-    height: 26em;
+    height: 30em;
     border: 2em solid white;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1) inset;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1); }
@@ -1019,9 +1021,8 @@ table {
 .col-3 {
   min-width: 10em;
   max-width: 30em;
-  margin: 2em auto;
+  margin-top: 2em;
   padding: .5em;
-  margin-bottom: 4em;
   text-align: center; }
   .col-3 h2 {
     text-transform: none;

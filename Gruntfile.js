@@ -13,7 +13,7 @@ grunt.loadNpmTasks('grunt-contrib-compress');
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
-  s3settings: grunt.file.readJSON('s3settingsprod.json'),
+  //s3settings: grunt.file.readJSON('s3settingsprod.json'), //-- READS THE PROD CREDENTIALS TO DEPLOY TO PROD ---//
   s3settings: grunt.file.readJSON('s3settings.json'),
 
   //------- AWS -------//
@@ -61,7 +61,7 @@ grunt.initConfig({
       },
       files: [
         //{expand: true, cwd: 'deploy/css/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
-        {expand: true, cwd: 'deploy/css/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+        {expand: true, cwd: 'deploy/css/', src: ['**'], dest: 'css/', params: {CacheControl: 'max-age=31536000, public'}},
 
       ]
     },
@@ -72,7 +72,7 @@ grunt.initConfig({
       files: [
         {dest: '/', cwd: 'backup/', action: 'download'},
       ]
-    }
+    },
   },
   //------- CSS Minify -------//
   cssmin: {

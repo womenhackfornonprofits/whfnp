@@ -45,10 +45,10 @@
 	}
 	@media(min-width:750px) {
 		.title-heading {
-			padding-top: 2em; //1.5
+			padding-top: 2em; 
 		}
 		.title-cta {
-			padding-top: 1.5em; //1.5
+			padding-top: 1.5em;
 
 		}
 	}
@@ -91,7 +91,7 @@
     	url('../img/projects.jpg') no-repeat center center;
     background-size: cover;
 
-}
+} 
 .homepage-image {
 	background:
 	linear-gradient(rgba(208, 208, 208, 0.35), rgba(0, 0, 0, 0.5)),
@@ -103,7 +103,7 @@
 .non-profits {
 	background:
 	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
-    	url('../img/non-profits1.JPG') no-repeat center center;
+    	url('../img/non-profits.JPG') no-repeat center center;
    	background-size: cover;
 
 }

@@ -61,7 +61,7 @@ header {
 }
 
 h3 {
-	text-align: center; //change this to a class
+	text-align: center;
 }
 .volunteer-link {
 	text-decoration: none;
@@ -94,8 +94,6 @@ h3 {
 
 .client-testimonial{
 	.col-2 {
-		//background-color: white;
-		//min-height: 18em;
 		p {
 			padding: $padding-margin-value;
 			padding-top: 2em;
@@ -170,8 +168,6 @@ h3 {
 
 .title-heading {
 	font-family: $title-font-name;
-	//position: relative;
-    //top: 30%;
 	font-weight: 400;
 	color: $white;
 	font-size: $h1-font-size/1.5;
@@ -201,7 +197,6 @@ h3 {
 	min-width: 5em;
 	line-height: $title-font-size;
 	font-family: $title-font-name;
-	//padding: 0;
 	padding: $padding-margin-value/2;
 	padding-bottom: 0.5em;
 	font-weight: bold;
@@ -211,10 +206,6 @@ h3 {
 	font-weight: 400;
 	margin:0 auto;
 	text-align: center;
-	@media(min-width:600px) {
-		//padding: $padding-margin-value/2;
-	
-	}
 }
 
 

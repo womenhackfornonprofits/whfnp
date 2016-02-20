@@ -13,6 +13,7 @@ grunt.loadNpmTasks('grunt-prettify');
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
+  s3settings: grunt.file.readJSON('s3settingsprod.json'),
   s3settings: grunt.file.readJSON('s3settings.json'),
 
   //------- AWS -------//

@@ -9,7 +9,7 @@ grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-browser-sync');
 grunt.loadNpmTasks('grunt-prettify');
-
+grunt.loadNpmTasks('grunt-contrib-compress');
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
@@ -25,18 +25,44 @@ grunt.initConfig({
       uploadConcurrency: 5, 
       downloadConcurrency: 5 
     },
-    live: {
+    img: {
+      options: {
+        bucket: '<%= s3settings.bucket %>',
+        differential: true // Only uploads the files that have changed
+      },
+      files: [
+        {expand: true, cwd: 'deploy/img/', src: ['**/*.{png,jpg,jpeg}'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public'}},
+      ]
+    },
+    svg: {
+      options: {
+        bucket: '<%= s3settings.bucket %>',
+        differential: true // Only uploads the files that have changed
+      },
+      files: [
+        {expand: true, cwd: 'deploy/img/', src: ['**/*.svg'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+      ]
+    },
+    html: {
       options: {
         bucket: '<%= s3settings.bucket %>',
         differential: false // Only uploads the files that have changed
       },
       files: [
-        {expand: true, cwd: 'deploy/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
-        //{expand: true, cwd: 'deploy/img/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
-        //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+        //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+        {expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
 
-        //{expand: true, cwd: 'deploy/css/', src: ['*.css'], dest: '', params: {CacheControl: '31536000'}},
-  
+      ]
+    },
+    css: {
+      options: {
+        bucket: '<%= s3settings.bucket %>',
+        differential: true // Only uploads the files that have changed
+      },
+      files: [
+        //{expand: true, cwd: 'deploy/css/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+        {expand: true, cwd: 'deploy/css/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+
       ]
     },
     download: {
@@ -74,7 +100,6 @@ grunt.initConfig({
       files: [
         // includes files within path
         {expand: true, cwd: 'src/', src: ['**'], dest: 'deploy/', filter: 'isFile'},
-        //{expand: true, cwd: 'src/css', src: ['*.css'], dest: 'deploy/css/', filter: 'isFile'},
       ]
     },
     img: {
@@ -133,10 +158,23 @@ grunt.initConfig({
       src: ['*.html'],
       dest: 'src/'
     }
+  },
+  //-------- Compress HTML ------//
+  compress: {
+    main: {
+      options: {
+        mode: 'gzip'
+      },
+      files: [
+        {expand: true, src: ['deploy/*.html'], dest: '', ext: '.html'},
+        {expand: true, src: ['deploy/css/screen.css'], dest: '', ext: '.css'},
+
+      ]
+    }
   }
 });
 
-  grunt.registerTask('deploy', ['default','aws_s3:live']);
+  grunt.registerTask('deploy', ['default','aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
   grunt.registerTask('download', ['aws_s3:download']);
   grunt.registerTask('img', ['imagemin', 'copy:img']);
   grunt.registerTask('default', ['sass', 'copy:main', 'cssmin', 'htmlmin']);

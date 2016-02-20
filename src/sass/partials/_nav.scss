@@ -1,0 +1,219 @@
+/** Navigation Styles**/
+nav {
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	float: right;
+	ul {
+		padding-right: $padding-margin-value*2;
+		list-style: none;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		li {
+			flex-grow: 1;
+			display: inline-block;
+			padding: .5em .5em;
+			margin: 0 auto;
+			text-align: left;
+			font-size: $base-font-size;
+			@media(min-width:600px) {
+				padding: 1.8em .4em;
+			}
+			a {
+				text-decoration: none;
+				font-family: $base-font-name;
+				text-transform: uppercase;
+				color: $nav-link-color;
+				padding-bottom: 0.15em;
+				&:visited{
+					color: $nav-link-visited-color;
+				}
+				&:hover {
+					border-bottom: 0.15em solid $salmon-pink;
+				}
+
+			}
+		}
+	}
+}
+
+#primary-nav {
+	display: none;
+	@media(min-width:750px) {
+		display: block;
+	}
+
+}
+
+
+#mobile-nav {
+	display: block;
+	@media(min-width:750px) {
+		display: none;
+	}
+
+}
+
+/**** hamburger styles *****/
+
+$break-small: 35rem;
+$break-medium: 50rem;
+$break-large: 75rem;
+$break-xlarge: 100rem;
+$text-clr: #aaa;
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+#mobile-nav {
+	// NOTE: When open make body height = veiwport height to prevent mobile bug. See behance.com
+	$min-nav-width: 14rem;
+	position: absolute;
+	top: 0;
+	right: -$min-nav-width;
+	z-index: 10;
+	box-sizing: border-box;
+	width: $min-nav-width;
+	height: 500px;
+	height: 100vh;
+	background: white;
+	border-left: 1px solid $text-clr;
+	font-size: 1rem;
+	@media screen and (min-width: $break-large) {
+		bottom: 0;
+		right: 0;
+		box-sizing: border-box;
+		height: 100%;
+		width: auto;
+		padding: 0;
+		padding-right: 1rem;
+		padding-bottom: 1rem;
+		border: none;
+		text-align: right;
+		letter-spacing: 0.2em;
+		&::before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: bottom;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: $orange;
+	}
+	.menu-item {
+		display: block;
+		padding: 1rem;
+		border-top: 1px solid lighten($text-clr, 95%);
+		border-bottom: 1px solid lighten($text-clr, 50%);
+		transition: box-shadow 0.3s, background 0.3s;
+		@media screen and (max-width: $break-large -0.05rem) {
+			&:hover {
+				background: #fbf6fb;
+			}
+		} 
+		@media screen and (min-width: $break-large) {
+			display: inline-block;
+			padding: 0 0.5rem;
+			border: none;
+		}
+	}
+	.hamburger {
+		position: absolute;
+		top: 1.8em;
+		left: -42px;
+		@media screen and (min-width: $break-large) {
+			display: none;
+		}
+	}
+}
+input.nav-toggle:checked + #mobile-nav {
+	@media screen and (max-width: $break-large - 0.05rem) {
+		right: 0;
+		box-shadow: 
+					5px 0 20px 0px rgba(0,0,0,0.5),
+					0 0 0 4000px rgba(255,255,255,0.95);
+		transition: right 0.3s, box-shadow 0.6s;
+  	.hamburger {
+  		&::before, &::after {
+  			transition: box-shadow 0.2s, transform 0.5s 0.2s;
+  		}
+  		&::before {
+  			transform:
+  				rotate(45deg)
+  				translate(5px, 5px);
+	  	}
+  		&::after {
+		  	transform:
+			  	rotate(-45deg)
+		  		translate(5px, -5px);
+	  		box-shadow: 0 -8.5px 0 0 transparent;
+  		}
+  	}
+	}
+}
+input[type="checkbox"].nav-toggle {
+	display: none;
+}
+.hamburger {
+	position: relative;
+	display: block;
+	height: 17px;
+	width: 19px;
+	background: transparent;
+	cursor: pointer;
+	$hamburger-clr: lighten($black, 10%);
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		display: block;
+		height: 3px;
+		width: 100%;
+		border-radius: 5px;
+		background: $hamburger-clr;
+		transition: box-shadow 0.2s 0.2s, transform 0.3s;
+	}
+	&::after {
+		top: auto;
+		bottom: 0;
+		box-shadow: 0 -7px 0 0 $hamburger-clr;
+	}
+
+}
+.expand {
+	position: absolute;
+	bottom: -1.8em;
+	right: 0;
+	font-size: 0.8em;
+	color: lighten($text-clr, 30%);
+	cursor: pointer;
+	&::before {
+		content: '+ expand';
+		display: inline;
+	}
+}
+.open > .expand::before {
+	content: 'x collapse';
+	display: inline;
+}
+.btn {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin: 1rem auto;
+	padding: 0.5rem;
+	text-decoration: none;
+	border: 1px solid lighten($text-clr, 50%);
+}
+.btn-container {
+	text-align: center;
+}

@@ -1,0 +1,22 @@
+.partner-list {
+	list-style: none;
+	max-width: 25em;
+	margin: $padding-margin-value/4 auto;
+	li {
+		display: inline-block;
+		width: 47%;
+    	vertical-align: middle;
+    	padding: .5em;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+	@media(min-width:600px) {
+		margin: $padding-margin-value/4 auto;
+		li {
+			width: 8em;
+
+		}
+	}
+}

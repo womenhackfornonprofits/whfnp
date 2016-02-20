@@ -1,0 +1,70 @@
+$section-bg: $white;
+
+section {
+	margin: 0;
+	clear: both;
+	background-color: $white; 
+	padding: 2em .5em;
+	background-color: $section-bg;
+	min-height: 20em;
+	p {
+		text-align: center;
+		max-width: $max-text-width; 
+		margin: 0 auto; 
+   		padding: 2em 1em;
+    	text-align: left;
+    	font-weight: $base-font-light;
+
+		@media (min-width: 600px)
+		{
+			padding: $padding-margin-value/2 $padding-margin-value;
+			text-align: center;
+		}
+	}
+	h3 {
+		max-width: $max-text-width; 
+		text-align: center;
+		margin: 0 auto;
+	}
+	@media (min-width: 300px)
+	{
+		padding: $padding-margin-value*3 $padding-margin-value;
+		padding-bottom: $padding-margin-value*4;
+	}
+}
+
+
+section:nth-child(4) {
+ 	$section-bg: $pop-blue;
+ 	background-color: $section-bg;
+ 	background-image: linear-gradient(315deg,#2693d5,$section-bg);
+ 	.faq{
+ 		h3 {
+		color: $black;
+		}
+	}
+}
+
+section:nth-child(0) {
+ 	$section-bg: $pop-blue;
+ 	background-color: $section-bg;
+ 	background-image: linear-gradient(315deg,#2693d5,$section-bg);
+
+
+}
+section:nth-child(6) {
+	$section-bg: $pale-orange;
+	background-color: $section-bg;
+ 	background-image: linear-gradient(315deg,#FF6E3D,$section-bg);
+
+}
+
+section:nth-child(even){
+	h2 {
+ 		color: $white;
+ 	}
+ 	.text-link {
+ 		color: $white;
+ 		border-bottom:1px $white dashed;
+ 	}
+}

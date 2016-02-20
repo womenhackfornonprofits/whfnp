@@ -1,0 +1,75 @@
+@import "base";
+
+.project-img {
+	img {
+		height: $project-image-height;
+	    border: 2em solid rgb(255, 255, 255);
+	    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.1) inset;
+	    box-shadow: 10px 10px 0px rgba(0,0,0,.1); 
+	}
+	height: $project-image-height;
+	margin: $padding-margin-value 0;
+	@media(min-width:600px) {
+		display: inline-block;
+		width: 49%;
+	}
+}
+
+.findacure {
+	background: url('../img/non-profits/findacure.png') no-repeat;
+	background-size: cover;
+}
+
+.whfnp {
+	background: url('../img/non-profits/whfnp.png') no-repeat;
+	background-size: cover;
+}
+.ippr {
+	background: url('../img/non-profits/IPPR.png') no-repeat;
+	background-size: cover;
+}
+.pimpmycause {
+	background: url('../img/non-profits/pimpmycause.png') no-repeat;
+	background-size: cover;
+}
+.jaspalsvoice {
+	background: url('../img/non-profits/jaspalsvoice.png') no-repeat;
+	background-size: cover;
+}
+.project-info {
+	vertical-align: top;
+	@media(min-width:600px) {
+		display: inline-block;
+		width: 49%;
+		margin: $padding-margin-value*2 0;
+		padding-left: $padding-margin-value;
+		.button {
+			margin: $padding-margin-value $padding-margin-value 0 0;
+		}
+	}
+}
+.project {
+	h3 {
+		text-align: center;
+		font-style: bold;
+		font-weight: 100;
+		padding: 0;
+		padding-bottom: $padding-margin-value/4;
+
+	}
+	p {
+		margin:0;
+		padding: 0;
+	}
+	h2 {
+		padding: 0;
+		padding-bottom: $padding-margin-value/4;
+		color: $orange;
+	}
+	@media(min-width:600px) {
+		h2, h3, p {
+			text-align: left;
+		}
+	}
+
+}

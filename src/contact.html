@@ -83,12 +83,16 @@
 		<section>
 			<h2> Get in touch </h2>
 			<form method="POST" action="//formspree.io/help@womenhackfornonprofits.com">
-				<input type="text" name="name" placeholder="Name" required>
-				<input type="email" name="_replyto" placeholder="Email" required>
+        <label for="name">Name:</label>
+				<input type="text" name="name" placeholder="E.g. Jon Snow" required>
+        <label for="email">Email Address:</label>
+				<input type="email" name="_replyto" placeholder="E.g. jon.snow@example.com" required>
 				<input type="hidden" name="_subject" value="New Submission: WHFN Website Contact Form"/>
 				<input type="text" name="_gotcha" style="display:none"/>
-				<input type="tel" name="phone" placeholder="Phone">
-				<textarea name="message" rows="5" placeholder="Your message here" required></textarea>
+        <label for="tel">Phone Number:</label>
+				<input type="tel" name="phone" placeholder="E.g. 07912 345 678">
+        <label for="message">Enter your message here:</label>
+				<textarea name="message" rows="5" placeholder="E.g. Hello, just wanted to tell you I think you are awesome" required></textarea>
 				<input type="submit" value="Send">
 			</form>
 		</section>

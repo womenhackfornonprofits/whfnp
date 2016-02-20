@@ -2,5 +2,6 @@
 .DS_Store
 node_modules/
 s3settings.json
+s3settingsprod.json
 deploy
 src/.DS_Store

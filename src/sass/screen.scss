@@ -252,10 +252,15 @@ h3 {
 .overlay-text > h2 {
 	padding: $padding-margin-value/2 0;
 }
-.non-profits-wrap {
+.non-profits-wrap, .volunteers-wrap {
 	img {
 		margin: 2em auto;
     	width: auto;
+	}
+}
+
+.non-profits-wrap {
+	img {
     	display: none;
 	}
 	@media(min-width:600px) {
@@ -265,7 +270,7 @@ h3 {
 
 	}
 }
-.founding-team, .non-profits-wrap {
+.founding-team, .non-profits-wrap, .volunteers-wrap{
 	max-width: 55em;
 	margin: 0 auto;
 	padding: 0;

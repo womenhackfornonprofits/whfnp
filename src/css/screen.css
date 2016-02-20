@@ -1015,9 +1015,8 @@ table {
 .col-3 {
   min-width: 10em;
   max-width: 30em;
-  margin: 2em auto;
+  margin-top: 2em;
   padding: .5em;
-  margin-bottom: 4em;
   text-align: center; }
   .col-3 h2 {
     text-transform: none;

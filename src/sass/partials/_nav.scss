@@ -38,9 +38,6 @@ nav {
 			}
 		}
 	}
-	@media(min-width:600px) {
-		//display:inline-block;
-	}
 }
 
 #primary-nav {
@@ -85,7 +82,7 @@ $text-clr: #aaa;
 	width: $min-nav-width;
 	height: 500px;
 	height: 100vh;
-	background: white;//$bodyBG;
+	background: white;
 	border-left: 1px solid $text-clr;
 	font-size: 1rem;
 	@media screen and (min-width: $break-large) {
@@ -143,7 +140,6 @@ input.nav-toggle:checked + #mobile-nav {
 		box-shadow: 
 					5px 0 20px 0px rgba(0,0,0,0.5),
 					0 0 0 4000px rgba(255,255,255,0.95);
-		//box-shadow: horizontal vertical blur spread color inset;
 		transition: right 0.3s, box-shadow 0.6s;
   	.hamburger {
   		&::before, &::after {

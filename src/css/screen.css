@@ -952,10 +952,10 @@ table {
   border-spacing: 0; }
 
 .project-img {
-  height: 26em;
+  height: 30em;
   margin: 2em 0; }
   .project-img img {
-    height: 26em;
+    height: 30em;
     border: 2em solid white;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1) inset;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1); }

@@ -13,8 +13,8 @@ grunt.loadNpmTasks('grunt-contrib-compress');
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
-  s3settings: grunt.file.readJSON('s3settingsprod.json'), //-- READS THE PROD CREDENTIALS TO DEPLOY TO PROD ---//
-  //s3settings: grunt.file.readJSON('s3settings.json'),
+  //s3settings: grunt.file.readJSON('s3settingsprod.json'), //-- READS THE PROD CREDENTIALS TO DEPLOY TO PROD ---//
+  s3settings: grunt.file.readJSON('s3settings.json'),
 
   //------- AWS -------//
   aws_s3: {
@@ -31,7 +31,7 @@ grunt.initConfig({
         differential: true // Only uploads the files that have changed
       },
       files: [
-        {expand: true, cwd: 'deploy/img/', src: ['**/*.{png,jpg,jpeg}'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public'}},
+        {expand: true, cwd: 'deploy/img/', src: ['**/*.{png,jpg,jpeg,JPG}'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public'}},
       ]
     },
     svg: {
@@ -174,9 +174,13 @@ grunt.initConfig({
   }
 });
 
+  /** DEPLOY task deployes all changes, check individual tasks above to see what they do **/
   grunt.registerTask('deploy', ['default','aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
-  grunt.registerTask('download', ['aws_s3:download']);
+  /** IMG task processess ALL images from src to deploy and optimizes them **/
   grunt.registerTask('img', ['imagemin', 'copy:img']);
+  /** DEFAULT task that compiles, minifies and copies relevant files, 
+  images are not copied everytime as the current once on site are gzipped. 
+  Images are not an asset that changes often so there is a secial task to copy**/
   grunt.registerTask('default', ['sass', 'copy:main', 'cssmin', 'htmlmin']);
 
 

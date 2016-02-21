@@ -13,8 +13,8 @@ grunt.loadNpmTasks('grunt-contrib-compress');
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
-  //s3settings: grunt.file.readJSON('s3settingsprod.json'), //-- READS THE PROD CREDENTIALS TO DEPLOY TO PROD ---//
-  s3settings: grunt.file.readJSON('s3settings.json'),
+  s3settings: grunt.file.readJSON('s3settingsprod.json'), //-- READS THE PROD CREDENTIALS TO DEPLOY TO PROD ---//
+  //s3settings: grunt.file.readJSON('s3settings.json'),
 
   //------- AWS -------//
   aws_s3: {

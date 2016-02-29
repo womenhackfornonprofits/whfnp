@@ -9,10 +9,11 @@ grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-browser-sync');
 grunt.loadNpmTasks('grunt-prettify');
-
+grunt.loadNpmTasks('grunt-contrib-compress');
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
+  //s3settings: grunt.file.readJSON('s3settingsprod.json'), //-- READS THE PROD CREDENTIALS TO DEPLOY TO PROD ---//
   s3settings: grunt.file.readJSON('s3settings.json'),
 
   //------- AWS -------//
@@ -24,18 +25,44 @@ grunt.initConfig({
       uploadConcurrency: 5, 
       downloadConcurrency: 5 
     },
-    live: {
+    img: {
+      options: {
+        bucket: '<%= s3settings.bucket %>',
+        differential: true // Only uploads the files that have changed
+      },
+      files: [
+        {expand: true, cwd: 'deploy/img/', src: ['**/*.{png,jpg,jpeg,JPG}'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public'}},
+      ]
+    },
+    svg: {
+      options: {
+        bucket: '<%= s3settings.bucket %>',
+        differential: true // Only uploads the files that have changed
+      },
+      files: [
+        {expand: true, cwd: 'deploy/img/', src: ['**/*.svg'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+      ]
+    },
+    html: {
       options: {
         bucket: '<%= s3settings.bucket %>',
         differential: false // Only uploads the files that have changed
       },
       files: [
-        {expand: true, cwd: 'deploy/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
-        //{expand: true, cwd: 'deploy/img/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
-        //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+        //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+        {expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
 
-        //{expand: true, cwd: 'deploy/css/', src: ['*.css'], dest: '', params: {CacheControl: '31536000'}},
-  
+      ]
+    },
+    css: {
+      options: {
+        bucket: '<%= s3settings.bucket %>',
+        differential: true // Only uploads the files that have changed
+      },
+      files: [
+        //{expand: true, cwd: 'deploy/css/', src: ['**'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+        {expand: true, cwd: 'deploy/css/', src: ['**'], dest: 'css/', params: {CacheControl: 'max-age=31536000, public'}},
+
       ]
     },
     download: {
@@ -45,7 +72,7 @@ grunt.initConfig({
       files: [
         {dest: '/', cwd: 'backup/', action: 'download'},
       ]
-    }
+    },
   },
   //------- CSS Minify -------//
   cssmin: {
@@ -73,7 +100,6 @@ grunt.initConfig({
       files: [
         // includes files within path
         {expand: true, cwd: 'src/', src: ['**'], dest: 'deploy/', filter: 'isFile'},
-        //{expand: true, cwd: 'src/css', src: ['*.css'], dest: 'deploy/css/', filter: 'isFile'},
       ]
     },
     img: {
@@ -132,12 +158,29 @@ grunt.initConfig({
       src: ['*.html'],
       dest: 'src/'
     }
+  },
+  //-------- Compress HTML ------//
+  compress: {
+    main: {
+      options: {
+        mode: 'gzip'
+      },
+      files: [
+        {expand: true, src: ['deploy/*.html'], dest: '', ext: '.html'},
+        {expand: true, src: ['deploy/css/screen.css'], dest: '', ext: '.css'},
+
+      ]
+    }
   }
 });
 
-  grunt.registerTask('deploy', ['default','aws_s3:live']);
-  grunt.registerTask('download', ['aws_s3:download']);
+  /** DEPLOY task deployes all changes, check individual tasks above to see what they do **/
+  grunt.registerTask('deploy', ['default','aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
+  /** IMG task processess ALL images from src to deploy and optimizes them **/
   grunt.registerTask('img', ['imagemin', 'copy:img']);
+  /** DEFAULT task that compiles, minifies and copies relevant files, 
+  images are not copied everytime as the current once on site are gzipped. 
+  Images are not an asset that changes often so there is a secial task to copy**/
   grunt.registerTask('default', ['sass', 'copy:main', 'cssmin', 'htmlmin']);
 
 

@@ -1,4 +1,3 @@
-
 form {
   margin: 0 auto;
   width: 100%;
@@ -19,12 +18,11 @@ input {
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  //color: $dark-grey;
-  color: #FBB7BC;
+  color: #FB4553;
 }
 
 label {
-  display: none;
+  font-weight: 500;
 }
 
 input[type=email] {
@@ -37,7 +35,6 @@ input[type=email] {
   font-weight: 100;
 }
 
-
 input[type=number] {
   display: block;
   padding: $form-padding-value;
@@ -46,7 +43,6 @@ input[type=number] {
   border: none;
   color: $black;
   font-weight: 100;
-
 }
 
 input[type=submit] {
@@ -56,15 +52,43 @@ input[type=submit] {
   width: 100%;
   border: none;
   opacity: 1;
-  box-shadow: .5em .5em 0px rgba(0,0,0,.1);
   background-color: $pop-pink;
   font-weight: 100;
   color: $white;
-  &:hover { 
-    opacity: .8;  
+  &:hover {
+    opacity: .8;
   }
 }
 
+input[type=tel] {
+  display: block;
+  padding: $form-padding-value;
+  margin: 0 auto $form-padding-value auto;
+  width: 100%;
+  border: none;
+  color: $black;
+  font-weight: 100;
+}
+
+input[type=text] {
+  display: block;
+  padding: $form-padding-value;
+  margin: 0 auto $form-padding-value auto;
+  width: 100%;
+  border: none;
+  color: $black;
+  font-weight: 100;
+}
+
+input[type=url] {
+  display: block;
+  padding: $form-padding-value;
+  margin: 0 auto $form-padding-value auto;
+  width: 100%;
+  border: none;
+  color: $black;
+  font-weight: 100;
+}
 
 textarea {
   display: block;

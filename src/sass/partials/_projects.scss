@@ -1,18 +1,13 @@
+@import "base";
+
 .project-img {
 	img {
 		height: $project-image-height;
-		//display: inline-block;
-	    //width: 49%;
 	    border: 2em solid rgb(255, 255, 255);
-	    /* border-bottom-width: 0; */
 	    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.1) inset;
-	    box-shadow: 10px 10px 0px rgba(0,0,0,.1);
+	    box-shadow: 10px 10px 0px rgba(0,0,0,.1); 
 	}
-	//background: url('../img/background-2.jpeg') no-repeat center center;
 	height: $project-image-height;
-	border: .1em #C5C2C2  solid;
- 	box-shadow: .5em .5em 0px rgba(0,0,0,.1);
-
 	margin: $padding-margin-value 0;
 	@media(min-width:600px) {
 		display: inline-block;
@@ -76,5 +71,5 @@
 			text-align: left;
 		}
 	}
-	
+
 }

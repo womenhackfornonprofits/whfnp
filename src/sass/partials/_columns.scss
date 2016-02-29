@@ -1,10 +1,10 @@
 .col-3 {
 	min-width: 10em;
 	max-width: 30em;
-	margin: $padding-margin-value auto;
+	margin-top: $padding-margin-value;
 	padding: .5em;
-	margin-bottom: $padding-margin-value*2;
-	text-align: center;
+	//margin-bottom: $padding-margin-value*2;
+	text-align: center; 
 
 	h2 {
 		text-transform: none;

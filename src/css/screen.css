@@ -519,7 +519,7 @@ h3 {
       font-size: 62.4px;
       line-height: 93.6px; } }
 
-.founding-team .col-2 h2, .founding-team .col-1 h2 {
+.founding-team .col-2 h2 {
   font-weight: 300;
   font-size: 1.6em; }
 
@@ -747,7 +747,7 @@ input[type="checkbox"].nav-toggle {
   bottom: -1.8em;
   right: 0;
   font-size: 0.8em;
-  color: #f7f7f7;
+  color: #f6f6f6;
   cursor: pointer; }
   .expand::before {
     content: '+ expand';
@@ -1259,10 +1259,6 @@ textarea {
       margin-top: 2em;
       width: 49%; } }
 
-.col-1 {
-  margin: 0 auto;
-  width: 15em; }
-
 .social {
   float: none;
   margin: 0 auto;
@@ -1388,13 +1384,24 @@ textarea {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1) inset; }
 
 footer {
-  background-color: #3c3c3c;
-  padding: 3em; }
-  footer p {
-    text-align: center;
-    font-weight: 100;
-    font-size: 0.9em;
-    color: #fff; }
+  padding: 30px 0;
+  background-color: #424242;
+  color: #cecece;
+  font-size: 14px; }
+  footer ul {
+    list-style: none;
+    margin-left: 0; }
+    footer ul li {
+      padding: 5px 0; }
+      footer ul li a, footer ul li a:visited {
+        color: #cecece; }
+        footer ul li a:hover, footer ul li a:visited:hover {
+          color: #d73f00; }
+  footer h5 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 5px; }
 
 .partner-list {
   list-style: none;
@@ -1413,5 +1420,13 @@ footer {
       margin: 0.5em auto; }
       .partner-list li {
         width: 8em; } }
+
+.position {
+  display: block;
+  float: none;
+  overflow: hidden; }
+  .position.central {
+    margin-left: auto;
+    margin-right: auto; }
 
 /*# sourceMappingURL=screen.css.map */

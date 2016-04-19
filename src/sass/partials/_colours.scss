@@ -28,3 +28,10 @@ $volunter-name-bg-color-1: rgba(236, 86, 112, 0.6);
 
 $volunter-type-bg-color-2: rgba(247, 203, 255, 0.6);
 $volunter-name-bg-color-2: rgba(247, 203, 255, 0.6);
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 30%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$brand-color:      #ff6525;
+$link-hover:	   darken($brand-color, 15%);

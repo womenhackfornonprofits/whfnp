@@ -63,8 +63,12 @@ section:nth-child(even){
 	h2 {
  		color: $white;
  	}
- 	.text-link {
+ 	a.text-link {
  		color: $white;
  		border-bottom:1px $white dashed;
+
+ 		&:hover {
+ 			text-decoration: none !important; // override bootstrap
+ 		}
  	}
 }

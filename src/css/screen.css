@@ -3312,7 +3312,8 @@ footer {
   padding: 30px 0;
   background-color: #424242;
   color: #cecece;
-  font-size: 14px; }
+  font-size: 14px;
+  font-family: "Lato", sans-serif; }
   footer ul {
     list-style: none;
     margin-left: 0; }

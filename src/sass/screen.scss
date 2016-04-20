@@ -191,7 +191,7 @@ h3 {
 
 .founding-team {
 	.col-2 h2 {
-		font-weight: 100;
+		font-weight: 300;
 		font-size: 1.6em;
 	}
 }
@@ -292,6 +292,8 @@ h3 {
 	font-size: 1.5em;
 }
 
+@import "partials/bootstrap";
+
 @import "partials/nav";
 @import "partials/banners";
 @import "partials/section";
@@ -302,4 +304,5 @@ h3 {
 @import "partials/form";
 @import "partials/footer";
 @import "partials/partners";
+@import "partials/layout";
 

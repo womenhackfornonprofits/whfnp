@@ -1,10 +1,31 @@
 footer {
-	background-color: #3c3c3c;
-	padding: 3em;
-	p {
-		text-align: center;
-		font-weight: 100;
-		font-size: 0.9em;
-		color: #fff;
-	}
+  padding: 30px 0;
+  background-color: $grey-color-dark;
+  color: $grey-color-light;
+  font-size: $small-font-size;
+  font-family: $base-font-name;
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+
+    li { 
+      padding: 5px 0;
+
+      a, a:visited {
+      color: $grey-color-light;
+
+        &:hover {
+          color: $link-hover;
+        }
+      }
+    }
+  }
+
+  h5 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: $small-font-size;
+    letter-spacing: 5px;
+  }
 }

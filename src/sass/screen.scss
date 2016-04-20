@@ -292,6 +292,8 @@ h3 {
 	font-size: 1.5em;
 }
 
+@import "partials/bootstrap";
+
 @import "partials/nav";
 @import "partials/banners";
 @import "partials/section";
@@ -302,4 +304,5 @@ h3 {
 @import "partials/form";
 @import "partials/footer";
 @import "partials/partners";
+@import "partials/layout";
 

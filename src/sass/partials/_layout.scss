@@ -1,0 +1,10 @@
+.position {
+	display: block;
+	float: none;
+	overflow: hidden;
+
+	&.central {
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+}

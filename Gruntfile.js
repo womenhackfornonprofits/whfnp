@@ -110,6 +110,12 @@ grunt.initConfig({
   },
   //------- SASS -------//
   sass: {
+    dev: {
+      options: {
+        style: 'expanded',
+        loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
+      },
+    },
     dist: {
       files: {
         'src/css/screen.css': 'src/sass/screen.scss'
@@ -118,9 +124,9 @@ grunt.initConfig({
   },
   //------- Watch SASS -> CSS -------//
   watch: {
-    css: {
+    sass: {
       files: 'src/sass/**/*.scss',
-      tasks: ['sass']
+      tasks: ['sass:dev']
     }
   },
   //------- IMAGE min -------//
@@ -182,6 +188,5 @@ grunt.initConfig({
   images are not copied everytime as the current once on site are gzipped. 
   Images are not an asset that changes often so there is a secial task to copy**/
   grunt.registerTask('default', ['sass', 'copy:main', 'cssmin', 'htmlmin']);
-
 
 };

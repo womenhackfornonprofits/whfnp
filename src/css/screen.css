@@ -2547,7 +2547,6 @@ nav {
       nav ul li a {
         text-decoration: none;
         font-family: "Lato", sans-serif;
-        text-transform: uppercase;
         color: #000;
         padding-bottom: 0.15em; }
         nav ul li a:visited {

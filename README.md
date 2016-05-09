@@ -11,14 +11,26 @@ Women Hack for Non-Profits website rebuild.
 	in the directory root, this will read the package.json file and install all required packages.
 5. You will need to create a file `s3settings.json` and `s3settingsprod.json` with the following content:
 
+*Development bucket*
+
 ```
 {
-	"key": "",
-	"secret": "",
-	"bucket": "",
-	"region": ""
+	"key": "your key here",
+	"secret": "your secret here",
+	"bucket": "devwomenhackfornonprofits",
+	"region": "us-west-2"
 }
 ```
+*Production bucket*
+
+```
+{
+	"key": "your production key here",
+	"secret": "your production secret here",
+	"bucket": "www.womenhackfornonprofits.com",
+	"region": "eu-west-1"
+}
+
 Note: All this information can be filled out once you have access to the bucket to deploy to DEV & PROD.
 
 # Team

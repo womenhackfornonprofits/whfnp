@@ -30,6 +30,7 @@ Women Hack for Non-Profits website rebuild.
 	"bucket": "www.womenhackfornonprofits.com",
 	"region": "eu-west-1"
 }
+```
 
 Note: All this information can be filled out once you have access to the bucket to deploy to DEV & PROD.
 

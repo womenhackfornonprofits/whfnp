@@ -13,8 +13,8 @@ footer {
       padding: 5px 0;
 
       a, a:visited {
-      color: $grey-color-light;
-
+        text-decoration: none;
+        color: $grey-color-light;
         &:hover {
           color: $link-hover;
         }

@@ -7,9 +7,10 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-browser-sync');
 grunt.loadNpmTasks('grunt-prettify');
 grunt.loadNpmTasks('grunt-contrib-compress');
+grunt.loadNpmTasks('grunt-concurrent');
+grunt.loadNpmTasks('grunt-shell');
 
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
@@ -46,7 +47,7 @@ grunt.initConfig({
     html: {
       options: {
         bucket: '<%= s3settings.bucket %>',
-        differential: false // Only uploads the files that have changed
+        differential: true // Only uploads the files that have changed
       },
       files: [
         //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
@@ -111,12 +112,16 @@ grunt.initConfig({
   //------- SASS -------//
   sass: {
     dev: {
-      options: {
-        style: 'expanded',
-        loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
-      },
-    },
+       options: {
+         style: 'expanded',
+         loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
+       },
+     },
     dist: {
+      options: {
+          style: 'compressed',
+          loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
+      },
       files: {
         'src/css/screen.css': 'src/sass/screen.scss'
       }
@@ -138,17 +143,6 @@ grunt.initConfig({
         src: ['**/*.{png,jpg,svg,jpeg}'],   // Actual patterns to match
         dest: 'deploy/img/'                  // Destination path prefix
       }]
-    }
-  },
-  //------- BrowserSync ------//
-  browserSync: {
-    bsFiles: {
-        src : 'css/*.css'
-    },
-    options: {
-        server: {
-            baseDir: "src/"
-        }
     }
   },
   //-------- Prettify HTML ------//
@@ -177,16 +171,35 @@ grunt.initConfig({
 
       ]
     }
-  }
+  },
+  shell: {
+    jekyllBuild: {
+      command: 'jekyll build --source src --destination src/_site'
+    },
+    jekyllServe: {
+      command: 'jekyll serve --source src --destination src/_site'
+    }
+  },
+  concurrent: {
+    serve: [
+        'sass',
+        'watch',
+        'shell:jekyllServe'
+    ],
+    options: {
+        logConcurrentOutput: true
+    }
+  },
 });
 
+  grunt.registerTask('serve', ['concurrent:serve']);
   /** DEPLOY task deployes all changes, check individual tasks above to see what they do **/
-  grunt.registerTask('deploy', ['default','aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
+  grunt.registerTask('deploy', ['default', 'imagemin', 'aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
   /** IMG task processess ALL images from src to deploy and optimizes them **/
   grunt.registerTask('img', ['imagemin', 'copy:img']);
   /** DEFAULT task that compiles, minifies and copies relevant files, 
   images are not copied everytime as the current once on site are gzipped. 
   Images are not an asset that changes often so there is a secial task to copy**/
-  grunt.registerTask('default', ['sass', 'copy:main', 'cssmin', 'htmlmin', 'imagemin']);
+  grunt.registerTask('default', ['sass:dist', 'copy:main', 'cssmin', 'htmlmin', 'serve']);
 
 };

@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 
 @import "partials/base";
-@import "partials/reset";
 *, 
 *:before,
 *:after {
@@ -292,8 +291,7 @@ h3 {
 	font-size: 1.5em;
 }
 
-@import "partials/bootstrap";
-
+@import "partials/bootstrap-custom";
 @import "partials/nav";
 @import "partials/banners";
 @import "partials/section";

@@ -36,6 +36,23 @@ Women Hack for Non-Profits website rebuild.
 }
 ```
 
+## Development Instructions
+
+1. HTML changes 
+	In order for Jekyll to watch and compile all the changes to html run `ekyll serve` in the `src` directory
+
+2. CSS/SASS changes 
+	In order to compile and watch the SASS run `grunt watch`
+
+
+## Deploying changes
+
+1. Make sure the gruntfile is pointing to the right credential file `s3settings.json` this should be by default using dev credentials
+2. All you need is to run `grunt deploy`
+This will minify, copy and do everything else needed to push the site to the dev bucket.
+
+
+
 Note: All this information can be filled out once you have access to the bucket to deploy to DEV & PROD.
 
 # Team

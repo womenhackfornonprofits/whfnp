@@ -9,6 +9,10 @@ Women Hack for Non-Profits website rebuild.
 4. Install all required packages:
 	`npm install`
 	in the directory root, this will read the package.json file and install all required packages.
+5. You will need to have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) on your machine
+6. Install [Ruby Gems](https://rubygems.org/pages/download)
+7. Get Bundler (the Ruby package manager): `gem install bundler`
+8. Run `bundle install` in the project root directory to install dependencies
 5. You will need to create a file `s3settings.json` and `s3settingsprod.json` with the following content:
 
 *Development bucket*
@@ -30,6 +34,7 @@ Women Hack for Non-Profits website rebuild.
 	"bucket": "www.womenhackfornonprofits.com",
 	"region": "eu-west-1"
 }
+```
 
 Note: All this information can be filled out once you have access to the bucket to deploy to DEV & PROD.
 

@@ -90,7 +90,7 @@ grunt.initConfig({
         collapseWhitespace: true,
       },
       files: [                     
-        {expand: true, cwd: 'src', src: ['**/*.html'], dest: 'deploy/'},
+        {expand: true, cwd: 'src/_site', src: ['**/*.html'], dest: 'deploy/'},
       ]
     }
   },
@@ -99,7 +99,7 @@ grunt.initConfig({
     main: {
       files: [
         // includes files within path
-        {expand: true, cwd: 'src/', src: ['**'], dest: 'deploy/', filter: 'isFile'},
+        {expand: true, cwd: 'src/', src: ['css'], dest: 'deploy/', filter: 'isFile'},
       ]
     },
     img: {
@@ -187,6 +187,6 @@ grunt.initConfig({
   /** DEFAULT task that compiles, minifies and copies relevant files, 
   images are not copied everytime as the current once on site are gzipped. 
   Images are not an asset that changes often so there is a secial task to copy**/
-  grunt.registerTask('default', ['sass', 'copy:main', 'cssmin', 'htmlmin']);
+  grunt.registerTask('default', ['sass', 'copy:main', 'cssmin', 'htmlmin', 'imagemin']);
 
 };

@@ -35,7 +35,6 @@ Women Hack for Non-Profits website rebuild.
 	"region": "eu-west-1"
 }
 ```
-
 ## Development Instructions
 
 1. HTML changes 

@@ -9,16 +9,50 @@ Women Hack for Non-Profits website rebuild.
 4. Install all required packages:
 	`npm install`
 	in the directory root, this will read the package.json file and install all required packages.
+5. You will need to have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) on your machine
+6. Install [Ruby Gems](https://rubygems.org/pages/download)
+7. Get Bundler (the Ruby package manager): `gem install bundler`
+8. Run `bundle install` in the project root directory to install dependencies
 5. You will need to create a file `s3settings.json` and `s3settingsprod.json` with the following content:
+
+*Development bucket*
 
 ```
 {
-	"key": "",
-	"secret": "",
-	"bucket": "",
-	"region": ""
+	"key": "your key here",
+	"secret": "your secret here",
+	"bucket": "devwomenhackfornonprofits",
+	"region": "us-west-2"
 }
 ```
+*Production bucket*
+
+```
+{
+	"key": "your production key here",
+	"secret": "your production secret here",
+	"bucket": "www.womenhackfornonprofits.com",
+	"region": "eu-west-1"
+}
+```
+
+## Development Instructions
+
+1. HTML changes 
+	In order for Jekyll to watch and compile all the changes to html run `jekyll serve` in the `src` directory
+
+2. CSS/SASS changes 
+	In order to compile and watch the SASS run `grunt watch`
+
+
+## Deploying changes
+
+1. Make sure the gruntfile is pointing to the right credential file `s3settings.json` this should be by default using dev credentials
+2. All you need is to run `grunt deploy`
+This will minify, copy and do everything else needed to push the site to the dev bucket.
+
+
+
 Note: All this information can be filled out once you have access to the bucket to deploy to DEV & PROD.
 
 # Team

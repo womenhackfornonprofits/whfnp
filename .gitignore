@@ -1,7 +1,12 @@
+s3settingslilidev.json
 .sass-cache/
 .DS_Store
+Gemfile.lock
+src/css/screen.css
+src/css/screen.css.map
 node_modules/
 s3settings.json
 s3settingsprod.json
+src/_site/
 deploy
 src/.DS_Store

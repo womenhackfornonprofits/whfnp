@@ -1,5 +1,5 @@
---- 
-layout: default 
+---
+layout: default
 title: "Homepage | Women Hack for Non-Profits"
 ---
 <section class="banner homepage-image">
@@ -42,48 +42,6 @@ title: "Homepage | Women Hack for Non-Profits"
     <a href="non-profits.html" class="button">How to work with us</a>
   </div>
 </section>
-<section>
-  <div class="content text-section">
-    <h2 class="section-heading">Newsletter</h2>
-    <p>Did you know we have an awesome newsletter? Sign up to ensure you don’t miss out on upcoming events, workshops and project news. We will never spam or share your details.</p>
-    <a href="http://eepurl.com/bwvdlL" class="button">Sign up for updates</a>
-  </div>
-</section>
-<section>
-  <div class="content text-section">
-    <h2 class="section-heading">Our Partners</h2>
-    <p>None of this would be possible without our wonderful partners:</p>
-    <ul class="partner-list">
-      <li>
-        <img src="img/partners/pyladies_logo.png" alt="PyLadies Logo Image">
-      </li>
-      <li>
-        <img src="img/partners/thoughtworks_logo.png" alt="Thoughtworks Logo Image">
-      </li>
-      <li>
-        <img src="img/partners/systango_logo.png" alt="Systango Logo Image">
-      </li>
-      <li>
-        <img src="img/partners/esynergysolutions_logo.png" alt="eSynergy Solutions Logo Image">
-      </li>
-      <li>
-        <img src="img/partners/stratifiedmedical_logo.png" alt="Stratified Medical Logo Image">
-      </li>
-      <li>
-        <img src="img/partners/womenwhocode_logo.png" alt="Women Who Code Logo Image">
-      </li>
-      <li>
-        <img src="img/partners/venntro_logo.png" alt="Venntro Logo Image">
-      </li>
-      <li>
-        <img src="img/partners/empowerhack-logo.png" alt="Empower Hack Logo Image">
-      </li>
-      <li>
-        <img src="img/partners/enough-software-logo.png" alt="Enough Software Logo Image">
-      </li>
-    </ul>
-    </nav>
-    <p>We are always looking for partners to help us run events.</p>
-    <a href="contact.html" class="button">Become a Partner</a>
-  </div>
-</section>
+{% include newsletter.html %}
+
+{% include partners.html %}

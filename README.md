@@ -37,11 +37,8 @@ Women Hack for Non-Profits website rebuild.
 ```
 ## Development Instructions
 
-1. HTML changes 
-	In order for Jekyll to watch and compile all the changes to html run `jekyll serve` in the `src` directory
-
-2. CSS/SASS changes 
-	In order to compile and watch the SASS run `grunt watch`
+1. HTML, CSS/SASS changes 
+In order to compile and watch the SASS and the templates run `grunt default`, this will watch for changes to html and sass and compile it all.
 
 
 ## Deploying changes

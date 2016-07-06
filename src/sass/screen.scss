@@ -223,10 +223,12 @@ h3 {
 .volunteer-picture, .non-profit-picture {
 	border: none;
 	background-size: cover;
-	position: relative;
+	display: block;
 	padding: 0;
-	height: 15em;
-	width: auto;
+	height: auto;
+	width: 15em;
+	margin: 0 auto;
+	
 	h2 {
 		color: $white;
 		padding: $padding-margin-value/2 0;
@@ -271,17 +273,17 @@ h3 {
 
 	}
 }
-.founding-team, .non-profits-wrap, .volunteers-wrap{
-	max-width: 55em;
-	margin: 0 auto;
-	padding: 0;
-	@media (min-width: 600px) {
-		padding:0;
-		.col-3 {
-			min-height: 15em;
-		}
-	}
-}
+// .founding-team, .non-profits-wrap, .volunteers-wrap{
+// 	max-width: 55em;
+// 	margin: 0 auto;
+// 	padding: 0;
+// 	@media (min-width: 600px) {
+// 		padding:0;
+// 		.col-3 {
+// 			min-height: 15em;
+// 		}
+// 	}
+// }
 .left-align-text {
 	text-align: left;
 }

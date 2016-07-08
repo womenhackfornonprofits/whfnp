@@ -7,20 +7,32 @@ title: Contact | Women Hack for Non-Profits
     <h1 class="title-heading">Contact Us</h2>
 	</div>
 </section>
-<section>
-	<h2> Get in touch </h2>
+<section class="col-lg-3 col-md-5 col-sm-6 col-xs-12 position central">
+	<h2>Get in touch</h2>
 	<form method="POST" action="//formspree.io/help@womenhackfornonprofits.com">
-    <label for="name">Name:</label>
-		<input type="text" name="name" placeholder="E.g. Jon Snow" required>
-    <label for="email">Email Address:</label>
-		<input type="email" name="_replyto" placeholder="E.g. jon.snow@example.com" required>
-		<input type="hidden" name="_subject" value="New Submission: WHFN Website Contact Form"/>
-		<input type="text" name="_gotcha" style="display:none"/>
-    <label for="tel">Phone Number:</label>
-		<input type="tel" name="phone" placeholder="E.g. 07912 345 678">
-    <label for="message">Enter your message here:</label>
-		<textarea name="message" rows="5" placeholder="E.g. Hello, just wanted to tell you I think you are awesome" required></textarea>
-		<input type="submit" value="Send">
+		<div class="form-group">
+	    	<label for="name">Name</label>
+			<input type="text" name="name" placeholder="Ada Lovelace" required aria-required="true" class="form-control"/>
+		</div>
+		<div class="form-group">
+	    	<label for="email">Email</label>
+			<input type="email" name="_replyto" placeholder="alovelace@example.co.uk" required aria-required="true" class="form-control"/>
+		</div>
+		<div class="form-group">
+			<label for="tel">Phone Number <span class="help-text">(optional)</span></label>
+			<input type="tel" name="phone" placeholder="07912 123123" class="form-control">
+		</div>
+		<div class="form-group">
+	    	<label for="message">Message</label>
+			<textarea name="message" rows="5" placeholder="Hello, is it me you're looking for..." required aria-required="true" class="form-control"></textarea>
+		</div>
+
+		<div class="form-group">
+			<input type="hidden" name="_subject" value="New Submission: WHFN Website Contact Form"/>
+			<input type="text" name="_gotcha" style="display:none" aria-hidden="true"/>
+		</div>
+
+		<input type="submit" value="Send us your message!" class="button btn_full-width">
 	</form>
 </section>
 

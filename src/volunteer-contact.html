@@ -7,29 +7,51 @@ title: Volunteer Contact | Women Hack for Non-Profits
     <h1 class="title-heading">Volunteer Contact Form</h1>
   </div>
 </section>
-<section>
+<section class="col-lg-3 col-md-5 col-sm-6 col-xs-12 position central">
   <h2>Volunteer with us</h2>
   <form method="POST" action="//formspree.io/help@womenhackfornonprofits.com">
-    <input type="hidden" name="_subject" value="New Submission: New Volunteer Application" />
-    <label for="name">Firstname:</label>
-    <input type="text" name="name" placeholder="E.g. Arya" required>
-    <label for="surname">Surname:</label>
-    <input type="text" name="surname" placeholder="E.g. Stark">
-    <label for="email">Your email address:</label>
-    <input type="email" name="_replyto" placeholder="E.g. arya.stark@example.com" required>
-    <label for="linkedin">LinkedIn profile:</label>
-    <input type="url" name="linkedin" placeholder="E.g. https://uk.linkedin.com/in/aryastark">
-    <label for="twitter">Twitter profile:</label>
-    <input type="url" name="twitter" placeholder="E.g. https://twitter.com/aryastark">
-    <label for="volunteer-skills">What skills are you able to contribute / want to learn by joining our community?</label>
-    <textarea name="volunteer-skills" rows="3" placeholder="E.g. QA, UX, Python..."></textarea>
-    <label for="hours">How many hours a week do you have available to collaborate on projects with us?</label>
-    <input type="number" name="hours" placeholder="E.g. 3">
-    <label for="why-volunteer">Why would you like to join our community?</label>
-    <textarea name="why-volunteer" rows="5" placeholder="E.g. I would like to improve my technical skills and give back to society"></textarea>
-    <label for="hear-about">How did you hear about us?</label>
-    <input type="text" name="hear-about" placeholder="E.g. Through a friend, Twitter, Ada's List...">
-    <input type="submit" value="Send">
+
+    <div class="form-group">
+      <input type="hidden" name="_subject" value="New Submission: New Volunteer Application" aria-hidden="true"/>
+      <label for="name">Name</label>
+      <input type="text" name="name" placeholder="Grace Hopper" required class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="_replyto" placeholder="grace.hopper@example.com" required class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="linkedin">LinkedIn</label>
+        <input type="url" name="linkedin" placeholder="https://uk.linkedin.com/in/aryastark" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="twitter">Twitter</label>
+        <input type="url" name="twitter" placeholder="@ghopper" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="volunteer-skills">Which skills do you have or would like to learn?</label>
+        <textarea name="volunteer-skills" rows="3" placeholder="QA, UX, Python" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="hours">How many hours a week do you have spare?</label>
+        <input type="number" name="hours" placeholder="3" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="why-volunteer">Why would you like to join our community?</label>
+        <textarea name="why-volunteer" rows="5" placeholder="I would like to improve my technical and teaching skills" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="hear-about">How did you hear about us?</label>
+        <input type="text" name="hear-about" placeholder="A friend, Twitter, Ada's List" class="form-control">
+    </div>
+    <input type="submit" value="Volunteer" class="button btn_full-width">
   </form>
 </section>
 

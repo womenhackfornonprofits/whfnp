@@ -1,6 +1,4 @@
 .button {
-	max-width: 14em;
-	margin: $padding-margin-value auto 0 auto;
 	border: 0.1em solid $pop-pink;
 	background-color: $pop-pink;
 	color: $white;
@@ -8,19 +6,33 @@
 	padding: $padding-margin-value/2;
 	display: block;
 	text-align: center;
-	&:visited{
+	margin: 0 auto;
+	width: 35%;
+
+	@media (max-width: 992px) {
+		width: 100%;
 	}
+
+	
+	&:visited{}
+
 	&:hover {
-		background: none;
-		color: $pop-pink;
+		background: darken($pop-pink, 10%);
+		text-decoration: underline;
+		border-color: darken($pop-pink, 15%);
+		color: $white;
 	}
 	
-}
-.larger-button {
-	max-width: 20em;
+	&.btn_full-width {
+		width: 100%;
+	}
+
+	&.larger-button {
+		width: 75%;
+	}
 }
 
 .inactive {
-		background: none;
-		color: $pop-pink;
+	background: none;
+	color: $pop-pink;
 }

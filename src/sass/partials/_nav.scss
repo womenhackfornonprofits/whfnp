@@ -3,7 +3,8 @@ nav {
 	vertical-align: top;
 	margin: 0;
 	padding: 0;
-	float: right;
+	flex: auto;
+
 	ul {
 		padding-right: $padding-margin-value*2;
 		list-style: none;
@@ -27,6 +28,7 @@ nav {
 				font-family: $base-font-name;
 				color: $nav-link-color;
 				padding-bottom: 0.15em;
+				text-transform: uppercase;
 				&:visited{
 					color: $nav-link-visited-color;
 				}

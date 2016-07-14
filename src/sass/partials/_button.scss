@@ -6,29 +6,14 @@
 	padding: $padding-margin-value/2;
 	display: block;
 	text-align: center;
-	margin: 0 auto;
-	width: 35%;
-
-	@media (max-width: 992px) {
-		width: 100%;
-	}
-
-	
-	&:visited{}
+	margin: 1em auto 0;
+	width: 15em;
 
 	&:hover {
 		background: darken($pop-pink, 10%);
 		text-decoration: underline;
 		border-color: darken($pop-pink, 15%);
 		color: $white;
-	}
-	
-	&.btn_full-width {
-		width: 100%;
-	}
-
-	&.larger-button {
-		width: 75%;
 	}
 }
 

@@ -1,6 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 
 @import "partials/base";
+
+@import "partials/bootstrap-custom";
+@import "partials/nav";
+@import "partials/banners";
+@import "partials/section";
+@import "partials/button";
+@import "partials/projects";
+@import "partials/columns";
+@import "partials/social";
+@import "partials/form";
+@import "partials/footer";
+@import "partials/partners";
+@import "partials/layout";
+
 *, 
 *:before,
 *:after {
@@ -33,37 +47,41 @@ body, html {
 	height: 100%;
 } 
 
-#logo {
-	margin-top: $padding-margin-value/2;
-	max-width: 15em;
-	width: 15em;
-	margin-left: $padding-margin-value;
-}
-.img-container {
-	display: inline-block;
-	float: left;
-}
 
 header {
-	min-height: 5em;
-	/** to help nav not be a little buggy fixed header does the trick **/
-
-	@media(min-width:750px) {
-		position: relative;
-		border: none;
-	}
-	position: fixed;
-	display: block;
 	background-color: $white;
 	border-bottom: 1px solid $grey;
-	width: 100%;
-	z-index: 99;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	flex-wrap: nowrap;
+	.img-container {
+		flex: 2;
+
+	}
+
+	.logo {
+		width: 100%;
+	}
+
+	.img-container {
+		max-width: 15em;
+		min-width: 10em;
+	}
+
+	nav {
+		flex: 8;
+		max-width: 60%;
+		margin-left: auto;
+	}
 
 }
 
 h3 {
 	text-align: center;
 }
+
 .volunteer-link {
 	text-decoration: none;
 	color: $pop-pink;
@@ -71,10 +89,12 @@ h3 {
 		color: $pop-pink;
 	}
 }
+
 .volunteer-quote {
 	text-align: left;
 	font-style: italic;
 }
+
 .faq {
 	p, h3 {
 		text-align: left;
@@ -173,13 +193,9 @@ h3 {
 	color: $white;
 	font-size: $h1-font-size/1.5;
 	line-height: $h1-line-height/1.5;
-	text-align: center;
-	padding: 2em 0;
-	padding-bottom: 0;
-	margin: 0;
 	text-shadow: 1px 1px $black;
-	max-width: 100%;
-	margin-bottom: 0;
+	text-align: center;
+
 	@media(min-width:600px) {
 		font-size: $h1-font-size;
 		line-height: $h1-line-height;
@@ -283,16 +299,4 @@ h3 {
 	font-size: 1.5em;
 }
 
-@import "partials/bootstrap-custom";
-@import "partials/nav";
-@import "partials/banners";
-@import "partials/section";
-@import "partials/button";
-@import "partials/projects";
-@import "partials/columns";
-@import "partials/social";
-@import "partials/form";
-@import "partials/footer";
-@import "partials/partners";
-@import "partials/layout";
 

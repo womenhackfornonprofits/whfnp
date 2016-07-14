@@ -2,10 +2,11 @@
 
 .banner {
 	background: 
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
- 	url('../img/index.jpg') no-repeat center center;
+		linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+ 		url('../img/index.jpg') no-repeat center center;
 	background-size: cover;
 	min-height: 35em;
+
 	h2 {
 		font-family: $base-font-name;
 		font-weight: $base-font-light;
@@ -37,22 +38,9 @@
  	url('../img/about.jpg') no-repeat center center;
 	background-size: cover;
 	height: $smaller-banner-height;
-	padding: 0;
-	margin: 0;
-	.title-heading {
-		padding: 0;
-		padding-top: 4em;
-	}
-	@media(min-width:750px) {
-		.title-heading {
-			padding-top: 2em; 
-		}
-		.title-cta {
-			padding-top: 1.5em;
-
-		}
-	}
-
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
 }
 
 .volunteers-image {

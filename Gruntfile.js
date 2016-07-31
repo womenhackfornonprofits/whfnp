@@ -177,7 +177,7 @@ grunt.initConfig({
       command: 'jekyll build --source src --destination src/_site'
     },
     jekyllServe: {
-      command: 'jekyll serve --source src --destination src/_site'
+      command: 'jekyll serve --source src --destination src/_site --port 8080'
     }
   },
   concurrent: {

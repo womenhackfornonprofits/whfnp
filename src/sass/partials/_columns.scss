@@ -36,36 +36,6 @@
 }
 
 
-.who-we-are {
-	padding: $padding-margin-value;
-
-	&:first-child {
-		border-right: 1px solid #F5F5F5; 
-	}
-	
-	&:last-child {
-		border-left: 1px solid #F5F5F5;
-	}
-	
-	p {
-		text-align: left;
-	}
-
-	h2 {
-		text-transform: none;
-		font-size: $title-font-size/1.3;
-		color: #333;
-		padding: 0;
-	}
-
-	p {
-		padding: $padding-margin-value/4;
-		margin: 0;
-		text-align: center;
-		font-weight: $base-font-light;
-
-	}
-}
 .col-wrap {
 	margin: 0 auto;
 	padding: 0;

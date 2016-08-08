@@ -6,14 +6,13 @@
 	padding: $padding-margin-value/2;
 	display: block;
 	text-align: center;
-	margin: 1em auto 0;
+	margin: 4em auto;
 	width: 15em;
+	font-weight: bold;
 
 	&:hover {
-		background: darken($pop-pink, 10%);
-		text-decoration: underline;
-		border-color: darken($pop-pink, 15%);
-		color: $white;
+		background: transparent;
+		color: $pop-pink;
 	}
 }
 

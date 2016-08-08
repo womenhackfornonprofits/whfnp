@@ -19,7 +19,21 @@
 .larger-button {
 	max-width: 20em;
 }
+.inline-block {
+	display:inline-block;
+}
+.alternative {
+	border: 0.1em solid $orange;
+	background-color: $orange;
+	display: inline-block;
+	&:visited{
+	}
+	&:hover {
+		background: none;
+		color: $orange;
+	}
 
+}
 .inactive {
 		background: none;
 		color: $pop-pink;

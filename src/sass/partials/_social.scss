@@ -1,11 +1,18 @@
 .social {
-	margin: 3em auto;
+	margin: 6em auto;
 	width: 100%;
+	text-align: center;
 
 	ul {
-		width: 20em;
-		margin:0 auto;
+		margin: 0 auto;
 		padding: 0;
+		display: inline;
+	}
+
+	li {
+		list-style: none;
+		display: inline-block;
+		margin: 0 .5em;
 	}
 }
 

@@ -3,45 +3,45 @@ layout: default
 title: Non-Profits Contact | Women Hack for Non-Profits
 ---
 <section class="smaller-banner">
-  <div class="container">
-    <h1 class="title-heading">Non-Profits Contact Form</h1>
-  </div>
+    <div class="container">
+        <h1 class="title-heading">Non-Profits Contact Form</h1>
+    </div>
 </section>
-<section class="col-lg-3 col-md-5 col-sm-6 col-xs-12 position central">
-  <h2>Work with us</h2>
-  <form method="POST" action="//formspree.io/help@womenhackfornonprofits.com">
-    <input type="hidden" name="_subject" value="New Submission: New Non-Profit Project Application" />
-    <div class="form-group">
-      <label for="non-profit-name">Name of your Non-Profit</label>
-      <input type="text" name="name" placeholder="Code 2040" required aria-required="true" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="contact-name">Contact Name</label>
-      <input type="text" name="contact-name" placeholder="Laura Weidman Powers" required aria-required="true" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" name="_replyto" placeholder="Laura@example.com" required aria-required="true" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="contact-tel">Phone <span class="help-text">(optional)</span></label>
-      <input type="tel" name="contact-tel" placeholder="07912 345 678" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="project-description">What kind of technical help would you like?</label>
-      <textarea name="project-description" rows="3" placeholder="Website, mobile, app" class="form-control"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="project-value">How will this project help you? <span class="help-text">(optional)</span></label>
-      <textarea name="project-value" rows="3" placeholder="Volunteer outreach, revamp the website" class="form-control"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="project-priority">What is the priority of this project for you? <span class="help-text">(optional)</span></label>
-      <textarea name="project-priority" rows="3" placeholder="Urgent, important, nice to have" class="form-control"></textarea>
-    </div>
+<section class="col-lg-4 col-md-5 col-sm-6 col-xs-10 position central">
+    <h2>Work with us</h2>
+    <form method="POST" action="//formspree.io/help@womenhackfornonprofits.com">
+        <input type="hidden" name="_subject" value="New Submission: New Non-Profit Project Application" />
+        <div class="form-group">
+            <label for="non-profit-name">Name of your Non-Profit</label>
+            <input type="text" name="name" placeholder="Code 2040" required aria-required="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="contact-name">Contact Name</label>
+            <input type="text" name="contact-name" placeholder="Laura Weidman Powers" required aria-required="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="_replyto" placeholder="laura.weidman@gmail.com" required aria-required="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="contact-tel">Phone <span class="help-text">(optional)</span></label>
+            <input type="tel" name="contact-tel" placeholder="07912 345 678" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="project-description">What kind of technical help would you like?</label>
+            <textarea name="project-description" rows="5" placeholder="Brand new website, website updates, mobile app" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="project-value">How will this project help you? <span class="help-text">(optional)</span></label>
+            <textarea name="project-value" rows="5" placeholder="Drive social engagement" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="project-priority">What is the priority of this project for you? <span class="help-text">(optional)</span></label>
+            <textarea name="project-priority" rows="5" placeholder="Urgent, important, nice to have" class="form-control"></textarea>
+        </div>
 
-    <input type="submit" value="Send" class="button btn_full-width">
-  </form>
+        <input type="submit" value="Submit" class="button btn_full-width">
+    </form>
 </section>
 
 {% include newsletter.html %}

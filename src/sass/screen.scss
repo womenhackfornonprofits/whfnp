@@ -52,38 +52,6 @@
 	height: 100%;
 } 
 
-
-header {
-	background-color: $white;
-	border-bottom: 1px solid $grey;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	align-content: center;
-	flex-wrap: nowrap;
-	padding: $padding-margin-value/2; 
-	
-	.img-container {
-		flex: 2;
-
-	}
-
-	.logo {
-		width: 100%;
-	}
-
-	.img-container {
-		max-width: 15em;
-		min-width: 10em;
-	}
-
-	nav {
-		flex: auto;
-		margin-left: 3em;
-	}
-
-}
-
 .volunteer-link {
 	text-decoration: none;
 	color: $pop-pink;
@@ -255,16 +223,13 @@ header {
 
 .non-profit-icons {
 	width: 4em;
-	margin-bottom: $padding-margin-value/2;
+	margin: $padding-margin-value/2 auto;
 }
 
 .non-profit-picture {
 	width: 100%;
 }
 
-.overlay-text > h2 {
-	padding: $padding-margin-value/2 0;
-}
 
 .non-profits-wrap, .volunteers-wrap {
 	img {

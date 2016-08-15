@@ -1,75 +1,75 @@
-@media(min-width:600px) {
-	.col-3 {
-		width: $col-width;
-		display: inline-block;
-    	vertical-align: top;
-    	margin: 0;
-    	padding-top: 3em;
-    	min-height: 18.5em;
-	}
-	.founding-team {
-		padding:0;
-		.col-3 {
-			min-height: 15em;
-		}
-	}
-	.board-teams {
-		.col-3 {
-			min-height: 10em;
-			width: 100/3 + 0%;
+// @media(min-width:600px) {
+// 	.col-3 {
+// 		width: $col-width;
+// 		display: inline-block;
+//     	vertical-align: top;
+//     	margin: 0;
+//     	padding-top: 3em;
+//     	min-height: 18.5em;
+// 	}
+// 	.founding-team {
+// 		padding:0;
+// 		.col-3 {
+// 			min-height: 15em;
+// 		}
+// 	}
+// 	.board-teams {
+// 		.col-3 {
+// 			min-height: 10em;
+// 			width: 100/3 + 0%;
 
-		}
-		.col-3:nth-child(2) {
-			margin: 0;
-		}
-	}
-	.col-3:first-child {
-		float: left;
-	}
-	.col-3:last-child {
-		float: right;
-	}
-	.col-3:nth-child(2) {
-		margin: 0 (100% - $col-width * 3)/2;
-	}
+// 		}
+// 		.col-3:nth-child(2) {
+// 			margin: 0;
+// 		}
+// 	}
+// 	.col-3:first-child {
+// 		float: left;
+// 	}
+// 	.col-3:last-child {
+// 		float: right;
+// 	}
+// 	.col-3:nth-child(2) {
+// 		margin: 0 (100% - $col-width * 3)/2;
+// 	}
 	
-	h1 {
-		font-size: $h1-font-size;
+// 	h1 {
+// 		font-size: $h1-font-size;
 
-	}
-	h2 {
-		font-size: $title-font-size;
+// 	}
+// 	h2 {
+// 		font-size: $title-font-size;
 
-	}
-	nav {
-		display:inline-block;
-	}
-	.img-container {
-		display: inline-block;
-		width: 40%;
-		padding: 0.3em;
-	}
-	.col-wrap {
-		padding: 0 0 2em 0;
+// 	}
+// 	nav {
+// 		display:inline-block;
+// 	}
+// 	.img-container {
+// 		display: inline-block;
+// 		width: 40%;
+// 		padding: 0.3em;
+// 	}
+// 	.col-wrap {
+// 		padding: 0 0 2em 0;
 
-	}
-	.project-img, .project-info {
-		display: inline-block;
-		width: 49%;
+// 	}
+// 	.project-img, .project-info {
+// 		display: inline-block;
+// 		width: 49%;
 
-	}
-	.project-info {
-		margin: $padding-margin-value*2 0;
-		padding-left: $padding-margin-value;
+// 	}
+// 	.project-info {
+// 		margin: $padding-margin-value*2 0;
+// 		padding-left: $padding-margin-value;
 
-		.button {
-			margin: $padding-margin-value $padding-margin-value 0 0;
-		}
-	}
-	.project {
-		h2, h3, p {
-			text-align: left;
-		}
-	}
+// 		.button {
+// 			margin: $padding-margin-value $padding-margin-value 0 0;
+// 		}
+// 	}
+// 	.project {
+// 		h2, h3, p {
+// 			text-align: left;
+// 		}
+// 	}
 
-}
+// }

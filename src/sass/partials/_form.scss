@@ -1,7 +1,35 @@
-span.help-text {
+.help-text {
 	color: $help-text;
 	font-size: 0.9em;
 	font-weight: 200;
 	margin-left: 5px;
 	font-style: italic;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+select,
+textarea {
+	display: block;
+    width: 100%;
+    margin: .5em 0;
+	padding: 1em;
+	border: 1px solid #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+select {
+	height: 3em;
+}
+
+.form-group {
+	margin: 0 0 2em;
 }

@@ -1,115 +1,78 @@
-
-
 .banner {
 	background: 
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
- 	url('../img/index.jpg') no-repeat center center;
+		linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.2)),
+ 		url('../img/index.jpg') no-repeat center center;
 	background-size: cover;
 	min-height: 35em;
-	h2 {
-		font-family: $base-font-name;
-		font-weight: $base-font-light;
-		color: $white;
-		font-size: $h2-font-size/1.4;
-		line-height: $h2-font-size/1.2;
-		max-width: 40em;
-		min-width: 15em;
-		margin: 0 auto;
-		padding: 0;
-		margin-top: 1em;
-		text-transform: none;
-		@media(min-width:600px) {
-			h2 {
-				margin:0 auto;
-				font-size: $h2-font-size;
-    			line-height: $h2-font-size;
-    			margin: 0 auto;
-    			padding: 0;
-			}
-		}
+}
 
-	}
+.banner,
+.smaller-banner {
+	display: flex;
+  	align-items: center;
+  	padding: 0;
 }
 
 .smaller-banner {
 	background: 
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.2)),
  	url('../img/about.jpg') no-repeat center center;
 	background-size: cover;
 	height: $smaller-banner-height;
-	padding: 0;
-	margin: 0;
-	.title-heading {
-		padding: 0;
-		padding-top: 4em;
-	}
-	@media(min-width:750px) {
-		.title-heading {
-			padding-top: 2em; 
-		}
-		.title-cta {
-			padding-top: 1.5em;
-
-		}
-	}
-
 }
 
 .volunteers-image {
 	background:
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.2)),
     	url('../img/volunteers.jpg') no-repeat center center;
     background-size: cover;
-
 }
+
 .events-image {
 	background:
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.2)),
     	url('../img/events.jpg') no-repeat center center;
     background-size: cover;
-
 }
+
 .contact-image {
 	background:
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.2)),
     	url('../img/contact.jpg') no-repeat center center;
     background-size: cover;
-
 }
 
 .about-image {
 	background:
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.2)),
     	url('../img/about.jpg') no-repeat center center;
     background-size: cover;
-
 }
 
 .projects-image {
 	background:
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.2)),
     	url('../img/projects.jpg') no-repeat center center;
     background-size: cover;
-
 } 
+
 .homepage-image {
 	background:
-	linear-gradient(rgba(208, 208, 208, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(208, 208, 208, 0.35), rgba(0, 0, 0, 0.2)),
     	url('../img/homepage.jpeg') no-repeat center center;
     background-size: cover;
-
 }
 
 .non-profits {
 	background:
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.2)),
     	url('../img/non-profits.JPG') no-repeat center center;
    	background-size: cover;
-
 }
+
 .error-image {
 	background:
-	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.5)),
+	linear-gradient(rgba(246, 198, 182, 0.35), rgba(0, 0, 0, 0.2)),
     	url('../img/404.jpg') no-repeat center center;
    	background-size: cover;
 

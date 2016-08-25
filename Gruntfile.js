@@ -190,7 +190,25 @@ module.exports = function(grunt) {
           logConcurrentOutput: true
       }
     },
+<<<<<<< HEAD
   });
+=======
+    jekyllServe: {
+      command: 'jekyll serve --source src --destination src/_site --host=0.0.0.0 --port 8080'
+    }
+  },
+  concurrent: {
+    serve: [
+        'sass',
+        'watch',
+        'shell:jekyllServe'
+    ],
+    options: {
+        logConcurrentOutput: true
+    }
+  },
+});
+>>>>>>> 49b74c8a9cc94f5042b4d53fdf8100b5124d17a8
 
     grunt.registerTask('serve', ['concurrent:serve']);
     /** DEPLOY task deployes all changes, check individual tasks above to see what they do **/
@@ -202,4 +220,8 @@ module.exports = function(grunt) {
     Images are not an asset that changes often so there is a secial task to copy**/
     grunt.registerTask('default', ['sass:dist', 'copy:main', 'cssmin', 'htmlmin', 'serve']);
 
+<<<<<<< HEAD
   };
+=======
+};
+>>>>>>> 49b74c8a9cc94f5042b4d53fdf8100b5124d17a8

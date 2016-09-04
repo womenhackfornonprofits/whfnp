@@ -177,7 +177,7 @@ module.exports = function(grunt) {
         command: 'jekyll build --source src --destination src/_site'
       },
       jekyllServe: {
-        command: 'jekyll serve --source src --destination src/_site'
+        command: 'jekyll serve --source src --destination src/_site --host 0.0.0.0 --port 8080'
       }
     },
     concurrent: {

@@ -2,11 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=OpenSans:400,300,700);
 
 @import "partials/normalize";
+@import "partials/bootstrap-custom";
 @import "partials/colours";
 @import "partials/base";
 @import "partials/mixins";
-@import "partials/typography";
-@import "partials/bootstrap-custom";
+@import "partials/custom_typography";
 
 @import "partials/nav";
 @import "partials/banners";
@@ -29,22 +29,6 @@
 	margin: 0;
 	padding: 0;
 }
-
-// body, html {
-// 	margin: 0;
-// 	padding: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	font-family: $base-font-name;
-// 	font-weight: $base-font-light;
-// 	font-size: 1.2em;
-// 	line-height: $line-height;
-// 	letter-spacing: 0.01em;
-// 	color: $black; 
-// 	line-height: 1.6em;
-// 	font-size: $base-font-size;
-
-// }
 
 .content {
 	max-width: 70em;
@@ -111,17 +95,74 @@
 	}
 }
 
-.speech-bubble-left, .speech-bubble-right {
+.speech-bubble {
 	background-color: $white;
 	position: relative;
-	border-radius: 1em;
+	padding: 30px;
+	border-radius: 40px;
+	margin: 30px 0;
 	p {
 		text-align: left;
 
 	}
 }
 
-.speech-bubble-left:before {
+.speech-bubble--btm-left {
+
+	&:before {
+		content: ' ';
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: -8px;
+	  	right: auto;
+	  	top: auto;
+		bottom: -40px;
+		border: 32px solid;
+		border-color: transparent transparent transparent #666;
+	}
+
+	&:after{
+		content: ' ';
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: 0px;
+	  	right: auto;
+	  	top: auto;
+		bottom: -20px;
+		border: 22px solid;
+		border-color: transparent transparent transparent lightyellow;
+	}
+}
+
+.tri-right.btm-left:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent lightyellow;
+}
+
+.tri-right.border.btm-left:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -8px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+}
+
+.speech-bubble--left:before {
   content:"";
   position: absolute;
   right: 100%;
@@ -135,20 +176,7 @@
 }
 
 
-
-.speech-bubble-left:before {
-	content:"";
-	position: absolute;
-	right: 100%;
-	top: 3em;
-	width: 0;
-	height: 0;
-	border-top: 13px solid transparent;
-	border-right: 26px solid $white;
-	border-bottom: 13px solid transparent;
-}
-
-.speech-bubble-right:before {
+.speech-bubble--right:before {
 	content:"";
 	position: absolute;
 	left: 100%;
@@ -237,17 +265,11 @@
     	width: auto;
 	}
 }
-
 .non-profits-wrap {
-	img {
-    	display: none;
-	}
-	@media(min-width:600px) {
-		img {
-			display: block;
-		}
-
-	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .left-align-text {

@@ -26,10 +26,10 @@ $base-font-size: 16px;
 
 // Paragraph Styles
 $paragraph-color      : #000;
-$paragraph-size       : rem(17px);
+$paragraph-size       : rem(18px);
 $paragraph-line-height: 1.5em;
 $paragraph-margin     : 20px;
-
+ 
 // Header Styles
 $header-color      : #000;
 $header-size       : rem(40px);
@@ -131,7 +131,11 @@ p {
 // Links
 a {
     text-decoration: none;
-    @include transition(all .2s ease);
+    color: $paragraph-color;
+    &:hover, &:focus {
+        text-decoration: none;
+        color: $paragraph-color;
+    }
 }
 
 

@@ -114,7 +114,7 @@ module.exports = function(grunt) {
       dev: {
          options: {
            style: 'expanded',
-           loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
+           //loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
          },
        },
       dist: {
@@ -168,7 +168,6 @@ module.exports = function(grunt) {
         files: [
           {expand: true, src: ['deploy/*.html'], dest: '', ext: '.html'},
           {expand: true, src: ['deploy/css/screen.css'], dest: '', ext: '.css'},
-
         ]
       }
     },
@@ -182,7 +181,6 @@ module.exports = function(grunt) {
     },
     concurrent: {
       serve: [
-          'sass',
           'watch',
           'shell:jekyllServe'
       ],

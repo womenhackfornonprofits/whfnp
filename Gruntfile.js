@@ -190,29 +190,12 @@ module.exports = function(grunt) {
           logConcurrentOutput: true
       }
     },
-<<<<<<< HEAD
   });
-=======
-    jekyllServe: {
-      command: 'jekyll serve --source src --destination src/_site --host=0.0.0.0 --port 8080'
-    }
-  },
-  concurrent: {
-    serve: [
-        'sass',
-        'watch',
-        'shell:jekyllServe'
-    ],
-    options: {
-        logConcurrentOutput: true
-    }
-  },
-});
->>>>>>> 49b74c8a9cc94f5042b4d53fdf8100b5124d17a8
+
 
     grunt.registerTask('serve', ['concurrent:serve']);
     /** DEPLOY task deployes all changes, check individual tasks above to see what they do **/
-    grunt.registerTask('deploy', ['default', 'imagemin', 'aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
+    grunt.registerTask('deploy', [ 'imagemin', 'aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
     /** IMG task processess ALL images from src to deploy and optimizes them **/
     grunt.registerTask('img', ['imagemin', 'copy:img']);
     /** DEFAULT task that compiles, minifies and copies relevant files,
@@ -220,8 +203,5 @@ module.exports = function(grunt) {
     Images are not an asset that changes often so there is a secial task to copy**/
     grunt.registerTask('default', ['sass:dist', 'copy:main', 'cssmin', 'htmlmin', 'serve']);
 
-<<<<<<< HEAD
-  };
-=======
 };
->>>>>>> 49b74c8a9cc94f5042b4d53fdf8100b5124d17a8
+

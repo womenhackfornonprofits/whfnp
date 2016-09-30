@@ -5,32 +5,12 @@
  */
 
 // Core variables and mixins
-<<<<<<< HEAD
-=======
 @import "bootstrap-sprockets";
 @import "bootstrap";
->>>>>>> 49b74c8a9cc94f5042b4d53fdf8100b5124d17a8
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
 // Reset and dependencies
-<<<<<<< HEAD
-//@import "bootstrap/normalize";
-
-// CSS Core
-//@import "bootstrap/type";
-//@import "bootstrap/code";
-@import "bootstrap/grid";
-//@import "bootstrap/forms";
-
-// Components
-//@import "bootstrap/responsive-embed";
-
-// Utility classes
-//@import "bootstrap/utilities";
-//@import "bootstrap/responsive-utilities";
-
-=======
 @import "bootstrap/normalize";
 
 // Core CSS
@@ -72,4 +52,3 @@
 // Utility classes
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
->>>>>>> 49b74c8a9cc94f5042b4d53fdf8100b5124d17a8

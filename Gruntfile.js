@@ -8,6 +8,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-prettify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-shell');
@@ -95,12 +96,35 @@ module.exports = function(grunt) {
         ]
       }
     },
+    //------- JS Paths ------//
+    jspaths: {
+      src: {
+        js: 'src/js/**.js'
+      },
+      dest: {
+        jsMin: 'src/js/whfnp.min.js'
+      }
+    },
+
+    //------- JS Minify ------//
+    uglify: {
+      options: {
+        compress: true,
+        mangle: true,
+        sourceMap: true
+      },
+      target: {
+        src: '<%= jspaths.src.js %>',
+        dest: '<%= jspaths.dest.jsMin %>'
+      }
+    },
     //------- Copy -------//
    copy: {
       main: {
         files: [
           // includes files within path
           {expand: true, cwd: 'src/', src: ['css'], dest: 'deploy/', filter: 'isFile'},
+          {expand: true, cwd: 'src/', src: ['js'], dest: 'deploy/', filter: 'isFile'},
         ]
       },
       img: {
@@ -198,8 +222,8 @@ module.exports = function(grunt) {
     grunt.registerTask('img', ['imagemin', 'copy:img']);
     /** DEFAULT task that compiles, minifies and copies relevant files,
     images are not copied everytime as the current once on site are gzipped.
-    Images are not an asset that changes often so there is a secial task to copy**/
-    grunt.registerTask('default', ['sass:dist', 'copy:main', 'cssmin', 'htmlmin', 'serve']);
+    Images are not an asset that changes often so there is a special task to copy**/
+    grunt.registerTask('default', ['sass:dist', 'copy:main', 'cssmin', 'uglify', 'htmlmin']);
 
 };
 

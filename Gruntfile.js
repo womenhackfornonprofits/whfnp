@@ -40,10 +40,10 @@ grunt.loadNpmTasks('grunt-contrib-clean');
       svg: {
         options: {
           bucket: '<%= s3settings.bucket %>',
-          differential: true // Only uploads the files that have changed
+          differential: false // Only uploads the files that have changed
         },
         files: [
-          {expand: true, cwd: 'deploy/img/', src: ['**/*.svg'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+          {expand: true, cwd: 'deploy/img/', src: ['**/*.svg'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public'}},
         ]
       },
       html: {
@@ -54,6 +54,17 @@ grunt.loadNpmTasks('grunt-contrib-clean');
         files: [
           //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
           {expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+
+        ]
+      },
+      js: {
+        options: {
+          bucket: '<%= s3settings.bucket %>',
+          differential: true // Only uploads the files that have changed
+        },
+        files: [
+          //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+          {expand: true, cwd: 'deploy/js/', src: ['whfnp.min.js'], dest: 'js/', params: {CacheControl: 'max-age=31536000, public'}},
 
         ]
       },
@@ -232,7 +243,7 @@ grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.registerTask('serve', ['concurrent:serve']);
     /** DEPLOY task deployes all changes, check individual tasks above to see what they do **/
-    grunt.registerTask('deploy', [ 'imagemin', 'aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
+    grunt.registerTask('deploy', [ 'aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
     /** IMG task processess ALL images from src to deploy and optimizes them **/
     grunt.registerTask('img', ['imagemin', 'copy:img']);
     grunt.registerTask('js', ['clean:js', 'uglify']);

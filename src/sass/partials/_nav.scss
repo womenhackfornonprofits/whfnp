@@ -15,8 +15,6 @@
 	}
 
 	&__nav {
-		//display: none;
-
 		@media (min-width: 990px) {
 			min-height: initial;
 			flex: auto;
@@ -37,15 +35,6 @@
 			display: inline;
 		}
 	}
-
-	// &_nav-toggle {
-	// 	position: absolute;
- //    	clip: rect(0, 0, 0, 0);
-	// }
-
-	// &_nav-toggle + label, &__list  {
-	//     transition: left 0.2s;
-	// }
 
 	&__list--mobile {
 		display: block;
@@ -104,7 +93,7 @@
 			background-image: none;
 
 			&:hover {
-				background-color: trasnparent;
+				background-color: transparent;
 			}
 		}
 	}
@@ -114,10 +103,10 @@
 		color: $nav-link-color;
 		padding: 25px;
 		display: block;
+		box-sizing: border-box;
 
 		&:hover {
 			text-decoration: none;
-			box-sizing: border-box;
 		}
 
 		@media (min-width: 990px) {
@@ -127,7 +116,7 @@
 			}
 
 			&:hover {
-				border-bottom: 0.15em solid $salmon-pink;
+				color: $salmon-pink;
 				text-decoration: none;
 			}
 		}

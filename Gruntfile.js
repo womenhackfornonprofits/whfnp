@@ -12,6 +12,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-shell');
+grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -156,6 +157,10 @@ module.exports = function(grunt) {
       sass: {
         files: 'src/sass/**/*.scss',
         tasks: ['sass:dev']
+      },
+      js: {
+        files: 'src/js/**/*.js',
+        tasks: ['js']
       }
     },
     //------- IMAGE min -------//
@@ -205,12 +210,22 @@ module.exports = function(grunt) {
     },
     concurrent: {
       serve: [
+          'clean',
+          'default',
           'watch',
           'shell:jekyllServe'
       ],
       options: {
           logConcurrentOutput: true
       }
+    },
+    clean: {
+      build: {
+        src: ['src/js/whfnp.min.js', 'src/_site'],
+       },
+      js: {
+        src: ['src/js/whfnp.min.js'],
+      },
     },
   });
 
@@ -220,10 +235,11 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy', [ 'imagemin', 'aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
     /** IMG task processess ALL images from src to deploy and optimizes them **/
     grunt.registerTask('img', ['imagemin', 'copy:img']);
+    grunt.registerTask('js', ['clean:js', 'uglify']);
     /** DEFAULT task that compiles, minifies and copies relevant files,
     images are not copied everytime as the current once on site are gzipped.
     Images are not an asset that changes often so there is a special task to copy**/
-    grunt.registerTask('default', ['sass:dist', 'copy:main', 'cssmin', 'uglify', 'htmlmin']);
+    grunt.registerTask('default', ['sass:dist', 'copy:main', 'cssmin', 'js', 'htmlmin']);
 
 };
 

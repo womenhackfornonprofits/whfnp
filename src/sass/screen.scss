@@ -60,6 +60,10 @@
 
 }
 
+.hidden {
+	display: none;
+}
+
 .faq {
 	p, h3 {
 		text-align: left;
@@ -155,8 +159,8 @@
 	width: 0;
 	height: 0;
 	left: -8px;
-  right: auto;
-  top: auto;
+  	right: auto;
+  	top: auto;
 	bottom: -40px;
 	border: 32px solid;
 	border-color: transparent transparent transparent #666;

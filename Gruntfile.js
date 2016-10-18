@@ -8,9 +8,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-prettify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -38,10 +40,10 @@ module.exports = function(grunt) {
       svg: {
         options: {
           bucket: '<%= s3settings.bucket %>',
-          differential: true // Only uploads the files that have changed
+          differential: false // Only uploads the files that have changed
         },
         files: [
-          {expand: true, cwd: 'deploy/img/', src: ['**/*.svg'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+          {expand: true, cwd: 'deploy/img/', src: ['**/*.svg'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public'}},
         ]
       },
       html: {
@@ -52,6 +54,17 @@ module.exports = function(grunt) {
         files: [
           //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
           {expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public'}},
+
+        ]
+      },
+      js: {
+        options: {
+          bucket: '<%= s3settings.bucket %>',
+          differential: true // Only uploads the files that have changed
+        },
+        files: [
+          //{expand: true, cwd: 'deploy/', src: ['*.html'], dest: '', params: {CacheControl: 'max-age=31536000, public', ContentEncoding: 'gzip'}},
+          {expand: true, cwd: 'deploy/js/', src: ['whfnp.min.js'], dest: 'js/', params: {CacheControl: 'max-age=31536000, public'}},
 
         ]
       },
@@ -95,12 +108,35 @@ module.exports = function(grunt) {
         ]
       }
     },
+    //------- JS Paths ------//
+    jspaths: {
+      src: {
+        js: 'src/js/**.js'
+      },
+      dest: {
+        jsMin: 'src/js/whfnp.min.js'
+      }
+    },
+
+    //------- JS Minify ------//
+    uglify: {
+      options: {
+        compress: true,
+        mangle: true,
+        sourceMap: true
+      },
+      target: {
+        src: '<%= jspaths.src.js %>',
+        dest: '<%= jspaths.dest.jsMin %>'
+      }
+    },
     //------- Copy -------//
    copy: {
       main: {
         files: [
           // includes files within path
           {expand: true, cwd: 'src/', src: ['css'], dest: 'deploy/', filter: 'isFile'},
+          {expand: true, cwd: 'src/', src: ['js'], dest: 'deploy/', filter: 'isFile'},
         ]
       },
       img: {
@@ -132,6 +168,10 @@ module.exports = function(grunt) {
       sass: {
         files: 'src/sass/**/*.scss',
         tasks: ['sass:dev']
+      },
+      js: {
+        files: 'src/js/**/*.js',
+        tasks: ['js']
       }
     },
     //------- IMAGE min -------//
@@ -181,6 +221,8 @@ module.exports = function(grunt) {
     },
     concurrent: {
       serve: [
+          'clean',
+          'default',
           'watch',
           'shell:jekyllServe'
       ],
@@ -188,18 +230,27 @@ module.exports = function(grunt) {
           logConcurrentOutput: true
       }
     },
+    clean: {
+      build: {
+        src: ['src/js/whfnp.min.js', 'src/_site'],
+       },
+      js: {
+        src: ['src/js/whfnp.min.js'],
+      },
+    },
   });
 
 
     grunt.registerTask('serve', ['concurrent:serve']);
     /** DEPLOY task deployes all changes, check individual tasks above to see what they do **/
-    grunt.registerTask('deploy', [ 'imagemin', 'aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
+    grunt.registerTask('deploy', [ 'aws_s3:css','aws_s3:html', 'aws_s3:img', 'aws_s3:svg']);
     /** IMG task processess ALL images from src to deploy and optimizes them **/
     grunt.registerTask('img', ['imagemin', 'copy:img']);
+    grunt.registerTask('js', ['clean:js', 'uglify']);
     /** DEFAULT task that compiles, minifies and copies relevant files,
     images are not copied everytime as the current once on site are gzipped.
-    Images are not an asset that changes often so there is a secial task to copy**/
-    grunt.registerTask('default', ['sass:dist', 'copy:main', 'cssmin', 'htmlmin', 'serve']);
+    Images are not an asset that changes often so there is a special task to copy**/
+    grunt.registerTask('default', ['sass:dist', 'copy:main', 'cssmin', 'js', 'htmlmin']);
 
 };
 

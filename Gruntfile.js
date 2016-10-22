@@ -121,9 +121,8 @@ module.exports = function(grunt) {
     //------- JS Minify ------//
     uglify: {
       options: {
-        compress: true,
-        mangle: true,
-        sourceMap: true
+        compress: {},
+        mangle: {}
       },
       target: {
         src: '<%= jspaths.src.js %>',
@@ -149,7 +148,7 @@ module.exports = function(grunt) {
     sass: {
       dev: {
          options: {
-           style: 'expanded',
+           style: 'expanded'
            //loadPath: 'node_modules/bootstrap-sass/assets/stylesheets'
          },
        },
@@ -219,6 +218,14 @@ module.exports = function(grunt) {
         command: 'jekyll serve --source src --destination src/_site --host 0.0.0.0 --port 8080'
       }
     },
+    clean: {
+      build: {
+        src: ['src/js/whfnp.min.js', 'src/_site'],
+       },
+      js: {
+        src: ['src/js/whfnp.min.js'],
+      },
+    },
     concurrent: {
       serve: [
           'clean',
@@ -229,14 +236,6 @@ module.exports = function(grunt) {
       options: {
           logConcurrentOutput: true
       }
-    },
-    clean: {
-      build: {
-        src: ['src/js/whfnp.min.js', 'src/_site'],
-       },
-      js: {
-        src: ['src/js/whfnp.min.js'],
-      },
     },
   });
 

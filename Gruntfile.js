@@ -121,9 +121,9 @@ module.exports = function(grunt) {
     //------- JS Minify ------//
     uglify: {
       options: {
-        compress: true,
+        compress: {},
         mangle: true,
-        sourceMap: true
+        sourceMap: false
       },
       target: {
         src: '<%= jspaths.src.js %>',

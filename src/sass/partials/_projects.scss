@@ -35,7 +35,7 @@
 }
 
 .pimpmycause {
-	background: url('../img/non-profits/pimpmycause.png') no-repeat center center;
+	background: url('../img/non-profits/pimpmycause-new.png') no-repeat center center;
 	background-size: cover;
 }
 
@@ -44,6 +44,10 @@
 	background-size: cover;
 }
 
+.tgiuk {
+	background: url('../img/non-profits/tgiuk.png') no-repeat center center;
+	background-size: cover;
+}
 .project-info {
 	vertical-align: top;
 	margin: 2em auto;
@@ -52,7 +56,7 @@
 		display: inline-block;
 		width: 49%;
 		margin: $padding-margin-value*2 0;
-		padding-left: $padding-margin-value;
+	//	padding-left: $padding-margin-value;
 		.button {
 			margin: $padding-margin-value $padding-margin-value 0 0;
 		}

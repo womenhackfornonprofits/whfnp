@@ -212,7 +212,11 @@
 	text-shadow: 1px 1px #7b7b7b;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 4em;
+	font-size: 3em;
+
+	@media (min-width: 500px) {
+		font-size: 4em;
+	}
 }
 
 .sub-title {

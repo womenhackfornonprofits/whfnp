@@ -167,7 +167,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: 'src/sass/**/*.scss',
-        tasks: ['sass:dev']
+        tasks: ['sass:dist']
       },
       js: {
         files: 'src/js/**/*.js',

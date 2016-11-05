@@ -61,7 +61,9 @@ section:nth-child(8) {
 
 section:nth-child(even){
 
-	h2 {
+	h2,
+	h3,
+	h4 {
  		color: $white;
  	}
 

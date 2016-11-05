@@ -1,4 +1,5 @@
 .project-img {
+	display: none;
 	img {
 		height: $project-image-height;
 	    border: 2em solid rgb(255, 255, 255);
@@ -8,45 +9,40 @@
 	height: $project-image-height;
 	margin: 0;
 
-	@media (min-width:600px) {
+	@media (min-width: 992px) {
 		display: inline-block;
-		min-width: 49%;
+		max-width: 49%;
 	}
 }
 
 .findacure {
-	background: url('../img/non-profits/findacure.png') no-repeat center center;
-	background-size: cover;
+	background: url('../img/non-profits/findacure.jpg') no-repeat center center;
+	background-size: contain;
 }
 
 .fashrevwall {
-	background: url('../img/non-profits/fashrevwall.png') no-repeat center center;
-	background-size: cover;
+	background: url('../img/non-profits/fashrevwall.jpg') no-repeat center center;
+	background-size: contain;
 }
 
 .whfnp {
-	background: url('../img/non-profits/whfnp.png') no-repeat center center;
-	background-size: cover;
-}
-
-.ippr {
-	background: url('../img/non-profits/IPPR.png') no-repeat center center;
-	background-size: cover;
+	background: url('../img/non-profits/womenhackfornonprofits.jpg') no-repeat center center;
+	background-size: contain;
 }
 
 .pimpmycause {
-	background: url('../img/non-profits/pimpmycause-new.png') no-repeat center center;
-	background-size: cover;
+	background: url('../img/non-profits/pimpmycause.jpg') no-repeat center center;
+	background-size: contain;
 }
 
 .jaspalsvoice {
-	background: url('../img/non-profits/jaspalsvoice.png') no-repeat center center;
-	background-size: cover;
+	background: url('../img/non-profits/jaspalsvoice.jpg') no-repeat top;
+	background-size: contain;
 }
 
 .tgiuk {
-	background: url('../img/non-profits/tgiuk.png') no-repeat center center;
-	background-size: cover;
+	background: url('../img/non-profits/togetherintheuk.jpg') no-repeat top;
+	background-size: contain;
 }
 
 .project {

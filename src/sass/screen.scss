@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=OpenSans:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
 @import "partials/normalize";
 @import "partials/bootstrap-custom";
@@ -49,6 +49,9 @@
 	font-style: italic;
 }
 
+.volunteer {
+	margin-top: 3em;
+}
 
 .who-we-are {
 	padding: $padding-margin-value;
@@ -57,6 +60,13 @@
 		border-right: 1px solid #F5F5F5; 
 	}
 
+}
+
+.how-it-works {
+	p {
+		border: 0;
+		text-align: center;
+	}
 }
 
 .hidden {

@@ -10,7 +10,7 @@
 
 	@media (min-width:600px) {
 		display: inline-block;
-		width: 49%;
+		min-width: 49%;
 	}
 }
 
@@ -35,7 +35,7 @@
 }
 
 .pimpmycause {
-	background: url('../img/non-profits/pimpmycause.png') no-repeat center center;
+	background: url('../img/non-profits/pimpmycause-new.png') no-repeat center center;
 	background-size: cover;
 }
 
@@ -44,44 +44,41 @@
 	background-size: cover;
 }
 
-.project-info {
-	vertical-align: top;
-
-	@media (min-width:600px) {
-		display: inline-block;
-		width: 49%;
-		margin: $padding-margin-value*2 0;
-		padding-left: $padding-margin-value;
-		.button {
-			margin: $padding-margin-value $padding-margin-value 0 0;
-		}
-	}
+.tgiuk {
+	background: url('../img/non-profits/tgiuk.png') no-repeat center center;
+	background-size: cover;
 }
 
 .project {
-	h3 {
-		text-align: center;
-		font-style: bold;
+	margin-top: 3em;
+	padding: 3em 0;
+
+	.button {
+		display: inline;
+		width: auto;
+	}
+
+	h4 {
+		text-align: left;
+		font-style: italic;
 		font-weight: 100;
-		padding: 0;
-		padding-bottom: $padding-margin-value/4;
 	}
 
 	p {
-		margin:0;
-		padding: 0;
+		border: 0 !important;
+		padding-left: 0;
+		padding-right: 0;
+
+		&:last-of-type {
+	        margin-bottom: 2em;
+	    }   
 	}
 
 	h2 {
 		padding: 0;
-		padding-bottom: $padding-margin-value/4;
 		color: $orange;
-	}
-
-	@media (min-width:600px) {
-		h2, h3, p {
-			text-align: left;
-		}
+		margin-top: 0;
+		text-align: left;
 	}
 
 }

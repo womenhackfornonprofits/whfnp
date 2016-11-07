@@ -5,6 +5,15 @@ section {
 	background-color: $white; 
     padding: 4em 0 8em;
     background-color: $section-bg;
+
+    p {
+    	border-left: 2px solid pink;
+    	padding: 0 1em;
+
+	    &:first-of-type {
+	        margin-top: 2em;
+	    }    
+	}
 }
 
 
@@ -18,6 +27,10 @@ section:nth-child(4) {
 			color: $black;
 		}
 	}
+	p {
+    	border-left: 2px solid $white;
+		color: $white;  
+	}
 }
 
 section:nth-child(0) {
@@ -30,12 +43,27 @@ section:nth-child(6) {
 	$section-bg: $pale-orange;
 	background-color: $section-bg;
  	background-image: linear-gradient(315deg,#FF6E3D,$section-bg);
+	p {
+    	border-left: 2px solid $white;
+		color: $white;  
+	}
+}
 
+section:nth-child(8) {
+ 	$section-bg: $pop-blue;
+	background-color: $section-bg;
+ 	background-image: linear-gradient(315deg,#2693d5,$section-bg);
+	p {
+    	border-left: 2px solid $white;
+		color: $white;  
+	}
 }
 
 section:nth-child(even){
 
-	h2 {
+	h2,
+	h3,
+	h4 {
  		color: $white;
  	}
 
@@ -43,4 +71,14 @@ section:nth-child(even){
  		color: $white;
  		border-bottom:1px $white dashed;
  	}
+ 	p {
+    	border-left: 2px solid $white;
+		color: $white;  
+	}
+}
+
+section:nth-child(odd){
+	p {
+		color: $black;  
+	}
 }

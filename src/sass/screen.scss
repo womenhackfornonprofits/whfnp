@@ -13,7 +13,6 @@
 @import "partials/section";
 @import "partials/button";
 @import "partials/projects";
-@import "partials/columns";
 @import "partials/social";
 @import "partials/form";
 @import "partials/footer";
@@ -50,6 +49,9 @@
 	font-style: italic;
 }
 
+.volunteer {
+	margin-top: 3em;
+}
 
 .who-we-are {
 	padding: $padding-margin-value;
@@ -58,6 +60,13 @@
 		border-right: 1px solid #F5F5F5; 
 	}
 
+}
+
+.how-it-works {
+	p {
+		border: 0;
+		text-align: center;
+	}
 }
 
 .hidden {
@@ -82,22 +91,22 @@
 	}
 }
 
-.client-testimonial{
-	.col-2 {
-		p {
-			padding: $padding-margin-value;
-			padding-top: 2em;
-		}
-		h3 {
-			padding: 1em;
-		}
-		margin-bottom: $padding-margin-value;
-		@media(min-width:600px) {
-			min-height: 18em;
+// .client-testimonial{
+// 	.col-2 {
+// 		p {
+// 			padding: $padding-margin-value;
+// 			padding-top: 2em;
+// 		}
+// 		h3 {
+// 			padding: 1em;
+// 		}
+// 		margin-bottom: $padding-margin-value;
+// 		@media(min-width:600px) {
+// 			min-height: 18em;
 
-		}
-	}
-}
+// 		}
+// 	}
+// }
 
 .speech-bubble {
 	background-color: $white;
@@ -146,8 +155,8 @@
 	width: 0;
 	height: 0;
 	left: 0px;
-  right: auto;
-  top: auto;
+  	right: auto;
+  	top: auto;
 	bottom: -20px;
 	border: 22px solid;
 	border-color: transparent transparent transparent lightyellow;
@@ -200,8 +209,14 @@
 
 .title-heading {
 	color: $white;
-	text-shadow: 1px 1px $black;
+	text-shadow: 1px 1px #7b7b7b;
 	text-align: center;
+	text-transform: uppercase;
+	font-size: 3em;
+
+	@media (min-width: 500px) {
+		font-size: 4em;
+	}
 }
 
 .sub-title {
@@ -209,7 +224,6 @@
 }
 
 .section-heading {
-	font-weight: 700;
 	color: $pop-pink;
 	max-width: 30em;
 	margin-left: auto;
@@ -274,6 +288,20 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+
+	p {
+		color: $black !important;
+		font-style: italic;
+	}
+}
+
+.non-profits-logo {
+	display: none;
+
+	@media (min-width:780px) {
+		display: block;
+	}
+
 }
 
 .left-align-text {

@@ -1,4 +1,5 @@
 .project-img {
+	display: none;
 	img {
 		height: $project-image-height;
 	    border: 2em solid rgb(255, 255, 255);
@@ -6,88 +7,76 @@
 	    box-shadow: 10px 10px 0px rgba(0,0,0,.1); 
 	}
 	height: $project-image-height;
-	margin: $padding-margin-value 0;
+	margin: 0;
 
-	@media (min-width:600px) {
+	@media (min-width: 992px) {
 		display: inline-block;
-		min-width: 49%;
+		max-width: 49%;
 	}
 }
 
 .findacure {
-	background: url('../img/non-profits/findacure.png') no-repeat center center;
-	background-size: cover;
+	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/q_auto:good/v1478311010/findacure_u5boyo.jpg') no-repeat center center;
+	background-size: contain;
 }
 
 .fashrevwall {
-	background: url('../img/non-profits/fashrevwall.png') no-repeat center center;
-	background-size: cover;
+	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/c_scale,q_auto:good,w_800/v1478311010/fashrevwall_ouqx5h.jpg') no-repeat center center;
+	background-size: contain;
 }
 
 .whfnp {
-	background: url('../img/non-profits/whfnp.png') no-repeat center center;
-	background-size: cover;
-}
-
-.ippr {
-	background: url('../img/non-profits/IPPR.png') no-repeat center center;
-	background-size: cover;
+	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/q_auto:good/v1478311011/whfnp_epiemo.png') no-repeat center center;
+	background-size: contain;
 }
 
 .pimpmycause {
-	background: url('../img/non-profits/pimpmycause-new.png') no-repeat center center;
-	background-size: cover;
+	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/q_auto:good/v1478311009/pimpmycause_wfdxkg.jpg') no-repeat center center;
+	background-size: contain;
 }
 
 .jaspalsvoice {
-	background: url('../img/non-profits/jaspalsvoice.png') no-repeat center center;
-	background-size: cover;
+	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/q_auto:good/v1478311011/jaspalsvoice_j9hpzc.jpg') no-repeat top;
+	background-size: contain;
 }
 
 .tgiuk {
-	background: url('../img/non-profits/tgiuk.png') no-repeat center center;
-	background-size: cover;
-}
-.project-info {
-	vertical-align: top;
-	margin: 2em auto;
-
-	@media (min-width:600px) {
-		display: inline-block;
-		width: 49%;
-		margin: $padding-margin-value*2 0;
-	//	padding-left: $padding-margin-value;
-		.button {
-			margin: $padding-margin-value $padding-margin-value 0 0;
-		}
-	}
+	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/q_auto:good/v1478311009/togetherintheuk_sfkocs.jpg') no-repeat top;
+	background-size: contain;
 }
 
 .project {
-	h3 {
-		text-align: center;
-		font-style: bold;
-		font-weight: 100;
-		padding: 0;
-		padding-bottom: $padding-margin-value/4;
+	margin-top: 3em;
+	padding: 3em 0;
+
+	.button {
+		display: inline-block;
+		width: auto;
+		margin: .5em auto;
 
 	}
 
+	h4 {
+		text-align: left;
+		font-style: italic;
+		font-weight: 100;
+	}
+
 	p {
-		margin:0;
-		padding: 0;
+		border: 0 !important;
+		padding-left: 0;
+		padding-right: 0;
+
+		&:last-of-type {
+	        margin-bottom: 2em;
+	    }   
 	}
 
 	h2 {
 		padding: 0;
-		padding-bottom: $padding-margin-value/4;
 		color: $orange;
-	}
-
-	@media (min-width:600px) {
-		h2, h3, p {
-			text-align: left;
-		}
+		margin-top: 0;
+		text-align: left;
 	}
 
 }

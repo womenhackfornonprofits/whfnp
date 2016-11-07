@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       img: {
         options: {
           bucket: '<%= s3settings.bucket %>',
-          differential: true // Only uploads the files that have changed
+          differential: false // Only uploads the files that have changed
         },
         files: [
           {expand: true, cwd: 'deploy/img/', src: ['**/*.{png,jpg,jpeg,JPG}'], dest: 'img/', params: {CacheControl: 'max-age=31536000, public'}},
@@ -167,7 +167,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: 'src/sass/**/*.scss',
-        tasks: ['sass:dev']
+        tasks: ['sass:dist']
       },
       js: {
         files: 'src/js/**/*.js',

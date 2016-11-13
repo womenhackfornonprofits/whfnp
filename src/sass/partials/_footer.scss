@@ -37,7 +37,7 @@
 		color: $white;
 		text-align: left;
 		font-size: .9em;
-		margin-top: 30px;
+		margin-top: 30px !important;
 
 		@media (min-width:480px) {
 			text-align: center;

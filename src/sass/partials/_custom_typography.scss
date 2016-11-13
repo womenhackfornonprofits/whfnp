@@ -25,22 +25,22 @@ $base-font-family: $base-font-name;
 $base-font-size: 16px;
 
 // Paragraph Styles
-$paragraph-color: #000;
-$paragraph-size: rem(18px);
+$paragraph-color      : #000;
+$paragraph-size       : rem(18px);
 $paragraph-line-height: 1.5em;
-$paragraph-margin: 20px;
+$paragraph-margin     : 20px;
  
 // Header Styles
-$header-color: #000;
-$header-size: rem(40px);
+$header-color      : #000;
+$header-size       : rem(40px);
 $header-line-height: 1.25em;
-$header-margin: $paragraph-margin * 1.2;
+$header-margin     : $paragraph-margin * 1.2;
 
 // Blockquote Styles
-$blockquote-color: #000;
-$blockquote-size: rem(23px);
+$blockquote-color      : #000;
+$blockquote-size       : rem(23px);
 $blockquote-line-height: 1.5em;
-$blockquote-margin: $paragraph-margin * 1.5;
+$blockquote-margin     : $paragraph-margin * 1.5;
 
 // Links
 $link-color: $pop-pink;
@@ -115,12 +115,15 @@ p {
     line-height: $paragraph-line-height;
     color: $paragraph-color;
 	font-family: $base-font-family;
-	text-align: left;
+	txt-align: center;
 	font-weight: 300;
 	max-width: 35em;
 	margin-left: auto;
 	margin-right: auto;
 
+    &:first-of-type {
+        margin-top: 0;
+    }
 }
 
 

@@ -4,6 +4,7 @@
 	
 	&__logo {
 		flex: 0 1 10em;
+		max-width: 20em;
 	}
 
 	&__wrapper {
@@ -47,10 +48,11 @@
 	    right: 0;
 	    margin: 0;
 	    padding: 0;
+	    padding-top: 60px;
 	    z-index: 1000;	    
 		list-style: none;
 		margin: 0;
-		background-image: linear-gradient(315deg,#FF6E3D,$salmon-pink);
+		background-image: linear-gradient(315deg, #FF6E3D, $salmon-pink);
 
 	}
 
@@ -63,10 +65,10 @@
 	    border: 0;
 	    margin: 1rem;
 	    position: fixed;
-	    top: 0;
+	    top: 12px;
 	    right: 15px;
 	    z-index: 2000;
-	    background: url(../img/icons/icon-hamburger-dark.svg) no-repeat center center;
+	    background: url('http://res.cloudinary.com/drdmdqahj/image/upload/v1479077702/Ic_menu_48px_mwfwvd.svg') no-repeat center center;
 	    background-size: cover;
 	    color: transparent;
 

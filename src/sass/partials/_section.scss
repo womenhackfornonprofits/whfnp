@@ -7,12 +7,19 @@ section {
     background-color: $section-bg;
 
     p {
-    	border-left: 2px solid pink;
     	padding: 0 1em;
+		text-align: center;
 
 	    &:first-of-type {
 	        margin-top: 2em;
 	    }    
+	}
+
+	@media (min-width: 760px) {	
+		p {
+    		border-left: 2px solid pink;
+    		text-align: left;
+		}
 	}
 }
 
@@ -28,8 +35,13 @@ section:nth-child(4) {
 		}
 	}
 	p {
-    	border-left: 2px solid $white;
 		color: $white;  
+	}
+
+	@media (min-width: 760px) {	
+		p {
+			border-left: 2px solid $white;
+		}
 	}
 }
 
@@ -44,18 +56,26 @@ section:nth-child(6) {
 	background-color: $section-bg;
  	background-image: linear-gradient(315deg,#FF6E3D,$section-bg);
 	p {
-    	border-left: 2px solid $white;
 		color: $white;  
 	}
+
+	@media (min-width: 768px) {	
+		p {
+			border-left: 2px solid $white;
+		}
+	}
 }
+
 
 section:nth-child(8) {
  	$section-bg: $pop-blue;
 	background-color: $section-bg;
  	background-image: linear-gradient(315deg,#2693d5,$section-bg);
-	p {
-    	border-left: 2px solid $white;
-		color: $white;  
+
+	@media (min-width: 760px) {	
+		p {
+			border-left: 2px solid $white;
+		}
 	}
 }
 
@@ -71,9 +91,14 @@ section:nth-child(even){
  		color: $white;
  		border-bottom:1px $white dashed;
  	}
- 	p {
-    	border-left: 2px solid $white;
+	p {
 		color: $white;  
+	}
+
+	@media (min-width: 760px) {	
+		p {
+			border-left: 2px solid $white;
+		}
 	}
 }
 

@@ -1,7 +1,8 @@
 .social {
-	margin: 6em auto;
+	padding: 3em 0;
 	width: 100%;
 	text-align: center;
+	background: #3D3D3D;
 
 	ul {
 		margin: 0 auto;
@@ -17,23 +18,23 @@
 }
 
 .twitter {
-	background: url('https://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/twitter-logo_k4nug4.svg') no-repeat center center;
+	background: url('https://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/twitter-logo_k4nug4.svg');
 }
 
 .facebook {
-	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/facebook-logo_htgvrx.svg') no-repeat center center;
+	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/facebook-logo_htgvrx.svg');
 }
 
 .github {
-	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/github-logo_nhuzqq.svg') no-repeat center center;
+	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/github-logo_nhuzqq.svg');
 }
 
 .medium {
-	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/medium-logo_qhao7s.svg') no-repeat center center;
+	background-image: url('http://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/medium-logo_qhao7s.svg');
 }
 
 .newsletter {
-	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/newsletter-logo_a0sctb.svg') no-repeat center center;
+	background: url('http://res.cloudinary.com/drdmdqahj/image/upload/v1478311048/newsletter-logo_a0sctb.svg');
 }
 
 .social-icon {
@@ -42,4 +43,5 @@
 	display: inline-block;
 	background-size: cover;
 	text-decoration: none;
+    border-radius: 2.5em;
 }

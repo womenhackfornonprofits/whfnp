@@ -74,20 +74,25 @@
 }
 
 .faq {
-	p, h3 {
-		text-align: left;
-		padding: $padding-margin-value/2 $padding-margin-value/2 0 $padding-margin-value/2;
-	}
-	h3 {
-		color: $pop-pink;
-		font-style: italic;
-	}
 	max-width: $max-text-width; 
 	margin: 0 auto;
+
+	p {
+		border: none !important;
+	}
+	p, h4 {
+		text-align: left;
+		padding: .5em;
+	}
+	h4 {
+		border-left: 2px solid pink;
+	}
 	ul {
 		list-style: disc;
 		padding:0 $padding-margin-value;
-
+		li {
+			font-weight: normal;
+		}
 	}
 }
 

@@ -59,6 +59,7 @@ Note: All this information can be filled out once you have access to the bucket 
 * **Logo:** [Mariza Dima](https://twitter.com/Marizolde)
 * **QA & Project Manager**: [Tanya Powell](http://tanyapowell.co.uk)
 * **Product Owner**: [Nandhini Narasimhan](http://nandhini31.github.io)
+* **Project Manager & Front End Dev (Overhaul)**: [Victoria Ogundare](https://github.com/VAO11)
 
 # Tools & Technologies
 - CSS

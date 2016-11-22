@@ -54,12 +54,13 @@ Note: All this information can be filled out once you have access to the bucket 
 # Team
 
 * **Content**: [Kriselda Rabino](https://github.com/krissy)
-* **Front End Dev**: [Liliana Kastilio](https://www.lilianakastilio.co.uk)
+* **Front End Dev**: [Liliana Kastilio](https://www.lilianakastilio.co.uk), [Jaycee Cheong](https://twitter.com/herecomesjaycee)
 * **Design:** [Elizabeth Chesters](http://echesters.co.uk)
 * **Logo:** [Mariza Dima](https://twitter.com/Marizolde)
 * **QA & Project Manager**: [Tanya Powell](http://tanyapowell.co.uk)
 * **Product Owner**: [Nandhini Narasimhan](http://nandhini31.github.io)
 * **Project Manager & Front End Dev (Overhaul)**: [Victoria Ogundare](https://github.com/VAO11)
+* **Testing: [Jaycee Cheong](https://twitter.com/herecomesjaycee)
 
 # Tools & Technologies
 - CSS

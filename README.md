@@ -61,7 +61,9 @@ Note: All this information can be filled out once you have access to the bucket 
 * **Product Owner**: [Nandhini Narasimhan](http://nandhini31.github.io)
 * **Project Manager & Front End Dev (Overhaul)**: [Victoria Ogundare](https://github.com/VAO11)
 * **Testing**: [Jaycee Cheong](https://twitter.com/herecomesjaycee), [Emiliana Emberton](https://uk.linkedin.com/in/emiliana-emberton-312b35124)
+
 # Tools & Technologies
+
 - CSS
 - HTML
 - [Grunt](gruntjs.com/)
